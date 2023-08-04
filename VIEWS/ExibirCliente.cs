@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using CONTROLLER;
 
@@ -26,12 +27,18 @@ namespace VIEWS
             var clientes = controllerCliente.Read();
             Dados dados = new Dados();
 
+            if(clientes.Count > 0)
+            {
             foreach (var idx in clientes)
             {
                 dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
             }
-
             dtGrid.DataSource = dados.Clientes;
+            }
+            else
+            {
+                dtGrid.Enabled = false;
+            }
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
@@ -66,12 +73,18 @@ namespace VIEWS
             var clientes = controllerCliente.Read();
             Dados dados = new Dados();
 
-            foreach (var idx in clientes)
+            if (clientes.Count > 0)
             {
-                dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
+                foreach (var idx in clientes)
+                {
+                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
+                }
+                dtGrid.DataSource = dados.Clientes;
             }
-
-            dtGrid.DataSource = dados.Clientes;
+            else
+            {
+                dtGrid.Enabled = false;
+            }
         }
         private void btnDeletar_Click(object sender, EventArgs e)
         {

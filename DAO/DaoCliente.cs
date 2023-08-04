@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using CONEXAO;
 using Dapper;
@@ -13,30 +15,43 @@ namespace DAO {
         }
 
         public bool Insert(Cliente Cliente) {
+            Conexao conexao = new Conexao();
+            var conn = conexao.Connection();
 
-           Conexao conexao = new Conexao();
-           var conn = conexao.Connection();
-           conn.Open();
-           var query = $"EXEC cadCliente " +
-                $" {Cliente.GetCnpj()}, " +
-                $"'{Cliente.GetNome()}'," +
-                $"'{Cliente.GetTelefone()}', " +
-                $"'{Cliente.GetRua()}', " +
-                $"'{Cliente.GetNumero()}', " +
-                $"'{Cliente.GetBairro()}', " +
-                $"'{Cliente.GetCidade()}', " +
-                $"'{Cliente.GetSiglaEs()}'";
-           var retorno = conn.Execute(query, Cliente);
-           if(retorno > 0)
+            try
             {
-                return true;
+                conn.Open();
+                var query = $"EXEC cadCliente " +
+                     $" {Cliente.GetCnpj()}, " +
+                     $"'{Cliente.GetNome()}'," +
+                     $"'{Cliente.GetTelefone()}', " +
+                     $"'{Cliente.GetRua()}', " +
+                     $"'{Cliente.GetNumero()}', " +
+                     $"'{Cliente.GetBairro()}', " +
+                     $"'{Cliente.GetCidade()}', " +
+                     $"'{Cliente.GetSiglaEs()}'";
+                var retorno = conn.Execute(query, Cliente);
+                if (retorno > 0)
+                {
+                    conn.Close();
+                    return true;
+                }
+                else
+                {
+                    conn.Close();
+                    return false;
+                }
             }
-            else
+            catch (SqlException ex)
             {
+                conn.Close();
                 return false;
+                throw new Exception($"Nome de usuário: {Cliente.GetNome()} está duplicado" + ex.Message);
             }
-         
-                        
+            finally
+            {
+                conn.Close();
+            }             
         }
 
         public bool Update(Cliente Cliente, decimal cnpj) {

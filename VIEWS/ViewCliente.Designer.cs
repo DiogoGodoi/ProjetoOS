@@ -167,6 +167,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -193,11 +194,12 @@
             this.btnCadastrar.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.FlatAppearance.BorderSize = 2;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCadastrar.Location = new System.Drawing.Point(101, 3);
+            this.btnCadastrar.Location = new System.Drawing.Point(102, 5);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(92, 58);
+            this.btnCadastrar.Size = new System.Drawing.Size(89, 56);
             this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -208,11 +210,12 @@
             this.btnExibir.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnExibir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExibir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExibir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExibir.FlatAppearance.BorderSize = 2;
+            this.btnExibir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExibir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExibir.Location = new System.Drawing.Point(3, 3);
+            this.btnExibir.Location = new System.Drawing.Point(5, 5);
             this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(92, 58);
+            this.btnExibir.Size = new System.Drawing.Size(89, 56);
             this.btnExibir.TabIndex = 0;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = false;
@@ -223,11 +226,12 @@
             this.btnPesquisar.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnPesquisar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.FlatAppearance.BorderSize = 2;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPesquisar.Location = new System.Drawing.Point(3, 67);
+            this.btnPesquisar.Location = new System.Drawing.Point(5, 69);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(92, 59);
+            this.btnPesquisar.Size = new System.Drawing.Size(89, 56);
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
@@ -237,11 +241,12 @@
             this.btnRelatorios.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnRelatorios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRelatorios.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorios.FlatAppearance.BorderSize = 2;
+            this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRelatorios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRelatorios.Location = new System.Drawing.Point(101, 67);
+            this.btnRelatorios.Location = new System.Drawing.Point(102, 69);
             this.btnRelatorios.Name = "btnRelatorios";
-            this.btnRelatorios.Size = new System.Drawing.Size(92, 59);
+            this.btnRelatorios.Size = new System.Drawing.Size(89, 56);
             this.btnRelatorios.TabIndex = 5;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.UseVisualStyleBackColor = false;
@@ -260,7 +265,8 @@
             this.btnSair.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnSair.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.FlatAppearance.BorderSize = 2;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSair.Location = new System.Drawing.Point(0, 0);
             this.btnSair.Name = "btnSair";

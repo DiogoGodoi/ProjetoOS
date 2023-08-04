@@ -412,7 +412,7 @@
             this.btnDeletar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnDeletar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDeletar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeletar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDeletar.Location = new System.Drawing.Point(0, 0);
             this.btnDeletar.Name = "btnDeletar";

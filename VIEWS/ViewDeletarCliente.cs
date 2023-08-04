@@ -49,11 +49,13 @@ namespace VIEWS
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             ControllerCliente controllerCliente = new ControllerCliente();
-            var retorno = controllerCliente.Delete(decimal.Parse(txtCnpj.Text));
 
-            var resultado = MessageBox.Show("Deseja mesmo excluir o registro ?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("Deseja mesmo excluir o registro ?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+           
             if(resultado == DialogResult.Yes)
             {
+                var retorno = controllerCliente.Delete(decimal.Parse(txtCnpj.Text));
+
                 if(retorno == true)
                 {
                     MessageBox.Show("Deletado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
