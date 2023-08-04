@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +74,12 @@
     <Compile Include="ExibirCliente.Designer.cs">
       <DependentUpon>ExibirCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="PesquisarClienteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PesquisarClienteView.Designer.cs">
+      <DependentUpon>PesquisarClienteView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewCliente.cs">
@@ -95,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExibirCliente.resx">
       <DependentUpon>ExibirCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesquisarClienteView.resx">
+      <DependentUpon>PesquisarClienteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

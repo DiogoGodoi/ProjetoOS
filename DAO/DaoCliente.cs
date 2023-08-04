@@ -97,9 +97,27 @@ namespace DAO {
             return clientes;
         }
 
-        //public Cliente Filter(long cnpj) {
+        public List<Cliente> Filter(decimal cnpj) {
 
-        //}
+            Conexao Conexao = new Conexao();
+            var conn = Conexao.Connection();
+            try
+            {
+            conn.Open();
+            var query = $"SELECT * FROM Cliente WHERE cnpj LIKE '{cnpj}%'";
+            var cliente = conn.Query<Cliente>(query).ToList();
+            return cliente;
+
+            }catch(SqlException)
+            {
+                conn.Close();
+                return null;
+            }
+            finally
+            {
+                conn.Close() ;
+            }
+        }
 
         public void report() {
     

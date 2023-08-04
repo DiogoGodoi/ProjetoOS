@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VIEWS
@@ -14,7 +7,8 @@ namespace VIEWS
     {
         frmExibirCliente _viewExibirCliente { get; set; }
         frmCadastrarCliente _viewCadastrarCliente { get; set; }
-        frmAlterarCliente _viewAlterarCliente { get; set; }
+        frmPesquisarClienteView _viewPesquisarCliente { get; set; } 
+
         public Panel panelTransition = new Panel();
         public frmViewCliente()
         {
@@ -25,6 +19,7 @@ namespace VIEWS
         }
         public void transicaoTela<T>(T tela) where T : Form, new()
         {
+
             if (ActiveMdiChild != null)
             {
                 foreach (T item in panel3.Controls)
@@ -65,6 +60,11 @@ namespace VIEWS
         private void ViewCliente_Load(object sender, EventArgs e)
         {
             transicaoTela(_viewExibirCliente);
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            transicaoTela(_viewPesquisarCliente);
         }
     }
 }

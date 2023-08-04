@@ -29,9 +29,10 @@ namespace CONTROLLER {
             return dao.Read();
         }
 
-        //public Cliente Filter(long cnpj) {
-
-        //}
+        public List<Cliente> Filter(decimal cnpj) 
+        {
+            return dao.Filter(cnpj); 
+        }
 
         public void report()
         {
