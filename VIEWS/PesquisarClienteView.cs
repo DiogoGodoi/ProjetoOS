@@ -43,7 +43,7 @@ namespace VIEWS
         {
             ControllerCliente controllerCliente = new ControllerCliente();
             Dados dados = new Dados();
-            var retorno = controllerCliente.Filter(decimal.Parse(txtCnpj.Text));
+            var retorno = controllerCliente.Filter(decimal.Parse(txtCnpj.Text), txtNome.Text);
             if(retorno.Count > 0)
             {
                 foreach (var idx in retorno)
