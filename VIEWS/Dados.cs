@@ -1,4 +1,6 @@
-﻿namespace VIEWS {
-    public partial class Dados {
+﻿namespace VIEWS
+{
+    public partial class Dados
+    {
     }
 }
