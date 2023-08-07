@@ -43,7 +43,12 @@ namespace VIEWS
         {
             ControllerCliente controllerCliente = new ControllerCliente();
             Dados dados = new Dados();
-            var retorno = controllerCliente.Filter(decimal.Parse(txtCnpj.Text), txtNome.Text);
+            decimal? cnpj = null;
+            if(txtCnpj.Text != string.Empty)
+            {
+            cnpj = decimal.Parse(txtCnpj.Text);
+            }
+            var retorno = controllerCliente.Filter(cnpj, txtNome.Text);
             if(retorno.Count > 0)
             {
                 foreach (var idx in retorno)
@@ -54,6 +59,26 @@ namespace VIEWS
 
             dtGrid.DataSource = dados.Clientes;
 
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            ControllerCliente controllerCliente = new ControllerCliente();
+            var clientes = controllerCliente.Read();
+            Dados dados = new Dados();
+
+            if (clientes.Count > 0)
+            {
+                foreach (var idx in clientes)
+                {
+                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
+                }
+                dtGrid.DataSource = dados.Clientes;
+            }
+            else
+            {
+                dtGrid.Enabled = false;
+            }
         }
     }
 }

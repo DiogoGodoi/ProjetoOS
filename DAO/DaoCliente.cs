@@ -97,14 +97,14 @@ namespace DAO {
             return clientes;
         }
 
-        public List<Cliente> Filter(decimal cnpj, string nome) {
+        public List<Cliente> Filter(decimal? cnpj, string nome) {
 
             Conexao Conexao = new Conexao();
             var conn = Conexao.Connection();
             try
             {
             conn.Open();
-            var query = $"SELECT * FROM Cliente WHERE cnpj LIKE '{cnpj}%' OR nome LIKE '{nome}%'";
+            var query = $"SELECT * FROM Cliente WHERE nome LIKE '{nome}%' AND Cnpj LIKE '{cnpj}%'";
             var cliente = conn.Query<Cliente>(query).ToList();
             return cliente;
 

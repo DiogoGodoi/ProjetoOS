@@ -29,7 +29,7 @@ namespace CONTROLLER {
             return dao.Read();
         }
 
-        public List<Cliente> Filter(decimal cnpj, string nome) 
+        public List<Cliente> Filter(decimal? cnpj, string nome) 
         {
             return dao.Filter(cnpj, nome); 
         }
