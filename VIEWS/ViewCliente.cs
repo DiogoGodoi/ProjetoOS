@@ -16,6 +16,7 @@ namespace VIEWS
             this.IsMdiContainer = true;
             panelTransition = panel3;
 
+
         }
         public void transicaoTela<T>(T tela) where T : Form, new()
         {

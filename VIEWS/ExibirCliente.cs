@@ -43,32 +43,28 @@ namespace VIEWS
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             if (dtGrid.Rows.Count > 1)
-            {
-                foreach (DataGridViewRow item in dtGrid.Rows)
-                {
-                    if (!item.IsNewRow) // Verifica se não é uma nova linha vazia
-                    {
-                        cnpj = item.Cells[0].Value.ToString();
-                        nome = item.Cells[1].Value.ToString();
-                        telefone = item.Cells[2].Value.ToString();
-                        rua = item.Cells[3].Value.ToString();
-                        numero = item.Cells[4].Value.ToString();
-                        bairro = item.Cells[5].Value.ToString();
-                        cidade = item.Cells[6].Value.ToString();
-                        siglaEs = item.Cells[7].Value.ToString();
-                    }
-                }
+            {   
+                DataGridViewRow linhaSelecionada = dtGrid.Rows[dtGrid.SelectedCells[0].RowIndex];
+                cnpj = linhaSelecionada.Cells[0].Value.ToString();
+                nome = linhaSelecionada.Cells[1].Value.ToString();
+                telefone = linhaSelecionada.Cells[2].Value.ToString();
+                rua = linhaSelecionada.Cells[3].Value.ToString();
+                numero = linhaSelecionada.Cells[4].Value.ToString();
+                bairro = linhaSelecionada.Cells[5].Value.ToString();
+                cidade = linhaSelecionada.Cells[6].Value.ToString();
+                siglaEs = linhaSelecionada.Cells[7].Value.ToString();
+                        
                 frmAlterarCliente _frmAlterarCliente = new frmAlterarCliente(cnpj, nome, telefone, rua, numero, bairro, cidade, siglaEs);
-                _frmAlterarCliente.Show();
-            }
+                _frmAlterarCliente.ShowDialog();
+                }
             else
             {
                 MessageBox.Show("Sem registros para alterar", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
         }
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+
             ControllerCliente controllerCliente = new ControllerCliente();
             var clientes = controllerCliente.Read();
             Dados dados = new Dados();
@@ -88,21 +84,18 @@ namespace VIEWS
         }
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            if(dtGrid.Rows.Count > 1) { 
-                foreach (DataGridViewRow item in dtGrid.Rows)
-                {
-                    if (!item.IsNewRow) // Verifica se não é uma nova linha vazia
-                    {
-                        cnpj = item.Cells[0].Value.ToString();
-                        nome = item.Cells[1].Value.ToString();
-                        telefone = item.Cells[2].Value.ToString();
-                        rua = item.Cells[3].Value.ToString();
-                        numero = item.Cells[4].Value.ToString();
-                        bairro = item.Cells[5].Value.ToString();
-                        cidade = item.Cells[6].Value.ToString();
-                        siglaEs = item.Cells[7].Value.ToString();
-                    }
-                }
+            if(dtGrid.Rows.Count > 1) {
+
+                DataGridViewRow linhaSelecionada = dtGrid.Rows[dtGrid.SelectedCells[0].RowIndex];
+                cnpj = linhaSelecionada.Cells[0].Value.ToString();
+                nome = linhaSelecionada.Cells[1].Value.ToString();
+                telefone = linhaSelecionada.Cells[2].Value.ToString();
+                rua = linhaSelecionada.Cells[3].Value.ToString();
+                numero = linhaSelecionada.Cells[4].Value.ToString();
+                bairro = linhaSelecionada.Cells[5].Value.ToString();
+                cidade = linhaSelecionada.Cells[6].Value.ToString();
+                siglaEs = linhaSelecionada.Cells[7].Value.ToString();
+      
                 frmViewDeletarCliente _frmAlterarCliente = new frmViewDeletarCliente(cnpj, nome, telefone, rua, numero, bairro, cidade, siglaEs);
                 _frmAlterarCliente.Show();
             }

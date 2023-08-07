@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarCliente));
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
@@ -52,15 +54,13 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelFooter = new System.Windows.Forms.Panel();
             this.btnInserir = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.panelHeader.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tlPanelLabels.SuspendLayout();
             this.tbTitulo.SuspendLayout();
             this.panelFooter.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -76,6 +76,28 @@
             this.panelHeader.Size = new System.Drawing.Size(740, 390);
             this.panelHeader.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pctLogo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(476, 77);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(20);
+            this.panel1.Size = new System.Drawing.Size(264, 276);
+            this.panel1.TabIndex = 9;
+            // 
+            // pctLogo
+            // 
+            this.pctLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pctLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
+            this.pctLogo.Location = new System.Drawing.Point(20, 20);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(224, 236);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctLogo.TabIndex = 9;
+            this.pctLogo.TabStop = false;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -86,9 +108,9 @@
             this.tableLayoutPanel2.Controls.Add(this.txtNumero, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.txtRua, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.txtTelefone, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtNome, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtCnpj, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cbEstado, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.txtNome, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(97, 77);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -393,28 +415,6 @@
             this.btnInserir.UseVisualStyleBackColor = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pctLogo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(476, 77);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(20);
-            this.panel1.Size = new System.Drawing.Size(264, 276);
-            this.panel1.TabIndex = 9;
-            // 
-            // pctLogo
-            // 
-            this.pctLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pctLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
-            this.pctLogo.Location = new System.Drawing.Point(20, 20);
-            this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(224, 236);
-            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pctLogo.TabIndex = 9;
-            this.pctLogo.TabStop = false;
-            // 
             // frmCadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,6 +428,8 @@
             this.Text = "CadastrarCliente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelHeader.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tlPanelLabels.ResumeLayout(false);
@@ -435,8 +437,6 @@
             this.tbTitulo.ResumeLayout(false);
             this.tbTitulo.PerformLayout();
             this.panelFooter.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
