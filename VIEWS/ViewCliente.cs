@@ -21,7 +21,7 @@ namespace VIEWS
         private void btnRelatorios_Click(object sender, EventArgs e)
         {
             ControllerCliente controllerCliente = new ControllerCliente();
-            var clientes = controllerCliente.Read();
+            var clientes = controllerCliente.Report();
             Dados dados = new Dados();
 
             if (clientes.Count > 0)

@@ -9,7 +9,7 @@ namespace MODEL {
     private string cidade { get; set; }
     private string siglaEs { get; set; }
     public Cliente(decimal cnpj, string nome, string telefone, string rua, string numero, string bairro, string cidade, string siglaEs)
-        {        
+    {        
     this.cnpj = cnpj;
     this.nome = nome;
     this.telefone = telefone;
@@ -27,7 +27,5 @@ namespace MODEL {
     public string GetBairro() { return this.bairro; }
     public string GetCidade() { return this.cidade; }
     public string GetSiglaEs() { return this.siglaEs; }
-
     }
-
 }
