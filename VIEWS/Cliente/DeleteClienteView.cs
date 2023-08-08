@@ -10,6 +10,7 @@ namespace VIEWS
         {
             InitializeComponent();
 
+            // Inicializa os campos do formulário com os valores passados como parâmetros.
             txtCnpj.Text = cnpj;
             txtNome.Text = nome;
             txtTelefone.Text = telefone;
@@ -19,29 +20,37 @@ namespace VIEWS
             txtCidade.Text = cidade;
             cbEstado.Text = siglaEs;
         }
+
+        // Manipula o evento de exclusão quando o botão é clicado.
         private void Delete(object sender, EventArgs e)
         {
+            // Cria uma instância do controlador de Cliente.
             ControllerCliente controllerCliente = new ControllerCliente();
 
+            // Exibe um diálogo de confirmação para excluir o registro.
             DialogResult resultado = MessageBox.Show("Deseja mesmo excluir o registro ?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-           
-            if(resultado == DialogResult.Yes)
+
+            if (resultado == DialogResult.Yes)
             {
+                // Chama o método de exclusão do controlador e obtém o resultado.
                 var retorno = controllerCliente.Delete(decimal.Parse(txtCnpj.Text));
 
-                if(retorno == true)
+                if (retorno == true)
                 {
+                    // Exibe uma mensagem de sucesso e fecha o formulário.
                     MessageBox.Show("Deletado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 else
                 {
+                    // Exibe uma mensagem de erro e fecha o formulário.
                     MessageBox.Show("Erro na exclusão", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Close();
                 }
             }
             else
             {
+                // Exibe uma mensagem de cancelamento e fecha o formulário.
                 MessageBox.Show("Operação cancelada", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

@@ -319,7 +319,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "ViewCliente";
             this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.CarregamentoTela);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelMenu.ResumeLayout(false);

@@ -11,44 +11,54 @@ namespace VIEWS
         {
             InitializeComponent();
         }
+
+        // Manipula o evento de inserção quando o botão é clicado.
         private void Insert(object sender, EventArgs e)
         {
             try
             {
+                // Cria uma instância do controlador de Cliente.
                 ControllerCliente controllerCliente = new ControllerCliente();
-                if(txtCnpj.Text.Length > 15)
+
+                // Validação do tamanho máximo dos campos antes da inserção.
+                if (txtCnpj.Text.Length > 15)
                 {
-                MessageBox.Show("Cnpj do cliente excede 15 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cnpj do cliente excede 15 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (txtNome.Text.Length > 45 )
+                else if (txtNome.Text.Length > 45)
                 {
-                MessageBox.Show("Nome do cliente excede 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nome do cliente excede 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if(txtTelefone.Text.Length > 18)
+                else if (txtTelefone.Text.Length > 18)
                 {
-                MessageBox.Show("Telefone do cliente excede 18 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Telefone do cliente excede 18 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (txtRua.Text.Length > 45) 
+                else if (txtRua.Text.Length > 45)
                 {
-                MessageBox.Show("Rua do cliente excede 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Rua do cliente excede 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (txtNumero.Text.Length > 7)
                 {
-                MessageBox.Show("Nímero da residencia do cliente excede 7 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Número da residência do cliente excede 7 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if(txtCidade.Text.Length > 35)
+                else if (txtCidade.Text.Length > 35)
                 {
-                MessageBox.Show("Cidade do cliente excede 35 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }else if(cbEstado.Text.Length > 2)
+                    MessageBox.Show("Cidade do cliente excede 35 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (cbEstado.Text.Length > 2)
                 {
-                MessageBox.Show("A sigla do estado só pode ter 2 caracteres do cliente excede 35 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("A sigla do estado só pode ter 2 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
+                    // Cria um objeto Cliente com os dados inseridos no formulário.
                     MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
+
+                    // Chama o método de inserção do controlador e obtém o resultado.
                     var retorno = controllerCliente.Insert(cliente);
-                    if(retorno == true)
+                    if (retorno == true)
                     {
+                        // Exibe uma mensagem de sucesso, limpa os campos do formulário e define o foco no campo CNPJ.
                         MessageBox.Show("Cadastrado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtCnpj.Text = string.Empty;
                         txtNome.Text = string.Empty;
@@ -62,13 +72,15 @@ namespace VIEWS
                     }
                     else
                     {
+                        // Exibe uma mensagem de erro.
                         MessageBox.Show("Erro no cadastro", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     }
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-            MessageBox.Show("Por favor insira os dados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Exibe uma mensagem de erro caso ocorra uma exceção.
+                MessageBox.Show("Por favor insira os dados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

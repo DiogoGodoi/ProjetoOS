@@ -28,34 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rpv1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // rpv1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "VIEWS.Cliente.Relatorio.RelClientes.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 0;
+            this.rpv1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpv1.LocalReport.ReportEmbeddedResource = "VIEWS.Cliente.Relatorio.RelClientes.rdlc";
+            this.rpv1.Location = new System.Drawing.Point(0, 0);
+            this.rpv1.Name = "rpv1";
+            this.rpv1.ServerReport.BearerToken = null;
+            this.rpv1.Size = new System.Drawing.Size(800, 450);
+            this.rpv1.TabIndex = 0;
             // 
             // frmRelatorioCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.rpv1);
             this.Name = "frmRelatorioCliente";
             this.Text = "Lista de clientes";
-            this.Load += new System.EventHandler(this.RelatorioCliente_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rpv1;
     }
 }
