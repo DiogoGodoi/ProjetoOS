@@ -48,11 +48,15 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbPanelTitulo = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tbPanelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -115,11 +119,12 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 526);
+            this.panel2.Location = new System.Drawing.Point(0, 532);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(927, 51);
+            this.panel2.Size = new System.Drawing.Size(927, 45);
             this.panel2.TabIndex = 18;
             // 
             // panel4
@@ -128,7 +133,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(200, 85);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(727, 441);
+            this.panel4.Size = new System.Drawing.Size(727, 447);
             this.panel4.TabIndex = 20;
             // 
             // panel3
@@ -139,7 +144,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 85);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 441);
+            this.panel3.Size = new System.Drawing.Size(200, 447);
             this.panel3.TabIndex = 19;
             // 
             // tableLayoutPanel1
@@ -163,7 +168,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(196, 390);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(196, 396);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
             // btnCadastrar
@@ -176,7 +181,7 @@
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCadastrar.Location = new System.Drawing.Point(102, 5);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(89, 56);
+            this.btnCadastrar.Size = new System.Drawing.Size(89, 57);
             this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -192,7 +197,7 @@
             this.btnExibir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExibir.Location = new System.Drawing.Point(5, 5);
             this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(89, 56);
+            this.btnExibir.Size = new System.Drawing.Size(89, 57);
             this.btnExibir.TabIndex = 0;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = false;
@@ -206,9 +211,9 @@
             this.btnPesquisar.FlatAppearance.BorderSize = 2;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPesquisar.Location = new System.Drawing.Point(5, 69);
+            this.btnPesquisar.Location = new System.Drawing.Point(5, 70);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(89, 56);
+            this.btnPesquisar.Size = new System.Drawing.Size(89, 57);
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
@@ -222,9 +227,9 @@
             this.btnRelatorios.FlatAppearance.BorderSize = 2;
             this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRelatorios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRelatorios.Location = new System.Drawing.Point(102, 69);
+            this.btnRelatorios.Location = new System.Drawing.Point(102, 70);
             this.btnRelatorios.Name = "btnRelatorios";
-            this.btnRelatorios.Size = new System.Drawing.Size(89, 56);
+            this.btnRelatorios.Size = new System.Drawing.Size(89, 57);
             this.btnRelatorios.TabIndex = 5;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.UseVisualStyleBackColor = false;
@@ -234,7 +239,7 @@
             // 
             this.panel5.Controls.Add(this.btnSair);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 390);
+            this.panel5.Location = new System.Drawing.Point(0, 396);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(196, 47);
             this.panel5.TabIndex = 0;
@@ -266,17 +271,41 @@
             // 
             // tbPanelTitulo
             // 
-            this.tbPanelTitulo.ColumnCount = 1;
-            this.tbPanelTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbPanelTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbPanelTitulo.ColumnCount = 2;
+            this.tbPanelTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
+            this.tbPanelTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbPanelTitulo.Controls.Add(this.pictureBox1, 0, 0);
+            this.tbPanelTitulo.Controls.Add(this.lblTitulo, 1, 0);
             this.tbPanelTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbPanelTitulo.Location = new System.Drawing.Point(0, 0);
             this.tbPanelTitulo.Name = "tbPanelTitulo";
             this.tbPanelTitulo.RowCount = 1;
-            this.tbPanelTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbPanelTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbPanelTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tbPanelTitulo.Size = new System.Drawing.Size(923, 57);
             this.tbPanelTitulo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(190, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(199, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(721, 57);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Modulo - Clientes";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmViewCliente
             // 
@@ -297,6 +326,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.tbPanelTitulo.ResumeLayout(false);
+            this.tbPanelTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +355,7 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tbPanelTitulo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
