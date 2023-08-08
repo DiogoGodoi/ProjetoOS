@@ -11,7 +11,6 @@ namespace VIEWS
         {
             InitializeComponent();
         }
-
         private void btnInserir_Click(object sender, EventArgs e)
         {
             try
