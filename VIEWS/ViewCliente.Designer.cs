@@ -251,6 +251,7 @@
             this.btnRelatorios.TabIndex = 5;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.UseVisualStyleBackColor = false;
+            this.btnRelatorios.Click += new System.EventHandler(this.btnRelatorios_Click);
             // 
             // panel5
             // 

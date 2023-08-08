@@ -38,9 +38,9 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCnpj = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.tlPanelLabels = new System.Windows.Forms.TableLayoutPanel();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
@@ -177,16 +177,6 @@
             this.txtTelefone.TabIndex = 2;
             this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtNome
-            // 
-            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(3, 38);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(373, 25);
-            this.txtNome.TabIndex = 1;
-            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtCnpj
             // 
             this.txtCnpj.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -238,6 +228,16 @@
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(373, 27);
             this.cbEstado.TabIndex = 7;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(3, 38);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(373, 25);
+            this.txtNome.TabIndex = 1;
+            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tlPanelLabels
             // 
@@ -405,7 +405,7 @@
             this.btnInserir.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnInserir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnInserir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnInserir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnInserir.Location = new System.Drawing.Point(0, 0);
             this.btnInserir.Name = "btnInserir";

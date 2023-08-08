@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CONTROLLER;
+using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VIEWS
@@ -66,6 +68,30 @@ namespace VIEWS
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             transicaoTela(_viewPesquisarCliente);
+        }
+
+        private void btnRelatorios_Click(object sender, EventArgs e)
+        {
+            ControllerCliente controllerCliente = new ControllerCliente();
+            var clientes = controllerCliente.Read();
+            Dados dados = new Dados();
+
+            if (clientes.Count > 0)
+            {
+                foreach (var idx in clientes)
+                {
+                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
+                }
+
+                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
+                _frmRelatorioCliente.ShowDialog();  
+            }
+            else
+            {
+                dados.Clientes.Rows.Add("Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados");
+                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
+                _frmRelatorioCliente.ShowDialog();
+            }
         }
     }
 }
