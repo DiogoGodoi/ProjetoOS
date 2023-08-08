@@ -1,6 +1,6 @@
 ﻿namespace VIEWS
 {
-    partial class frmAlterarCliente
+    partial class UpdateClienteView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlterarCliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateClienteView));
             this.btnAlterar = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCidade = new System.Windows.Forms.TextBox();
@@ -414,14 +414,14 @@
             this.pctLogo.TabIndex = 9;
             this.pctLogo.TabStop = false;
             // 
-            // frmAlterarCliente
+            // UpdateClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "frmAlterarCliente";
+            this.Name = "UpdateClienteView";
             this.Padding = new System.Windows.Forms.Padding(30);
             this.Text = "AlterarCliente";
             this.tableLayoutPanel2.ResumeLayout(false);

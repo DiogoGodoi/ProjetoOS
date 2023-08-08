@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace VIEWS
 {
-    public partial class frmPesquisarClienteView : Form
+    public partial class FilterClienteView : Form
     {
-        public frmPesquisarClienteView()
+        public FilterClienteView()
         {
             InitializeComponent();
 

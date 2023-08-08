@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace VIEWS
 {
-    public partial class frmViewDeletarCliente : Form
+    public partial class DeleteClienteView : Form
     {
-        public frmViewDeletarCliente(string cnpj, string nome, string telefone, string rua, string numero, string bairro, string cidade, string siglaEs)
+        public DeleteClienteView(string cnpj, string nome, string telefone, string rua, string numero, string bairro, string cidade, string siglaEs)
         {
             InitializeComponent();
 

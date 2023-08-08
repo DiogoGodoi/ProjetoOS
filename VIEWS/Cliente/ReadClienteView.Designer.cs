@@ -1,6 +1,6 @@
 ﻿namespace VIEWS
 {
-    partial class frmExibirCliente
+    partial class ReadClienteView
     {
         /// <summary>
         /// Required designer variable.
@@ -172,7 +172,7 @@
             this.dtGrid.Size = new System.Drawing.Size(780, 305);
             this.dtGrid.TabIndex = 3;
             // 
-            // frmExibirCliente
+            // ReadClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,7 +182,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmExibirCliente";
+            this.Name = "ReadClienteView";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "ExibirForumulario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace VIEWS
 {
-    public partial class frmCadastrarCliente : Form
+    public partial class InsertClienteView : Form
     {
-        public frmCadastrarCliente()
+        public InsertClienteView()
         {
             InitializeComponent();
         }

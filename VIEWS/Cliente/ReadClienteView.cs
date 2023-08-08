@@ -5,9 +5,9 @@ using VIEWS.Cliente.Relatorio;
 
 namespace VIEWS
 {
-    public partial class frmExibirCliente : Form
+    public partial class ReadClienteView : Form
     {
-        public frmExibirCliente()
+        public ReadClienteView()
         {
             InitializeComponent();
 
@@ -44,7 +44,7 @@ namespace VIEWS
                 var cidade = linhaSelecionada.Cells[6].Value.ToString();
                 var siglaEs = linhaSelecionada.Cells[7].Value.ToString();
                         
-                frmAlterarCliente _frmAlterarCliente = new frmAlterarCliente(cnpj, nome, telefone, rua, numero, bairro, cidade, siglaEs);
+                UpdateClienteView _frmAlterarCliente = new UpdateClienteView(cnpj, nome, telefone, rua, numero, bairro, cidade, siglaEs);
                 _frmAlterarCliente.ShowDialog();
                 }
             else
@@ -86,7 +86,7 @@ namespace VIEWS
                 var cidade = linhaSelecionada.Cells[6].Value.ToString();
                 var siglaEs = linhaSelecionada.Cells[7].Value.ToString();
       
-                frmViewDeletarCliente _frmAlterarCliente = new frmViewDeletarCliente(cnpj, nome, telefone, rua, numero, bairro, cidade, siglaEs);
+                DeleteClienteView _frmAlterarCliente = new DeleteClienteView(cnpj, nome, telefone, rua, numero, bairro, cidade, siglaEs);
                 _frmAlterarCliente.Show();
             }
             else

@@ -5,14 +5,14 @@ using System.Windows.Forms;
 
 namespace VIEWS
 {
-    public partial class frmViewCliente : Form
+    public partial class ViewCliente : Form
     {
-        frmExibirCliente _viewExibirCliente { get; set; }
-        frmCadastrarCliente _viewCadastrarCliente { get; set; }
-        frmPesquisarClienteView _viewPesquisarCliente { get; set; } 
+        ReadClienteView _viewExibirCliente { get; set; }
+        InsertClienteView _viewCadastrarCliente { get; set; }
+        FilterClienteView _viewPesquisarCliente { get; set; } 
 
         public Panel slideMenu = new Panel();
-        public frmViewCliente()
+        public ViewCliente()
         {
             InitializeComponent();
             this.IsMdiContainer = true;

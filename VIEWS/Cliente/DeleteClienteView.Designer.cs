@@ -1,6 +1,6 @@
 ﻿namespace VIEWS
 {
-    partial class frmViewDeletarCliente
+    partial class DeleteClienteView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewDeletarCliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteClienteView));
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -422,13 +422,13 @@
             this.btnDeletar.UseVisualStyleBackColor = false;
             this.btnDeletar.Click += new System.EventHandler(this.Delete);
             // 
-            // frmViewDeletarCliente
+            // DeleteClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelHeader);
-            this.Name = "frmViewDeletarCliente";
+            this.Name = "DeleteClienteView";
             this.Padding = new System.Windows.Forms.Padding(30);
             this.Text = "ViewDeletarCliene";
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
