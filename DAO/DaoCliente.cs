@@ -8,12 +8,15 @@ using MODEL;
 
 namespace DAO {
     public class DaoCliente {
-        public DaoCliente() {
-   
+
+        Conexao conexao { get; set; }
+
+        public DaoCliente() 
+        {
+        conexao = new Conexao();
         }
         public bool Insert(Cliente Cliente) {
 
-            Conexao conexao = new Conexao();
             var conn = conexao.Connection();
             try
             {
@@ -52,7 +55,6 @@ namespace DAO {
         }
         public bool Update(Cliente Cliente, decimal cnpj) {
 
-            Conexao conexao = new Conexao();
             var conn = conexao.Connection();
             try
             {
@@ -81,7 +83,6 @@ namespace DAO {
         }
         public bool Delete(decimal cnpj) {
 
-            Conexao conexao = new Conexao();
             var conn = conexao.Connection();
             try
             {
@@ -108,8 +109,7 @@ namespace DAO {
         }
         public List<Cliente> Read() {
            
-            Conexao Conexao = new Conexao();
-            var conn = Conexao.Connection();
+            var conn = conexao.Connection();
             try
             {
                 conn.Open();
@@ -129,8 +129,7 @@ namespace DAO {
         }
         public List<Cliente> Filter(decimal? cnpj, string nome) {
 
-            Conexao Conexao = new Conexao();
-            var conn = Conexao.Connection();
+            var conn = conexao.Connection();
             try
             {
                 conn.Open();
@@ -150,8 +149,7 @@ namespace DAO {
         }
         public List<Cliente> report() {
 
-            Conexao Conexao = new Conexao();
-            var conn = Conexao.Connection();
+            var conn = conexao.Connection();
             try
             {
                 conn.Open();
