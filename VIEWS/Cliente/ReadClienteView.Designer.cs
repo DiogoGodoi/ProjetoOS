@@ -85,7 +85,7 @@
             this.btnAlterar.TabIndex = 0;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            this.btnAlterar.Click += new System.EventHandler(this.Update);
             // 
             // btnDeletar
             // 
@@ -101,7 +101,7 @@
             this.btnDeletar.TabIndex = 2;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = false;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            this.btnDeletar.Click += new System.EventHandler(this.Delete);
             // 
             // tableLayoutPanel2
             // 
@@ -140,7 +140,7 @@
             this.btnAtualizar.TabIndex = 3;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            this.btnAtualizar.Click += new System.EventHandler(this.Read);
             // 
             // dtGrid
             // 
@@ -186,7 +186,7 @@
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "ExibirForumulario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ExibirCliente_Load);
+            this.Load += new System.EventHandler(this.Read);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

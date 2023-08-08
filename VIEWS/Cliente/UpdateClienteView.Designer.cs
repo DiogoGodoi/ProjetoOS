@@ -76,7 +76,7 @@
             this.btnAlterar.TabIndex = 0;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            this.btnAlterar.Click += new System.EventHandler(this.Update);
             // 
             // tableLayoutPanel2
             // 
@@ -424,7 +424,6 @@
             this.Name = "frmAlterarCliente";
             this.Padding = new System.Windows.Forms.Padding(30);
             this.Text = "AlterarCliente";
-            this.Load += new System.EventHandler(this.frmAlterarCliente_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tlPanelLabels.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace VIEWS
 {
-    partial class frmViewDeletarCliente
+    partial class frmCadastrarCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewDeletarCliente));
-            this.pctLogo = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarCliente));
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCnpj = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.tlPanelLabels = new System.Windows.Forms.TableLayoutPanel();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
@@ -53,15 +53,38 @@
             this.tbTitulo = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelFooter = new System.Windows.Forms.Panel();
-            this.btnDeletar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
+            this.btnInserir = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tlPanelLabels.SuspendLayout();
             this.tbTitulo.SuspendLayout();
             this.panelFooter.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.Controls.Add(this.panel1);
+            this.panelHeader.Controls.Add(this.tableLayoutPanel2);
+            this.panelHeader.Controls.Add(this.tlPanelLabels);
+            this.panelHeader.Controls.Add(this.tbTitulo);
+            this.panelHeader.Controls.Add(this.panelFooter);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelHeader.Location = new System.Drawing.Point(30, 30);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(740, 390);
+            this.panelHeader.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pctLogo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(476, 77);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(20);
+            this.panel1.Size = new System.Drawing.Size(264, 276);
+            this.panel1.TabIndex = 9;
             // 
             // pctLogo
             // 
@@ -75,29 +98,6 @@
             this.pctLogo.TabIndex = 9;
             this.pctLogo.TabStop = false;
             // 
-            // panelHeader
-            // 
-            this.panelHeader.Controls.Add(this.panel1);
-            this.panelHeader.Controls.Add(this.tableLayoutPanel2);
-            this.panelHeader.Controls.Add(this.tlPanelLabels);
-            this.panelHeader.Controls.Add(this.tbTitulo);
-            this.panelHeader.Controls.Add(this.panelFooter);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHeader.Location = new System.Drawing.Point(30, 30);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(740, 390);
-            this.panelHeader.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pctLogo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(476, 77);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(20);
-            this.panel1.Size = new System.Drawing.Size(264, 276);
-            this.panel1.TabIndex = 8;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -108,9 +108,9 @@
             this.tableLayoutPanel2.Controls.Add(this.txtNumero, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.txtRua, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.txtTelefone, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtNome, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtCnpj, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cbEstado, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.txtNome, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(97, 77);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -123,13 +123,13 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(379, 276);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // txtCidade
             // 
             this.txtCidade.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCidade.Enabled = false;
             this.txtCidade.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(3, 208);
             this.txtCidade.Name = "txtCidade";
@@ -140,7 +140,6 @@
             // txtBairro
             // 
             this.txtBairro.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBairro.Enabled = false;
             this.txtBairro.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairro.Location = new System.Drawing.Point(3, 174);
             this.txtBairro.Name = "txtBairro";
@@ -151,7 +150,6 @@
             // txtNumero
             // 
             this.txtNumero.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNumero.Enabled = false;
             this.txtNumero.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(3, 140);
             this.txtNumero.Name = "txtNumero";
@@ -162,7 +160,6 @@
             // txtRua
             // 
             this.txtRua.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtRua.Enabled = false;
             this.txtRua.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRua.Location = new System.Drawing.Point(3, 106);
             this.txtRua.Name = "txtRua";
@@ -173,7 +170,6 @@
             // txtTelefone
             // 
             this.txtTelefone.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtTelefone.Enabled = false;
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.Location = new System.Drawing.Point(3, 72);
             this.txtTelefone.Name = "txtTelefone";
@@ -181,21 +177,9 @@
             this.txtTelefone.TabIndex = 2;
             this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtNome
-            // 
-            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNome.Enabled = false;
-            this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(3, 38);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(373, 25);
-            this.txtNome.TabIndex = 1;
-            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtCnpj
             // 
             this.txtCnpj.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCnpj.Enabled = false;
             this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCnpj.Location = new System.Drawing.Point(3, 4);
             this.txtCnpj.Name = "txtCnpj";
@@ -208,7 +192,6 @@
             this.cbEstado.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbEstado.DropDownHeight = 100;
             this.cbEstado.DropDownWidth = 30;
-            this.cbEstado.Enabled = false;
             this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbEstado.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
@@ -245,6 +228,16 @@
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(373, 27);
             this.cbEstado.TabIndex = 7;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(3, 38);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(373, 25);
+            this.txtNome.TabIndex = 1;
+            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tlPanelLabels
             // 
@@ -395,46 +388,48 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(732, 75);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Deletar cliente";
+            this.lblTitulo.Text = "Cadastrar Cliente";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelFooter
             // 
-            this.panelFooter.Controls.Add(this.btnDeletar);
+            this.panelFooter.Controls.Add(this.btnInserir);
             this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFooter.Location = new System.Drawing.Point(0, 353);
             this.panelFooter.Name = "panelFooter";
             this.panelFooter.Size = new System.Drawing.Size(740, 37);
             this.panelFooter.TabIndex = 3;
             // 
-            // btnDeletar
+            // btnInserir
             // 
-            this.btnDeletar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDeletar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeletar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDeletar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeletar.Location = new System.Drawing.Point(0, 0);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(740, 37);
-            this.btnDeletar.TabIndex = 0;
-            this.btnDeletar.Text = "Excluir";
-            this.btnDeletar.UseVisualStyleBackColor = false;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            this.btnInserir.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnInserir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnInserir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnInserir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnInserir.Location = new System.Drawing.Point(0, 0);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(740, 37);
+            this.btnInserir.TabIndex = 0;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = false;
+            this.btnInserir.Click += new System.EventHandler(this.Insert);
             // 
-            // frmViewDeletarCliente
+            // frmCadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelHeader);
-            this.Name = "frmViewDeletarCliente";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "frmCadastrarCliente";
             this.Padding = new System.Windows.Forms.Padding(30);
-            this.Text = "ViewDeletarCliene";
-            this.Load += new System.EventHandler(this.frmViewDeletarCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CadastrarCliente";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelHeader.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tlPanelLabels.ResumeLayout(false);
@@ -448,18 +443,11 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Panel panelHeader;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.TextBox txtRua;
-        private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtCnpj;
-        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.Panel panelFooter;
+        private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.TableLayoutPanel tbTitulo;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TableLayoutPanel tlPanelLabels;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblCidade;
@@ -469,9 +457,16 @@
         private System.Windows.Forms.Label lblTelfone;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCnpj;
-        private System.Windows.Forms.TableLayoutPanel tbTitulo;
-        private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Panel panelFooter;
-        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.TextBox txtRua;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtCnpj;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pctLogo;
     }
 }

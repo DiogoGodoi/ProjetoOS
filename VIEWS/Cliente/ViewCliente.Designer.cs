@@ -38,7 +38,7 @@
             this.emitirRelatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnExibir = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -84,21 +84,21 @@
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
-            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.InsertStrip);
             // 
             // deletarToolStripMenuItem
             // 
             this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
-            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.deletarToolStripMenuItem.Text = "Pesquisar";
-            this.deletarToolStripMenuItem.Click += new System.EventHandler(this.pesquisarToolStripMenuItem_Click);
+            this.deletarToolStripMenuItem.Click += new System.EventHandler(this.FilterStrip);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // relatoriosToolStripMenuItem
@@ -113,9 +113,9 @@
             // emitirRelatórioToolStripMenuItem
             // 
             this.emitirRelatórioToolStripMenuItem.Name = "emitirRelatórioToolStripMenuItem";
-            this.emitirRelatórioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.emitirRelatórioToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.emitirRelatórioToolStripMenuItem.Text = "Emitir Relatório";
-            this.emitirRelatórioToolStripMenuItem.Click += new System.EventHandler(this.emitirRelatórioToolStripMenuItem_Click);
+            this.emitirRelatórioToolStripMenuItem.Click += new System.EventHandler(this.ReportStrip);
             // 
             // panel2
             // 
@@ -136,16 +136,16 @@
             this.panel4.Size = new System.Drawing.Size(727, 447);
             this.panel4.TabIndex = 20;
             // 
-            // panel3
+            // panelMenu
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.tableLayoutPanel1);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 85);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 447);
-            this.panel3.TabIndex = 19;
+            this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelMenu.Controls.Add(this.tableLayoutPanel1);
+            this.panelMenu.Controls.Add(this.panel5);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 85);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(200, 447);
+            this.panelMenu.TabIndex = 19;
             // 
             // tableLayoutPanel1
             // 
@@ -185,7 +185,7 @@
             this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.InsertView);
+            this.btnCadastrar.Click += new System.EventHandler(this.Insert);
             // 
             // btnExibir
             // 
@@ -201,7 +201,7 @@
             this.btnExibir.TabIndex = 0;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = false;
-            this.btnExibir.Click += new System.EventHandler(this.ReadView);
+            this.btnExibir.Click += new System.EventHandler(this.Read);
             // 
             // btnPesquisar
             // 
@@ -217,7 +217,7 @@
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            this.btnPesquisar.Click += new System.EventHandler(this.Filter);
             // 
             // btnRelatorios
             // 
@@ -233,7 +233,7 @@
             this.btnRelatorios.TabIndex = 5;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.UseVisualStyleBackColor = false;
-            this.btnRelatorios.Click += new System.EventHandler(this.btnRelatorios_Click);
+            this.btnRelatorios.Click += new System.EventHandler(this.Report);
             // 
             // panel5
             // 
@@ -313,16 +313,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 577);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmViewCliente";
             this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.ViewCliente_Load);
+            this.Load += new System.EventHandler(this.CarregamentoTela);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -344,7 +344,7 @@
         private System.Windows.Forms.ToolStripMenuItem emitirRelatórioToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnRelatorios;

@@ -1,5 +1,4 @@
 ﻿using CONTROLLER;
-using MODEL;
 using System;
 using System.Windows.Forms;
 
@@ -7,28 +6,20 @@ namespace VIEWS
 {
     public partial class frmAlterarCliente : Form
     {
-        private string cnpj { get; set; }
-        private string nome { get; set; }
-        private string telefone { get; set; }
-        private string rua { get; set; }
-        private string numero { get; set; }
-        private string bairro { get; set; }
-        private string cidade { get; set; }
-        private string siglaEs { get; set; }
         public frmAlterarCliente(string cnpj, string nome, string telefone, string rua, string numero, string bairro, string cidade, string siglaEs)
         {
             InitializeComponent();
-            this.cnpj = cnpj;
-            this.nome = nome;
-            this.telefone = telefone;
-            this.rua = rua;
-            this.numero = numero;
-            this.bairro = bairro;
-            this.cidade = cidade;
-            this.siglaEs = siglaEs;
-        }
 
-        private void btnAlterar_Click(object sender, EventArgs e)
+            txtCnpj.Text = cnpj;
+            txtNome.Text = nome;
+            txtTelefone.Text = telefone;
+            txtRua.Text = rua;
+            txtNumero.Text = numero;
+            txtBairro.Text = bairro;
+            txtCidade.Text = cidade;
+            cbEstado.Text = siglaEs;
+        }
+        private void Update(object sender, EventArgs e)
         {
             ControllerCliente controllerCliente = new ControllerCliente();
             if (txtCnpj.Text.Length > 15)
@@ -81,18 +72,6 @@ namespace VIEWS
                     MessageBox.Show("Erro na alteracao", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void frmAlterarCliente_Load(object sender, EventArgs e)
-        {
-            txtCnpj.Text = cnpj;
-            txtNome.Text = nome;
-            txtTelefone.Text = telefone;
-            txtRua.Text = rua;
-            txtNumero.Text = numero;
-            txtBairro.Text = bairro;
-            txtCidade.Text = cidade;
-            cbEstado.Text = siglaEs;
         }
     }
 }

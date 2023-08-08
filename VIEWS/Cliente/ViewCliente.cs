@@ -11,67 +11,19 @@ namespace VIEWS
         frmCadastrarCliente _viewCadastrarCliente { get; set; }
         frmPesquisarClienteView _viewPesquisarCliente { get; set; } 
 
-        public Panel panelTransition = new Panel();
+        public Panel slideMenu = new Panel();
         public frmViewCliente()
         {
             InitializeComponent();
             this.IsMdiContainer = true;
-            panelTransition = panel3;
+            slideMenu = panelMenu;
         }
-        private void btnRelatorios_Click(object sender, EventArgs e)
-        {
-            ControllerCliente controllerCliente = new ControllerCliente();
-            var clientes = controllerCliente.Report();
-            Dados dados = new Dados();
-
-            if (clientes.Count > 0)
-            {
-                foreach (var idx in clientes)
-                {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
-                }
-
-                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
-                _frmRelatorioCliente.ShowDialog();  
-            }
-            else
-            {
-                dados.Clientes.Rows.Add("Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados");
-                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
-                _frmRelatorioCliente.ShowDialog();
-            }
-        }
-
-        private void emitirRelatórioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ControllerCliente controllerCliente = new ControllerCliente();
-            var clientes = controllerCliente.Read();
-            Dados dados = new Dados();
-
-            if (clientes.Count > 0)
-            {
-                foreach (var idx in clientes)
-                {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
-                }
-
-                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
-                _frmRelatorioCliente.ShowDialog();
-            }
-            else
-            {
-                dados.Clientes.Rows.Add("Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados");
-                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
-                _frmRelatorioCliente.ShowDialog();
-            }
-        }
-
         public void transicaoTela<T>(T tela) where T : Form, new()
         {
 
             if (ActiveMdiChild != null)
             {
-                foreach (T item in panel3.Controls)
+                foreach (T item in panelMenu.Controls)
                 {
                     item.Close();
                 }
@@ -96,33 +48,73 @@ namespace VIEWS
                 tela.Show();
             };
         }
-
-        private void ReadView(object sender, EventArgs e)
-        {
-            transicaoTela(_viewExibirCliente);
-        }
-
-        private void InsertView(object sender, EventArgs e)
+        private void Insert(object sender, EventArgs e)
         {
             transicaoTela(_viewCadastrarCliente);
         }
-
-        private void ViewCliente_Load(object sender, EventArgs e)
+        private void Read(object sender, EventArgs e)
         {
             transicaoTela(_viewExibirCliente);
         }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        private void Filter(object sender, EventArgs e)
         {
             transicaoTela(_viewPesquisarCliente);
         }
+        private void Report(object sender, EventArgs e)
+        {
+            ControllerCliente controllerCliente = new ControllerCliente();
+            var clientes = controllerCliente.Report();
+            Dados dados = new Dados();
 
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+            if (clientes.Count > 0)
+            {
+                foreach (var idx in clientes)
+                {
+                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
+                }
+
+                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
+                _frmRelatorioCliente.ShowDialog();
+            }
+            else
+            {
+                dados.Clientes.Rows.Add("Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados");
+                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
+                _frmRelatorioCliente.ShowDialog();
+            }
+        }
+        private void ReportStrip(object sender, EventArgs e)
+        {
+            ControllerCliente controllerCliente = new ControllerCliente();
+            var clientes = controllerCliente.Read();
+            Dados dados = new Dados();
+
+            if (clientes.Count > 0)
+            {
+                foreach (var idx in clientes)
+                {
+                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
+                }
+
+                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
+                _frmRelatorioCliente.ShowDialog();
+            }
+            else
+            {
+                dados.Clientes.Rows.Add("Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados");
+                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
+                _frmRelatorioCliente.ShowDialog();
+            }
+        }
+        private void CarregamentoTela(object sender, EventArgs e)
+        {
+            transicaoTela(_viewExibirCliente);
+        }
+        private void InsertStrip(object sender, EventArgs e)
         {
             transicaoTela(_viewCadastrarCliente);
         }
-
-        private void pesquisarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FilterStrip(object sender, EventArgs e)
         {
             transicaoTela(_viewPesquisarCliente);
         }

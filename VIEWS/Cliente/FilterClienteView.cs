@@ -10,11 +10,9 @@ namespace VIEWS
         public frmPesquisarClienteView()
         {
             InitializeComponent();
-            dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
 
-        private void frmPesquisarClienteView_Load(object sender, EventArgs e)
-        {
+            dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             ControllerCliente controllerCliente = new ControllerCliente();
             var clientes = controllerCliente.Read();
             Dados dados = new Dados();
@@ -32,8 +30,7 @@ namespace VIEWS
                 dtGrid.Enabled = false;
             }
         }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        private void Filter(object sender, EventArgs e)
         {
             ControllerCliente controllerCliente = new ControllerCliente();
             Dados dados = new Dados();
@@ -54,8 +51,7 @@ namespace VIEWS
             dtGrid.DataSource = dados.Clientes;
 
         }
-
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        private void Read(object sender, EventArgs e)
         {
             ControllerCliente controllerCliente = new ControllerCliente();
             var clientes = controllerCliente.Read();

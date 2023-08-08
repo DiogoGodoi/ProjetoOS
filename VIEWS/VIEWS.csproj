@@ -71,17 +71,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente\AlterarCliente.cs">
+    <Compile Include="Cliente\UpdateClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente\AlterarCliente.Designer.cs">
-      <DependentUpon>AlterarCliente.cs</DependentUpon>
+    <Compile Include="Cliente\UpdateClienteView.Designer.cs">
+      <DependentUpon>UpdateClienteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente\CadastrarCliente.cs">
+    <Compile Include="Cliente\InsertClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente\CadastrarCliente.Designer.cs">
-      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    <Compile Include="Cliente\InsertClienteView.Designer.cs">
+      <DependentUpon>InsertClienteView.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente\Relatorio\Dados.cs">
       <DependentUpon>Dados.xsd</DependentUpon>
@@ -91,25 +91,25 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Cliente\ExibirCliente.cs">
+    <Compile Include="Cliente\ReadClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente\ExibirCliente.Designer.cs">
-      <DependentUpon>ExibirCliente.cs</DependentUpon>
+    <Compile Include="Cliente\ReadClienteView.Designer.cs">
+      <DependentUpon>ReadClienteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente\PesquisarClienteView.cs">
+    <Compile Include="Cliente\FilterClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente\PesquisarClienteView.Designer.cs">
-      <DependentUpon>PesquisarClienteView.cs</DependentUpon>
+    <Compile Include="Cliente\FilterClienteView.Designer.cs">
+      <DependentUpon>FilterClienteView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Cliente\Relatorio\RelatorioCliente.cs">
+    <Compile Include="Cliente\Relatorio\ReportClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente\Relatorio\RelatorioCliente.Designer.cs">
-      <DependentUpon>RelatorioCliente.cs</DependentUpon>
+    <Compile Include="Cliente\Relatorio\ReportClienteView.Designer.cs">
+      <DependentUpon>ReportClienteView.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente\ViewCliente.cs">
       <SubType>Form</SubType>
@@ -117,23 +117,23 @@
     <Compile Include="Cliente\ViewCliente.Designer.cs">
       <DependentUpon>ViewCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente\ViewDeletarCliente.cs">
+    <Compile Include="Cliente\DeleteClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente\ViewDeletarCliente.Designer.cs">
-      <DependentUpon>ViewDeletarCliente.cs</DependentUpon>
+    <Compile Include="Cliente\DeleteClienteView.Designer.cs">
+      <DependentUpon>DeleteClienteView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cliente\AlterarCliente.resx">
-      <DependentUpon>AlterarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente\UpdateClienteView.resx">
+      <DependentUpon>UpdateClienteView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente\CadastrarCliente.resx">
-      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente\InsertClienteView.resx">
+      <DependentUpon>InsertClienteView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente\ExibirCliente.resx">
-      <DependentUpon>ExibirCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente\ReadClienteView.resx">
+      <DependentUpon>ReadClienteView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente\PesquisarClienteView.resx">
-      <DependentUpon>PesquisarClienteView.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente\FilterClienteView.resx">
+      <DependentUpon>FilterClienteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,15 +145,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Cliente\Relatorio\RelatorioCliente.resx">
-      <DependentUpon>RelatorioCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente\Relatorio\ReportClienteView.resx">
+      <DependentUpon>ReportClienteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\Relatorio\RelClientes.rdlc" />
     <EmbeddedResource Include="Cliente\ViewCliente.resx">
       <DependentUpon>ViewCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente\ViewDeletarCliente.resx">
-      <DependentUpon>ViewDeletarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente\DeleteClienteView.resx">
+      <DependentUpon>DeleteClienteView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Cliente\Relatorio\Dados.xsc">
       <DependentUpon>Dados.xsd</DependentUpon>
