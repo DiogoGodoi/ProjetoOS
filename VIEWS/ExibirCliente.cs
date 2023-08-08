@@ -104,12 +104,5 @@ namespace VIEWS
                 MessageBox.Show("Sem registros para excluir", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            frmPesquisarClienteView frmPesquisarClienteView = new frmPesquisarClienteView();
-            frmPesquisarClienteView.WindowState = FormWindowState.Normal;
-            frmPesquisarClienteView.Show();
-        }
     }
 }
