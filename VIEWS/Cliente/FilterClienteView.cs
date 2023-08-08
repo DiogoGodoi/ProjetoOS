@@ -61,9 +61,14 @@ namespace VIEWS
                 {
                     dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
                 }
-            }
 
-            dtGrid.DataSource = dados.Clientes;
+                dtGrid.DataSource = dados.Clientes;
+            }
+            else
+            {
+                //Mensagem exibiba quando a pesquisa não encontra clientes registrados com os parâmetros informados
+                MessageBox.Show("Não existem clientes registrados com os parâmetros informados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }   
         }
 
         // Manipula o evento de leitura quando o botão é clicado.

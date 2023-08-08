@@ -96,9 +96,8 @@ namespace VIEWS
             }
             else
             {
-                dados.Clientes.Rows.Add("Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados", "Sem dados");
-                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
-                _frmRelatorioCliente.ShowDialog();
+                // Mensagem exibida quando não se tem clientes cadastrados
+                MessageBox.Show("Sem dados a exibir", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

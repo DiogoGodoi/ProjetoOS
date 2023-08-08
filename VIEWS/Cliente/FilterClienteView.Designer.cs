@@ -78,13 +78,13 @@
             // tbPanel
             // 
             this.tbPanel.ColumnCount = 7;
-            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.01063F));
-            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.63397F));
-            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.62073F));
-            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.648648F));
-            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.02703F));
-            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.75676F));
-            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.2973F));
+            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.911999F));
+            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.51934F));
+            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.37815F));
+            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.563436F));
+            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.81001F));
+            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.64092F));
+            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.17614F));
             this.tbPanel.Controls.Add(this.txtCnpj, 4, 0);
             this.tbPanel.Controls.Add(this.lblCnpj, 3, 0);
             this.tbPanel.Controls.Add(this.lblNome, 1, 0);
@@ -93,15 +93,16 @@
             this.tbPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbPanel.Location = new System.Drawing.Point(30, 76);
             this.tbPanel.Name = "tbPanel";
-            this.tbPanel.RowCount = 1;
-            this.tbPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbPanel.Size = new System.Drawing.Size(740, 32);
+            this.tbPanel.RowCount = 2;
+            this.tbPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.90909F));
+            this.tbPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tbPanel.Size = new System.Drawing.Size(740, 41);
             this.tbPanel.TabIndex = 3;
             // 
             // txtCnpj
             // 
             this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCnpj.Location = new System.Drawing.Point(404, 6);
+            this.txtCnpj.Location = new System.Drawing.Point(404, 8);
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(155, 20);
             this.txtCnpj.TabIndex = 3;
@@ -113,7 +114,7 @@
             this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCnpj.Location = new System.Drawing.Point(341, 0);
             this.lblCnpj.Name = "lblCnpj";
-            this.lblCnpj.Size = new System.Drawing.Size(57, 32);
+            this.lblCnpj.Size = new System.Drawing.Size(57, 37);
             this.lblCnpj.TabIndex = 0;
             this.lblCnpj.Text = "Cnpj:";
             this.lblCnpj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -125,7 +126,7 @@
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.Location = new System.Drawing.Point(76, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(79, 32);
+            this.lblNome.Size = new System.Drawing.Size(79, 37);
             this.lblNome.TabIndex = 5;
             this.lblNome.Text = "Nome: ";
             this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,7 +147,7 @@
             // txtNome
             // 
             this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.Location = new System.Drawing.Point(161, 6);
+            this.txtNome.Location = new System.Drawing.Point(161, 8);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(174, 20);
             this.txtNome.TabIndex = 6;
@@ -201,14 +202,14 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtGrid.Location = new System.Drawing.Point(30, 108);
+            this.dtGrid.Location = new System.Drawing.Point(30, 117);
             this.dtGrid.Name = "dtGrid";
             this.dtGrid.ReadOnly = true;
             this.dtGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dtGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtGrid.Size = new System.Drawing.Size(740, 275);
+            this.dtGrid.Size = new System.Drawing.Size(740, 266);
             this.dtGrid.TabIndex = 5;
             // 
             // FilterClienteView
