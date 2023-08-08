@@ -1,6 +1,6 @@
 ﻿using CONTROLLER;
 using System;
-using System.Threading.Tasks;
+using VIEWS.Cliente.Relatorio;
 using System.Windows.Forms;
 
 namespace VIEWS

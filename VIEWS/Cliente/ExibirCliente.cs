@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using CONTROLLER;
+using VIEWS.Cliente.Relatorio;
 
 namespace VIEWS
 {
