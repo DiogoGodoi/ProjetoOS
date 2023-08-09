@@ -6,6 +6,7 @@ namespace VIEWS
 {
     public partial class UpdateClienteView : Form
     {
+        private MODEL.Cliente cliente;
         public UpdateClienteView(string cnpj, string nome, 
             string telefone, string rua, 
             string numero, string bairro, 
@@ -22,10 +23,11 @@ namespace VIEWS
             txtBairro.Text = bairro;
             txtCidade.Text = cidade;
             cbEstado.Text = siglaEs;
+
+            btnAlterar.Click += (sender, e) => Update(cliente);
         }
 
-        // Manipula o evento de atualização quando o botão é clicado.
-        private void Update(object sender, EventArgs e)
+        private void Update(MODEL.Cliente cliente)
         {
             try
             {
@@ -64,7 +66,7 @@ namespace VIEWS
                 else
                 {
                     // Cria um objeto Cliente com os dados atualizados.
-                    MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
+                    cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
 
                     // Chama o método de atualização do controlador e obtém o resultado.
                     var retorno = controllerCliente.Update(cliente, decimal.Parse(txtCnpj.Text));

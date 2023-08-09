@@ -35,6 +35,7 @@ namespace VIEWS
             // Atualiza o relatório
             this.rpv1.RefreshReport();
         }
+
     }
 
 }

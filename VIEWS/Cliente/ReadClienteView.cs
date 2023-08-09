@@ -14,31 +14,13 @@ namespace VIEWS
             // Configuração do DataGridView para preencher as colunas automaticamente.
             dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Cria uma instância do controlador de Cliente.
-            ControllerCliente controllerCliente = new ControllerCliente();
+            Load += (sender, e) => Read();
+            btnAtualizar.Click += (sender, e) => Read();
+            btnAlterar.Click += (sender, e) => Update();
+            btnDeletar.Click += (sender, e) => Delete();
 
-            // Recupera todos os clientes do banco de dados.
-            var clientes = controllerCliente.Read();
-            Dados dados = new Dados();
-
-            if (clientes.Count > 0)
-            {
-                // Preenche o DataGridView com os dados dos clientes.
-                foreach (var idx in clientes)
-                {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
-                }
-                dtGrid.DataSource = dados.Clientes;
-            }
-            else
-            {
-                // Desabilita o DataGridView se não houver clientes.
-                dtGrid.Enabled = false;
-            }
         }
-
-        // Manipula o evento de atualização quando o botão é clicado.
-        private void Update(object sender, EventArgs e)
+        private void Update()
         {
             if (dtGrid.Rows.Count > 1)
             {
@@ -62,9 +44,7 @@ namespace VIEWS
                 MessageBox.Show("Sem registros para alterar", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        // Manipula o evento de leitura quando o botão é clicado.
-        private void Read(object sender, EventArgs e)
+        private void Read()
         {
             // Cria uma instância do controlador de Cliente.
             ControllerCliente controllerCliente = new ControllerCliente();
@@ -88,9 +68,7 @@ namespace VIEWS
                 dtGrid.Enabled = false;
             }
         }
-
-        // Manipula o evento de exclusão quando o botão é clicado.
-        private void Delete(object sender, EventArgs e)
+        private void Delete()
         {
             if (dtGrid.Rows.Count > 1)
             {

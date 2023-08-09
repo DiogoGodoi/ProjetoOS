@@ -19,10 +19,10 @@ namespace VIEWS
             txtBairro.Text = bairro;
             txtCidade.Text = cidade;
             cbEstado.Text = siglaEs;
-        }
 
-        // Manipula o evento de exclusão quando o botão é clicado.
-        private void Delete(object sender, EventArgs e)
+            btnDeletar.Click += (sender, e) => Delete(decimal.Parse(txtCnpj.Text));
+        }
+        private void Delete(decimal cnpj)
         {
             // Cria uma instância do controlador de Cliente.
             ControllerCliente controllerCliente = new ControllerCliente();
@@ -33,7 +33,7 @@ namespace VIEWS
             if (resultado == DialogResult.Yes)
             {
                 // Chama o método de exclusão do controlador e obtém o resultado.
-                var retorno = controllerCliente.Delete(decimal.Parse(txtCnpj.Text));
+                var retorno = controllerCliente.Delete(cnpj);
 
                 if (retorno == true)
                 {

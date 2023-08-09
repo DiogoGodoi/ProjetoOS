@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewCliente));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deletarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsCadastrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsPesquisar = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.emitirRelatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsReport = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -73,49 +73,46 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem,
-            this.deletarToolStripMenuItem,
+            this.tsCadastrar,
+            this.tsPesquisar,
             this.sairToolStripMenuItem});
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
-            // cadastrarToolStripMenuItem
+            // tsCadastrar
             // 
-            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.cadastrarToolStripMenuItem.Text = "Cadastrar";
-            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.InsertStrip);
+            this.tsCadastrar.Name = "tsCadastrar";
+            this.tsCadastrar.Size = new System.Drawing.Size(180, 22);
+            this.tsCadastrar.Text = "Cadastrar";
             // 
-            // deletarToolStripMenuItem
+            // tsPesquisar
             // 
-            this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
-            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.deletarToolStripMenuItem.Text = "Pesquisar";
-            this.deletarToolStripMenuItem.Click += new System.EventHandler(this.FilterStrip);
+            this.tsPesquisar.Name = "tsPesquisar";
+            this.tsPesquisar.Size = new System.Drawing.Size(180, 22);
+            this.tsPesquisar.Text = "Pesquisar";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // relatoriosToolStripMenuItem
             // 
             this.relatoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.emitirRelatórioToolStripMenuItem});
+            this.tsReport});
             this.relatoriosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("relatoriosToolStripMenuItem.Image")));
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
             this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.relatoriosToolStripMenuItem.Text = "Relatoriós";
             // 
-            // emitirRelatórioToolStripMenuItem
+            // tsReport
             // 
-            this.emitirRelatórioToolStripMenuItem.Name = "emitirRelatórioToolStripMenuItem";
-            this.emitirRelatórioToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.emitirRelatórioToolStripMenuItem.Text = "Emitir Relatório";
-            this.emitirRelatórioToolStripMenuItem.Click += new System.EventHandler(this.ReportStrip);
+            this.tsReport.Name = "tsReport";
+            this.tsReport.Size = new System.Drawing.Size(180, 22);
+            this.tsReport.Text = "Emitir Relatório";
             // 
             // panel2
             // 
@@ -185,7 +182,6 @@
             this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.Insert);
             // 
             // btnExibir
             // 
@@ -201,7 +197,6 @@
             this.btnExibir.TabIndex = 0;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = false;
-            this.btnExibir.Click += new System.EventHandler(this.Read);
             // 
             // btnPesquisar
             // 
@@ -217,7 +212,6 @@
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.Filter);
             // 
             // btnRelatorios
             // 
@@ -233,7 +227,6 @@
             this.btnRelatorios.TabIndex = 5;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.UseVisualStyleBackColor = false;
-            this.btnRelatorios.Click += new System.EventHandler(this.Report);
             // 
             // panel5
             // 
@@ -337,10 +330,10 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsCadastrar;
+        private System.Windows.Forms.ToolStripMenuItem tsPesquisar;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem emitirRelatórioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsReport;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panelMenu;

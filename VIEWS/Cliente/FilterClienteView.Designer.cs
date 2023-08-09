@@ -133,16 +133,16 @@
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPesquisar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPesquisar.Location = new System.Drawing.Point(565, 3);
+            this.btnPesquisar.Location = new System.Drawing.Point(565, 7);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(78, 23);
+            this.btnPesquisar.Size = new System.Drawing.Size(80, 23);
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.Filter);
             // 
             // txtNome
             // 
@@ -180,7 +180,6 @@
             this.btnAtualizar.TabIndex = 0;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
-            this.btnAtualizar.Click += new System.EventHandler(this.Read);
             // 
             // dtGrid
             // 

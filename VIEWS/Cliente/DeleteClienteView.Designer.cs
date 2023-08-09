@@ -420,7 +420,6 @@
             this.btnDeletar.TabIndex = 0;
             this.btnDeletar.Text = "Excluir";
             this.btnDeletar.UseVisualStyleBackColor = false;
-            this.btnDeletar.Click += new System.EventHandler(this.Delete);
             // 
             // DeleteClienteView
             // 

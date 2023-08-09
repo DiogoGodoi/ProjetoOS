@@ -14,31 +14,11 @@ namespace VIEWS
             // Configuração do DataGridView para preencher as colunas automaticamente.
             dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Cria uma instância do controlador de Cliente.
-            ControllerCliente controllerCliente = new ControllerCliente();
-
-            // Recupera todos os clientes do banco de dados.
-            var clientes = controllerCliente.Read();
-            Dados dados = new Dados();
-
-            if (clientes.Count > 0)
-            {
-                // Preenche o DataGridView com os dados dos clientes.
-                foreach (var idx in clientes)
-                {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
-                }
-                dtGrid.DataSource = dados.Clientes;
-            }
-            else
-            {
-                // Desabilita o DataGridView se não houver clientes.
-                dtGrid.Enabled = false;
-            }
+            Load += (sender, e) => Read();
+            btnAtualizar.Click += (sender, e) => Read();
+            btnPesquisar.Click += (sender, e) => Filter();    
         }
-
-        // Manipula o evento de filtro quando o botão é clicado.
-        private void Filter(object sender, EventArgs e)
+        private void Filter()
         {
             // Cria uma instância do controlador de Cliente.
             ControllerCliente controllerCliente = new ControllerCliente();
@@ -68,11 +48,9 @@ namespace VIEWS
             {
                 //Mensagem exibiba quando a pesquisa não encontra clientes registrados com os parâmetros informados
                 MessageBox.Show("Não existem clientes registrados com os parâmetros informados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }   
+            }
         }
-
-        // Manipula o evento de leitura quando o botão é clicado.
-        private void Read(object sender, EventArgs e)
+        private void Read()
         {
             // Cria uma instância do controlador de Cliente.
             ControllerCliente controllerCliente = new ControllerCliente();
