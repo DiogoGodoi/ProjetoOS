@@ -28,7 +28,6 @@ namespace VIEWS
             tsCadastrar.Click += (sender, e) => OpenClientInserView();
             tsPesquisar.Click += (sender, e) => OpenClientFilterView();
             tsReport.Click += (sender, e) => OpenClientReportView();
-            btnSair.Click += (sender, e) => OpenViewHome();
         }
         public void transicaoTela<T>(T tela) where T : Form, new()
         {
@@ -97,17 +96,6 @@ namespace VIEWS
                 // Mensagem exibida quando não se tem clientes cadastrados
                 MessageBox.Show("Sem dados a exibir", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-        private void OpenViewHome()
-        {
-            Thread thread = new Thread(ViewHome);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            this.Close();
-        }
-        private void ViewHome()
-        {
-            Application.Run(new ViewHome());
         }
     }
 }
