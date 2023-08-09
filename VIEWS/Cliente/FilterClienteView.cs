@@ -1,6 +1,5 @@
 ﻿using CONTROLLER;
 using VIEWS.Cliente.Relatorio;
-using System;
 using System.Windows.Forms;
 
 namespace VIEWS
@@ -13,7 +12,6 @@ namespace VIEWS
 
             // Configuração do DataGridView para preencher as colunas automaticamente.
             dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
             Load += (sender, e) => Read();
             btnAtualizar.Click += (sender, e) => Read();
             btnPesquisar.Click += (sender, e) => Filter();    
@@ -23,6 +21,7 @@ namespace VIEWS
             // Cria uma instância do controlador de Cliente.
             ControllerCliente controllerCliente = new ControllerCliente();
             Dados dados = new Dados();
+
             decimal? cnpj = null;
 
             if (txtCnpj.Text != string.Empty)
@@ -75,5 +74,4 @@ namespace VIEWS
             }
         }
     }
-
 }

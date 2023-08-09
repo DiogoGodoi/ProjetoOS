@@ -7,14 +7,12 @@ namespace VIEWS
 {
     public partial class InsertClienteView : Form
     {
-        private MODEL.Cliente cliente;
         public InsertClienteView()
         {
             InitializeComponent();
-
-            btnInserir.Click += (sender, e) => Insert(cliente);
+            btnInserir.Click += (sender, e) => Insert();
         }
-        private void Insert(MODEL.Cliente cliente)
+        private void Insert()
         {
             try
             {
@@ -53,7 +51,7 @@ namespace VIEWS
                 else
                 {
                     // Cria um objeto Cliente com os dados inseridos no formulário.
-                    cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
+                    MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
 
                     // Chama o método de inserção do controlador e obtém o resultado.
                     var retorno = controllerCliente.Insert(cliente);

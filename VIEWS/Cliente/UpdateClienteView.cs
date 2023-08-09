@@ -6,28 +6,23 @@ namespace VIEWS
 {
     public partial class UpdateClienteView : Form
     {
-        private MODEL.Cliente cliente;
-        public UpdateClienteView(string cnpj, string nome, 
-            string telefone, string rua, 
-            string numero, string bairro, 
-            string cidade, string siglaEs)
+        public UpdateClienteView(MODEL.Cliente cliente)
         {
             InitializeComponent();
 
             // Preenche os campos do formulário com os valores recebidos.
-            txtCnpj.Text = cnpj;
-            txtNome.Text = nome;
-            txtTelefone.Text = telefone;
-            txtRua.Text = rua;
-            txtNumero.Text = numero;
-            txtBairro.Text = bairro;
-            txtCidade.Text = cidade;
-            cbEstado.Text = siglaEs;
+            txtCnpj.Text = cliente.GetCnpj().ToString();
+            txtNome.Text = cliente.GetNome();
+            txtTelefone.Text = cliente.GetTelefone();
+            txtRua.Text = cliente.GetRua();
+            txtNumero.Text = cliente.GetNumero();
+            txtBairro.Text = cliente.GetBairro();
+            txtCidade.Text = cliente.GetCidade();
+            cbEstado.Text = cliente.GetSiglaEs();
 
-            btnAlterar.Click += (sender, e) => Update(cliente);
+            btnAlterar.Click += (sender, e) => Update();
         }
-
-        private void Update(MODEL.Cliente cliente)
+        private void Update()
         {
             try
             {
@@ -66,10 +61,10 @@ namespace VIEWS
                 else
                 {
                     // Cria um objeto Cliente com os dados atualizados.
-                    cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
+                    MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
 
                     // Chama o método de atualização do controlador e obtém o resultado.
-                    var retorno = controllerCliente.Update(cliente, decimal.Parse(txtCnpj.Text));
+                    var retorno = controllerCliente.Update(cliente, cliente.GetCnpj());
                     if (retorno == true)
                     {
                         // Exibe uma mensagem de sucesso, limpa os campos do formulário e fecha o formulário.
@@ -98,5 +93,4 @@ namespace VIEWS
             }
         }
     }
-
 }

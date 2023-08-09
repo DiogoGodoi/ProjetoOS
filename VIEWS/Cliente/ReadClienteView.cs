@@ -14,13 +14,13 @@ namespace VIEWS
             // Configuração do DataGridView para preencher as colunas automaticamente.
             dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            Load += (sender, e) => Read();
+            Load += (sender, e) =>  Read();
             btnAtualizar.Click += (sender, e) => Read();
-            btnAlterar.Click += (sender, e) => Update();
-            btnDeletar.Click += (sender, e) => Delete();
+            btnAlterar.Click += (sender, e) => OpenUpdateClientView();
+            btnDeletar.Click += (sender, e) => OpenDeleteClientView();
 
         }
-        private void Update()
+        private void OpenUpdateClientView()
         {
             if (dtGrid.Rows.Count > 1)
             {
@@ -36,12 +36,38 @@ namespace VIEWS
                 var siglaEs = linhaSelecionada.Cells[7].Value.ToString();
 
                 // Cria e exibe o formulário de atualização com os dados do cliente.
-                UpdateClienteView _frmAlterarCliente = new UpdateClienteView(cnpj, nome, telefone, rua, numero, bairro, cidade, siglaEs);
+                MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
+                UpdateClienteView _frmAlterarCliente = new UpdateClienteView(cliente);
                 _frmAlterarCliente.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Sem registros para alterar", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void OpenDeleteClientView()
+        {
+            if (dtGrid.Rows.Count > 1)
+            {
+                // Obtém os valores da linha selecionada no DataGridView.
+                DataGridViewRow linhaSelecionada = dtGrid.Rows[dtGrid.SelectedCells[0].RowIndex];
+                var cnpj = linhaSelecionada.Cells[0].Value.ToString();
+                var nome = linhaSelecionada.Cells[1].Value.ToString();
+                var telefone = linhaSelecionada.Cells[2].Value.ToString();
+                var rua = linhaSelecionada.Cells[3].Value.ToString();
+                var numero = linhaSelecionada.Cells[4].Value.ToString();
+                var bairro = linhaSelecionada.Cells[5].Value.ToString();
+                var cidade = linhaSelecionada.Cells[6].Value.ToString();
+                var siglaEs = linhaSelecionada.Cells[7].Value.ToString();
+
+                // Cria e exibe o formulário de exclusão com os dados do cliente.
+                MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
+                DeleteClienteView _frmAlterarCliente = new DeleteClienteView(cliente);
+                _frmAlterarCliente.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sem registros para excluir", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void Read()
@@ -66,30 +92,6 @@ namespace VIEWS
             {
                 // Desabilita o DataGridView se não houver clientes.
                 dtGrid.Enabled = false;
-            }
-        }
-        private void Delete()
-        {
-            if (dtGrid.Rows.Count > 1)
-            {
-                // Obtém os valores da linha selecionada no DataGridView.
-                DataGridViewRow linhaSelecionada = dtGrid.Rows[dtGrid.SelectedCells[0].RowIndex];
-                var cnpj = linhaSelecionada.Cells[0].Value.ToString();
-                var nome = linhaSelecionada.Cells[1].Value.ToString();
-                var telefone = linhaSelecionada.Cells[2].Value.ToString();
-                var rua = linhaSelecionada.Cells[3].Value.ToString();
-                var numero = linhaSelecionada.Cells[4].Value.ToString();
-                var bairro = linhaSelecionada.Cells[5].Value.ToString();
-                var cidade = linhaSelecionada.Cells[6].Value.ToString();
-                var siglaEs = linhaSelecionada.Cells[7].Value.ToString();
-
-                // Cria e exibe o formulário de exclusão com os dados do cliente.
-                DeleteClienteView _frmAlterarCliente = new DeleteClienteView(cnpj, nome, telefone, rua, numero, bairro, cidade, siglaEs);
-                _frmAlterarCliente.Show();
-            }
-            else
-            {
-                MessageBox.Show("Sem registros para excluir", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

@@ -1,28 +1,28 @@
 ﻿using CONTROLLER;
-using System;
 using System.Windows.Forms;
 
 namespace VIEWS
 {
     public partial class DeleteClienteView : Form
     {
-        public DeleteClienteView(string cnpj, string nome, string telefone, string rua, string numero, string bairro, string cidade, string siglaEs)
+        public DeleteClienteView(MODEL.Cliente cliente)
         {
             InitializeComponent();
 
             // Inicializa os campos do formulário com os valores passados como parâmetros.
-            txtCnpj.Text = cnpj;
-            txtNome.Text = nome;
-            txtTelefone.Text = telefone;
-            txtRua.Text = rua;
-            txtNumero.Text = numero;
-            txtBairro.Text = bairro;
-            txtCidade.Text = cidade;
-            cbEstado.Text = siglaEs;
+            txtCnpj.Text = cliente.GetCnpj().ToString();
+            txtNome.Text = cliente.GetNome();
+            txtTelefone.Text = cliente.GetTelefone();
+            txtRua.Text = cliente.GetRua();
+            txtNumero.Text = cliente.GetNumero();
+            txtBairro.Text = cliente.GetBairro();
+            txtCidade.Text = cliente.GetCidade();
+            cbEstado.Text = cliente.GetSiglaEs();
 
-            btnDeletar.Click += (sender, e) => Delete(decimal.Parse(txtCnpj.Text));
+
+            btnDeletar.Click += (sender, e) => Delete();
         }
-        private void Delete(decimal cnpj)
+        private void Delete()
         {
             // Cria uma instância do controlador de Cliente.
             ControllerCliente controllerCliente = new ControllerCliente();
@@ -33,7 +33,7 @@ namespace VIEWS
             if (resultado == DialogResult.Yes)
             {
                 // Chama o método de exclusão do controlador e obtém o resultado.
-                var retorno = controllerCliente.Delete(cnpj);
+                var retorno = controllerCliente.Delete(decimal.Parse(txtCnpj.Text));
 
                 if (retorno == true)
                 {
