@@ -16,7 +16,7 @@ namespace VIEWS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ViewCliente());
+            Application.Run(new ViewHome());
         }
     }
 }
