@@ -23,6 +23,8 @@ namespace VIEWS
 
             // Associa o evento de clique do botão 'Deletar' à função Delete
             btnDeletar.Click += (sender, e) => Delete();
+
+            this.MaximizeBox = false;
         }
 
         // Função para realizar a exclusão do cliente

@@ -24,6 +24,7 @@ namespace VIEWS
 
             // Associação de evento para realizar a atualização dos dados
             btnAlterar.Click += (sender, e) => Update();
+            this.MaximizeBox = false;
         }
 
         // Função para realizar a atualização dos dados do cliente

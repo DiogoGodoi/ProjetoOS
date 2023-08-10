@@ -16,7 +16,7 @@ namespace VIEWS
             dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // Associações de eventos para carregar e filtrar os dados de clientes
-            Load += (sender, e) => Read(); // Carrega todos os clientes
+            Load += (sender, e) => { Read(); dtGrid.Focus(); }; // Carrega todos os clientes
             btnAtualizar.Click += (sender, e) => Read(); // Atualiza a exibição dos clientes
             btnPesquisar.Click += (sender, e) => Filter(); // Realiza a filtragem dos clientes
         }

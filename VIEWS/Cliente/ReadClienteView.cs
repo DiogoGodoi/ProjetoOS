@@ -17,10 +17,11 @@ namespace VIEWS
             dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // Associação de eventos para carregar, atualizar, alterar e deletar registros de clientes
-            Load += (sender, e) => Read(); // Carrega todos os clientes
+            Load += (sender, e) => {Read(); dtGrid.Focus(); }; // Carrega todos os clientes
             btnAtualizar.Click += (sender, e) => Read(); // Atualiza a exibição dos clientes
             btnAlterar.Click += (sender, e) => OpenUpdateClientView(); // Abre a tela de alteração do cliente
             btnDeletar.Click += (sender, e) => OpenDeleteClientView(); // Abre a tela de exclusão do cliente
+
         }
 
         // Função para abrir a tela de alteração do cliente

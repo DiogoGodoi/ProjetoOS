@@ -14,6 +14,7 @@ namespace VIEWS
             InitializeComponent();
 
             // Associação do evento de clique do botão 'Inserir' à função Insert
+            Load += (sender, e) => { txtCnpj.Focus(); };
             btnInserir.Click += (sender, e) => Insert();
         }
 
