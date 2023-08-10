@@ -1,8 +1,6 @@
 ﻿using CONTROLLER;
-using System;
 using VIEWS.Cliente.Relatorio;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace VIEWS
 {
