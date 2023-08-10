@@ -5,8 +5,10 @@ using VIEWS.Cliente.Relatorio;
 
 namespace VIEWS
 {
+    // Classe que representa a interface de usuário para visualização e manipulação de dados de clientes
     public partial class ReadClienteView : Form
     {
+        // Construtor da classe
         public ReadClienteView()
         {
             InitializeComponent();
@@ -14,12 +16,14 @@ namespace VIEWS
             // Configuração do DataGridView para preencher as colunas automaticamente.
             dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            Load += (sender, e) =>  Read();
-            btnAtualizar.Click += (sender, e) => Read();
-            btnAlterar.Click += (sender, e) => OpenUpdateClientView();
-            btnDeletar.Click += (sender, e) => OpenDeleteClientView();
-
+            // Associação de eventos para carregar, atualizar, alterar e deletar registros de clientes
+            Load += (sender, e) => Read(); // Carrega todos os clientes
+            btnAtualizar.Click += (sender, e) => Read(); // Atualiza a exibição dos clientes
+            btnAlterar.Click += (sender, e) => OpenUpdateClientView(); // Abre a tela de alteração do cliente
+            btnDeletar.Click += (sender, e) => OpenDeleteClientView(); // Abre a tela de exclusão do cliente
         }
+
+        // Função para abrir a tela de alteração do cliente
         private void OpenUpdateClientView()
         {
             if (dtGrid.Rows.Count > 1)
@@ -45,6 +49,8 @@ namespace VIEWS
                 MessageBox.Show("Sem registros para alterar", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        // Função para abrir a tela de exclusão do cliente
         private void OpenDeleteClientView()
         {
             if (dtGrid.Rows.Count > 1)
@@ -70,6 +76,8 @@ namespace VIEWS
                 MessageBox.Show("Sem registros para excluir", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        // Função para exibir todos os clientes
         private void Read()
         {
             // Cria uma instância do controlador de Cliente.

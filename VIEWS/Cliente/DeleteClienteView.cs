@@ -3,25 +3,29 @@ using System.Windows.Forms;
 
 namespace VIEWS
 {
+    // Classe que representa a interface de usuário para exclusão de um cliente
     public partial class DeleteClienteView : Form
     {
+        // Construtor da classe, recebe um objeto 'cliente' para preencher os campos do formulário
         public DeleteClienteView(MODEL.Cliente cliente)
         {
             InitializeComponent();
 
             // Inicializa os campos do formulário com os valores passados como parâmetros.
-            txtCnpj.Text = cliente.GetCnpj().ToString();
-            txtNome.Text = cliente.GetNome();
-            txtTelefone.Text = cliente.GetTelefone();
-            txtRua.Text = cliente.GetRua();
-            txtNumero.Text = cliente.GetNumero();
-            txtBairro.Text = cliente.GetBairro();
-            txtCidade.Text = cliente.GetCidade();
-            cbEstado.Text = cliente.GetSiglaEs();
+            txtCnpj.Text = cliente.GetCnpj().ToString(); // Define o CNPJ
+            txtNome.Text = cliente.GetNome(); // Define o nome
+            txtTelefone.Text = cliente.GetTelefone(); // Define o telefone
+            txtRua.Text = cliente.GetRua(); // Define a rua
+            txtNumero.Text = cliente.GetNumero(); // Define o número
+            txtBairro.Text = cliente.GetBairro(); // Define o bairro
+            txtCidade.Text = cliente.GetCidade(); // Define a cidade
+            cbEstado.Text = cliente.GetSiglaEs(); // Define a sigla do estado
 
-
+            // Associa o evento de clique do botão 'Deletar' à função Delete
             btnDeletar.Click += (sender, e) => Delete();
         }
+
+        // Função para realizar a exclusão do cliente
         private void Delete()
         {
             // Cria uma instância do controlador de Cliente.

@@ -4,8 +4,10 @@ using System.Windows.Forms;
 
 namespace VIEWS
 {
+    // Classe que representa a interface de usuário para atualização de dados de clientes
     public partial class UpdateClienteView : Form
     {
+        // Construtor da classe que recebe um objeto Cliente para preencher os campos
         public UpdateClienteView(MODEL.Cliente cliente)
         {
             InitializeComponent();
@@ -20,8 +22,11 @@ namespace VIEWS
             txtCidade.Text = cliente.GetCidade();
             cbEstado.Text = cliente.GetSiglaEs();
 
+            // Associação de evento para realizar a atualização dos dados
             btnAlterar.Click += (sender, e) => Update();
         }
+
+        // Função para realizar a atualização dos dados do cliente
         private void Update()
         {
             try
@@ -93,4 +98,5 @@ namespace VIEWS
             }
         }
     }
+
 }

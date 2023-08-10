@@ -5,13 +5,19 @@ using System.Windows.Forms;
 
 namespace VIEWS
 {
+    // Classe que representa a interface de usuário para inserção de um novo cliente
     public partial class InsertClienteView : Form
     {
+        // Construtor da classe
         public InsertClienteView()
         {
             InitializeComponent();
+
+            // Associação do evento de clique do botão 'Inserir' à função Insert
             btnInserir.Click += (sender, e) => Insert();
         }
+
+        // Função para realizar a inserção de um novo cliente
         private void Insert()
         {
             try
@@ -55,6 +61,7 @@ namespace VIEWS
 
                     // Chama o método de inserção do controlador e obtém o resultado.
                     var retorno = controllerCliente.Insert(cliente);
+
                     if (retorno == true)
                     {
                         // Exibe uma mensagem de sucesso, limpa os campos do formulário e define o foco no campo CNPJ.
@@ -83,4 +90,5 @@ namespace VIEWS
             }
         }
     }
+
 }
