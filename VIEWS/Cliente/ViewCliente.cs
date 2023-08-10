@@ -33,8 +33,7 @@ namespace VIEWS
             tsPesquisar.Click += (sender, e) => OpenClientFilterView(); // Abre a visualização de filtro de clientes
             tsReport.Click += (sender, e) => OpenClientReportView(); // Abre a visualização de relatórios de clientes
 
-            this.MaximizeBox = false;
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Normal;
         }
 
         // Realiza a transição entre diferentes telas de visualização
@@ -62,14 +61,14 @@ namespace VIEWS
                 tela.Close();
             }
 
-            //// Redimensiona a tela quando a janela é redimensionada
-            //Resize += (sender, e) =>
-            //{
-            //    tela = new T();
-            //    tela.MdiParent = this;
-            //    panel4.Controls.Add(tela);
-            //    tela.Show();
-            //};
+            // Redimensiona a tela quando a janela é redimensionada
+            Resize += (sender, e) =>
+            {
+                tela = new T();
+                tela.MdiParent = this;
+                panel4.Controls.Add(tela);
+                tela.Show();
+            };
         }
 
         // Abre a visualização de cadastro de clientes

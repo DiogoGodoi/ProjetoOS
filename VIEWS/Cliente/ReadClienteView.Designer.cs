@@ -83,9 +83,9 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(5, 410);
+            this.panel1.Location = new System.Drawing.Point(5, 408);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(790, 35);
+            this.panel1.Size = new System.Drawing.Size(790, 37);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -109,7 +109,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(788, 33);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(788, 35);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // btnDeletar
@@ -122,7 +122,7 @@
             this.btnDeletar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDeletar.Location = new System.Drawing.Point(340, 4);
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(105, 25);
+            this.btnDeletar.Size = new System.Drawing.Size(105, 27);
             this.btnDeletar.TabIndex = 2;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = false;
@@ -137,7 +137,7 @@
             this.btnAlterar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAlterar.Location = new System.Drawing.Point(116, 4);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(105, 25);
+            this.btnAlterar.Size = new System.Drawing.Size(105, 27);
             this.btnAlterar.TabIndex = 0;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -152,7 +152,7 @@
             this.btnAtualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAtualizar.Location = new System.Drawing.Point(564, 4);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(105, 25);
+            this.btnAtualizar.Size = new System.Drawing.Size(105, 27);
             this.btnAtualizar.TabIndex = 3;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
@@ -185,7 +185,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dtGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtGrid.Size = new System.Drawing.Size(788, 328);
+            this.dtGrid.Size = new System.Drawing.Size(788, 326);
             this.dtGrid.TabIndex = 4;
             // 
             // panel2
@@ -195,7 +195,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(5, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(790, 330);
+            this.panel2.Size = new System.Drawing.Size(790, 328);
             this.panel2.TabIndex = 5;
             // 
             // ReadClienteView
