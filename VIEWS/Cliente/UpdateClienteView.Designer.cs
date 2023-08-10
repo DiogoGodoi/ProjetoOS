@@ -73,7 +73,7 @@
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(4, 1);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(780, 75);
+            this.lblTitulo.Size = new System.Drawing.Size(653, 75);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Alterar Cliente";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -92,7 +92,7 @@
             this.tbTitulo.RowCount = 1;
             this.tbTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbTitulo.Size = new System.Drawing.Size(788, 77);
+            this.tbTitulo.Size = new System.Drawing.Size(661, 77);
             this.tbTitulo.TabIndex = 1;
             // 
             // panelFooter
@@ -100,9 +100,9 @@
             this.panelFooter.BackColor = System.Drawing.Color.White;
             this.panelFooter.Controls.Add(this.tableLayoutPanel1);
             this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFooter.Location = new System.Drawing.Point(0, 401);
+            this.panelFooter.Location = new System.Drawing.Point(0, 304);
             this.panelFooter.Name = "panelFooter";
-            this.panelFooter.Size = new System.Drawing.Size(788, 37);
+            this.panelFooter.Size = new System.Drawing.Size(661, 37);
             this.panelFooter.TabIndex = 3;
             // 
             // tableLayoutPanel1
@@ -119,7 +119,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(788, 37);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(661, 37);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnAlterar
@@ -129,9 +129,9 @@
             this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlterar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAlterar.Location = new System.Drawing.Point(266, 4);
+            this.btnAlterar.Location = new System.Drawing.Point(224, 4);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(255, 29);
+            this.btnAlterar.Size = new System.Drawing.Size(213, 29);
             this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHeader.Location = new System.Drawing.Point(5, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(790, 440);
+            this.panelHeader.Size = new System.Drawing.Size(663, 343);
             this.panelHeader.TabIndex = 1;
             // 
             // panel1
@@ -155,10 +155,10 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pctLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(476, 77);
+            this.panel1.Location = new System.Drawing.Point(388, 77);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(20);
-            this.panel1.Size = new System.Drawing.Size(312, 324);
+            this.panel1.Size = new System.Drawing.Size(273, 227);
             this.panel1.TabIndex = 11;
             // 
             // pctLogo
@@ -168,7 +168,7 @@
             this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
             this.pctLogo.Location = new System.Drawing.Point(20, 20);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(272, 284);
+            this.pctLogo.Size = new System.Drawing.Size(233, 187);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctLogo.TabIndex = 9;
             this.pctLogo.TabStop = false;
@@ -199,7 +199,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(379, 324);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(291, 227);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
             // txtCidade
@@ -207,9 +207,9 @@
             this.txtCidade.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtCidade.BackColor = System.Drawing.SystemColors.Control;
             this.txtCidade.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(3, 247);
+            this.txtCidade.Location = new System.Drawing.Point(3, 171);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(373, 25);
+            this.txtCidade.Size = new System.Drawing.Size(285, 25);
             this.txtCidade.TabIndex = 6;
             this.txtCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -218,9 +218,9 @@
             this.txtBairro.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtBairro.BackColor = System.Drawing.SystemColors.Control;
             this.txtBairro.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(3, 207);
+            this.txtBairro.Location = new System.Drawing.Point(3, 143);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(373, 25);
+            this.txtBairro.Size = new System.Drawing.Size(285, 25);
             this.txtBairro.TabIndex = 5;
             this.txtBairro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -229,9 +229,9 @@
             this.txtNumero.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtNumero.BackColor = System.Drawing.SystemColors.Control;
             this.txtNumero.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(3, 167);
+            this.txtNumero.Location = new System.Drawing.Point(3, 115);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(373, 25);
+            this.txtNumero.Size = new System.Drawing.Size(285, 25);
             this.txtNumero.TabIndex = 4;
             this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -240,9 +240,9 @@
             this.txtRua.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtRua.BackColor = System.Drawing.SystemColors.Control;
             this.txtRua.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRua.Location = new System.Drawing.Point(3, 127);
+            this.txtRua.Location = new System.Drawing.Point(3, 87);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(373, 25);
+            this.txtRua.Size = new System.Drawing.Size(285, 25);
             this.txtRua.TabIndex = 3;
             this.txtRua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -251,9 +251,9 @@
             this.txtTelefone.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtTelefone.BackColor = System.Drawing.SystemColors.Control;
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(3, 87);
+            this.txtTelefone.Location = new System.Drawing.Point(3, 59);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(373, 25);
+            this.txtTelefone.Size = new System.Drawing.Size(285, 25);
             this.txtTelefone.TabIndex = 2;
             this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -262,9 +262,9 @@
             this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtNome.BackColor = System.Drawing.SystemColors.Control;
             this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(3, 47);
+            this.txtNome.Location = new System.Drawing.Point(3, 31);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(373, 25);
+            this.txtNome.Size = new System.Drawing.Size(285, 25);
             this.txtNome.TabIndex = 1;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -273,9 +273,9 @@
             this.txtCnpj.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtCnpj.BackColor = System.Drawing.SystemColors.Control;
             this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCnpj.Location = new System.Drawing.Point(3, 7);
+            this.txtCnpj.Location = new System.Drawing.Point(3, 3);
             this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(373, 25);
+            this.txtCnpj.Size = new System.Drawing.Size(285, 25);
             this.txtCnpj.TabIndex = 0;
             this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -317,9 +317,9 @@
             "SP",
             "SE",
             "TO"});
-            this.cbEstado.Location = new System.Drawing.Point(3, 288);
+            this.cbEstado.Location = new System.Drawing.Point(3, 199);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(373, 27);
+            this.cbEstado.Size = new System.Drawing.Size(285, 27);
             this.cbEstado.TabIndex = 7;
             // 
             // tlPanelLabels
@@ -348,7 +348,7 @@
             this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlPanelLabels.Size = new System.Drawing.Size(97, 324);
+            this.tlPanelLabels.Size = new System.Drawing.Size(97, 227);
             this.tlPanelLabels.TabIndex = 9;
             // 
             // lblEstado
@@ -356,9 +356,9 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(3, 280);
+            this.lblEstado.Location = new System.Drawing.Point(3, 196);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(91, 44);
+            this.lblEstado.Size = new System.Drawing.Size(91, 31);
             this.lblEstado.TabIndex = 7;
             this.lblEstado.Text = "Estado";
             this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -368,9 +368,9 @@
             this.lblCidade.AutoSize = true;
             this.lblCidade.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCidade.Location = new System.Drawing.Point(3, 240);
+            this.lblCidade.Location = new System.Drawing.Point(3, 168);
             this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(91, 40);
+            this.lblCidade.Size = new System.Drawing.Size(91, 28);
             this.lblCidade.TabIndex = 6;
             this.lblCidade.Text = "Cidade";
             this.lblCidade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -380,9 +380,9 @@
             this.lblBairro.AutoSize = true;
             this.lblBairro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.Location = new System.Drawing.Point(3, 200);
+            this.lblBairro.Location = new System.Drawing.Point(3, 140);
             this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(91, 40);
+            this.lblBairro.Size = new System.Drawing.Size(91, 28);
             this.lblBairro.TabIndex = 5;
             this.lblBairro.Text = "Bairro";
             this.lblBairro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -392,9 +392,9 @@
             this.lblNumero.AutoSize = true;
             this.lblNumero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(3, 160);
+            this.lblNumero.Location = new System.Drawing.Point(3, 112);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(91, 40);
+            this.lblNumero.Size = new System.Drawing.Size(91, 28);
             this.lblNumero.TabIndex = 4;
             this.lblNumero.Text = "Numero";
             this.lblNumero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -404,9 +404,9 @@
             this.lblRua.AutoSize = true;
             this.lblRua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRua.Location = new System.Drawing.Point(3, 120);
+            this.lblRua.Location = new System.Drawing.Point(3, 84);
             this.lblRua.Name = "lblRua";
-            this.lblRua.Size = new System.Drawing.Size(91, 40);
+            this.lblRua.Size = new System.Drawing.Size(91, 28);
             this.lblRua.TabIndex = 3;
             this.lblRua.Text = "Rua";
             this.lblRua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -416,9 +416,9 @@
             this.lblTelfone.AutoSize = true;
             this.lblTelfone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTelfone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelfone.Location = new System.Drawing.Point(3, 80);
+            this.lblTelfone.Location = new System.Drawing.Point(3, 56);
             this.lblTelfone.Name = "lblTelfone";
-            this.lblTelfone.Size = new System.Drawing.Size(91, 40);
+            this.lblTelfone.Size = new System.Drawing.Size(91, 28);
             this.lblTelfone.TabIndex = 2;
             this.lblTelfone.Text = "Telefone";
             this.lblTelfone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -428,9 +428,9 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(3, 40);
+            this.lblNome.Location = new System.Drawing.Point(3, 28);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(91, 40);
+            this.lblNome.Size = new System.Drawing.Size(91, 28);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
             this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -442,7 +442,7 @@
             this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCnpj.Location = new System.Drawing.Point(3, 0);
             this.lblCnpj.Name = "lblCnpj";
-            this.lblCnpj.Size = new System.Drawing.Size(91, 40);
+            this.lblCnpj.Size = new System.Drawing.Size(91, 28);
             this.lblCnpj.TabIndex = 0;
             this.lblCnpj.Text = "Cnpj";
             this.lblCnpj.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -451,7 +451,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(673, 353);
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "UpdateClienteView";
