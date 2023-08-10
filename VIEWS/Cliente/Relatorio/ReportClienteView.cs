@@ -17,11 +17,11 @@ namespace VIEWS
             InitializeComponent();
 
             // Evento de carregamento do formulário para gerar o relatório
-            Load += (sender, e) => ReportClient();
+            Load += (sender, e) => GenerateReport();
         }
 
         // Método assíncrono para gerar o relatório
-        private async void ReportClient()
+        private async void GenerateReport()
         {
             // Cria um controlador de cliente e obtém dados para relatório
             ControllerCliente controllerCliente = new ControllerCliente();
