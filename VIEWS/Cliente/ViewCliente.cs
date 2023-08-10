@@ -8,10 +8,10 @@ namespace VIEWS
     public partial class ViewCliente : Form
     {
         // Visualizações relacionadas aos clientes
-        ReadClienteView _viewExibirCliente { get; set; }
-        InsertClienteView _viewCadastrarCliente { get; set; }
-        FilterClienteView _viewPesquisarCliente { get; set; }
-        ReportClientView _viewReportClient { get;set; }
+        private ReadClienteView _viewExibirCliente { get; set; }
+        private InsertClienteView _viewCadastrarCliente { get; set; }
+        private FilterClienteView _viewPesquisarCliente { get; set; }
+        private ReportClientView _viewReportClient { get;set; }
 
         // Construtor da classe ViewCliente
         public ViewCliente()
