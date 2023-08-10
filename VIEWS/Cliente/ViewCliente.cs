@@ -11,9 +11,7 @@ namespace VIEWS
         ReadClienteView _viewExibirCliente { get; set; }
         InsertClienteView _viewCadastrarCliente { get; set; }
         FilterClienteView _viewPesquisarCliente { get; set; }
-
-        // Painel de menu deslizante
-        public Panel slideMenu = new Panel();
+        ReportClientView _viewReportClient { get;set; }
 
         // Construtor da classe ViewCliente
         public ViewCliente()
@@ -22,7 +20,8 @@ namespace VIEWS
 
             // Configura a janela como um contêiner MDI (Multiple Document Interface)
             this.IsMdiContainer = true;
-            slideMenu = panelMenu;
+
+            _viewReportClient = new ReportClientView();
 
             // Associações de eventos para diferentes ações do usuário
             Load += (sender, e) => OpenClientReadView(); // Carrega a visualização de leitura de clientes
@@ -94,29 +93,11 @@ namespace VIEWS
         // Abre a visualização de relatórios de clientes
         private void OpenClientReportView()
         {
-            // Cria um controlador de cliente e obtém dados para relatório
-            ControllerCliente controllerCliente = new ControllerCliente();
-            var clientes = controllerCliente.Report();
-            Dados dados = new Dados();
-
-            // Verifica se há clientes para gerar o relatório
-            if (clientes.Count > 0)
-            {
-                // Preenche os dados do relatório com informações dos clientes
-                foreach (var idx in clientes)
-                {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
-                }
-
+                // Cria um dataSet de dados
+                 Dados dados = new Dados();
                 // Cria e exibe a visualização do relatório de clientes
-                ReportClientView _frmRelatorioCliente = new ReportClientView(dados);
-                _frmRelatorioCliente.ShowDialog();
-            }
-            else
-            {
-                // Exibe uma mensagem quando não há clientes para relatório
-                MessageBox.Show("Sem dados a exibir", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                _viewReportClient.SetDados(dados);
+                _viewReportClient.ShowDialog();   
         }
     }
 }
