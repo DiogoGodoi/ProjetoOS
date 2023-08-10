@@ -1,6 +1,6 @@
 ﻿namespace VIEWS
 {
-    partial class frmRelatorioCliente
+    partial class ReportClientView
     {
         /// <summary>
         /// Required designer variable.
@@ -41,13 +41,13 @@
             this.rpv1.Size = new System.Drawing.Size(800, 450);
             this.rpv1.TabIndex = 0;
             // 
-            // frmRelatorioCliente
+            // ReportClientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.rpv1);
-            this.Name = "frmRelatorioCliente";
+            this.Name = "ReportClientView";
             this.Text = "Lista de clientes";
             this.ResumeLayout(false);
 

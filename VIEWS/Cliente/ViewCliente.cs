@@ -108,7 +108,7 @@ namespace VIEWS
                 }
 
                 // Cria e exibe a visualização do relatório de clientes
-                frmRelatorioCliente _frmRelatorioCliente = new frmRelatorioCliente(dados);
+                ReportClientView _frmRelatorioCliente = new ReportClientView(dados);
                 _frmRelatorioCliente.ShowDialog();
             }
             else

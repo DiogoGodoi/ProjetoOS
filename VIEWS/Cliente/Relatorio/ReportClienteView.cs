@@ -6,14 +6,15 @@ using VIEWS.Cliente.Relatorio;
 
 namespace VIEWS
 {
-    public partial class frmRelatorioCliente : Form
+    public partial class ReportClientView : Form
     {
         Dados dados = new Dados();
 
         // Construtor da classe que recebe os dados para gerar o relatório
-        public frmRelatorioCliente(Dados dados)
+        public ReportClientView(Dados dados)
         {
             InitializeComponent();
+
             this.dados = dados;
 
             // Evento de carregamento do formulário para gerar o relatório
@@ -35,7 +36,5 @@ namespace VIEWS
             // Atualiza o relatório
             this.rpv1.RefreshReport();
         }
-
     }
-
 }
