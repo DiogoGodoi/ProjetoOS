@@ -41,7 +41,6 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnExibir = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnRelatorios = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -50,6 +49,7 @@
             this.tbPanelTitulo = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnExibir = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -84,19 +84,19 @@
             // tsCadastrar
             // 
             this.tsCadastrar.Name = "tsCadastrar";
-            this.tsCadastrar.Size = new System.Drawing.Size(180, 22);
+            this.tsCadastrar.Size = new System.Drawing.Size(124, 22);
             this.tsCadastrar.Text = "Cadastrar";
             // 
             // tsPesquisar
             // 
             this.tsPesquisar.Name = "tsPesquisar";
-            this.tsPesquisar.Size = new System.Drawing.Size(180, 22);
+            this.tsPesquisar.Size = new System.Drawing.Size(124, 22);
             this.tsPesquisar.Text = "Pesquisar";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // relatoriosToolStripMenuItem
@@ -111,7 +111,7 @@
             // tsReport
             // 
             this.tsReport.Name = "tsReport";
-            this.tsReport.Size = new System.Drawing.Size(180, 22);
+            this.tsReport.Size = new System.Drawing.Size(155, 22);
             this.tsReport.Text = "Emitir Relatório";
             // 
             // panel2
@@ -150,10 +150,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btnRelatorios, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnPesquisar, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnCadastrar, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnExibir, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnPesquisar, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnRelatorios, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -182,21 +182,6 @@
             this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
-            // 
-            // btnExibir
-            // 
-            this.btnExibir.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnExibir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExibir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExibir.FlatAppearance.BorderSize = 2;
-            this.btnExibir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExibir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExibir.Location = new System.Drawing.Point(5, 5);
-            this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(89, 57);
-            this.btnExibir.TabIndex = 0;
-            this.btnExibir.Text = "Exibir";
-            this.btnExibir.UseVisualStyleBackColor = false;
             // 
             // btnPesquisar
             // 
@@ -300,6 +285,21 @@
             this.lblTitulo.Text = "Modulo - Clientes";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnExibir
+            // 
+            this.btnExibir.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnExibir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExibir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExibir.FlatAppearance.BorderSize = 2;
+            this.btnExibir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExibir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExibir.Location = new System.Drawing.Point(5, 5);
+            this.btnExibir.Name = "btnExibir";
+            this.btnExibir.Size = new System.Drawing.Size(89, 57);
+            this.btnExibir.TabIndex = 6;
+            this.btnExibir.Text = "Exibir";
+            this.btnExibir.UseVisualStyleBackColor = false;
+            // 
             // ViewCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,12 +342,12 @@
         private System.Windows.Forms.Button btnRelatorios;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnExibir;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tbPanelTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnExibir;
     }
 }
