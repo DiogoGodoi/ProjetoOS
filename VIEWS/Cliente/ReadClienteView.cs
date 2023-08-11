@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using CONTROLLER;
 using VIEWS.Cliente.Relatorio;
@@ -43,7 +44,8 @@ namespace VIEWS
                 // Cria e exibe o formulário de atualização com os dados do cliente.
                 MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
                 UpdateClienteView _frmAlterarCliente = new UpdateClienteView(cliente);
-                _frmAlterarCliente.ShowDialog();
+                _frmAlterarCliente.Show();
+                _frmAlterarCliente.FormClosed += (sender, e) => Read();
             }
             else
             {
@@ -71,6 +73,7 @@ namespace VIEWS
                 MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
                 DeleteClienteView _frmAlterarCliente = new DeleteClienteView(cliente);
                 _frmAlterarCliente.Show();
+                _frmAlterarCliente.FormClosed += (sender, e) => Read();
             }
             else
             {
@@ -99,9 +102,13 @@ namespace VIEWS
             }
             else
             {
-                // Desabilita o DataGridView se não houver clientes.
+                DataTable tb = new DataTable();
+                tb.Columns.Add("Clientes", typeof(string));
+                tb.Rows.Add("Sem dados");
+                dtGrid.DataSource = tb;
                 dtGrid.Enabled = false;
             }
         }
+        
     }
 }
