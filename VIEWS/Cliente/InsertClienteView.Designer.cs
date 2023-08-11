@@ -47,20 +47,20 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.tbTitulo = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.panelFooter.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -142,7 +142,6 @@
             // 
             // panel6
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.tlPanelLabels);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(5, 5);
@@ -153,6 +152,7 @@
             // tlPanelLabels
             // 
             this.tlPanelLabels.BackColor = System.Drawing.Color.White;
+            this.tlPanelLabels.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tlPanelLabels.ColumnCount = 1;
             this.tlPanelLabels.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlPanelLabels.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -176,7 +176,7 @@
             this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlPanelLabels.Size = new System.Drawing.Size(103, 308);
+            this.tlPanelLabels.Size = new System.Drawing.Size(105, 310);
             this.tlPanelLabels.TabIndex = 14;
             // 
             // lblEstado
@@ -184,96 +184,96 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(3, 266);
+            this.lblEstado.Location = new System.Drawing.Point(4, 267);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(97, 42);
             this.lblEstado.TabIndex = 7;
             this.lblEstado.Text = "Estado";
-            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
             this.lblCidade.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCidade.Location = new System.Drawing.Point(3, 228);
+            this.lblCidade.Location = new System.Drawing.Point(4, 229);
             this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(97, 38);
+            this.lblCidade.Size = new System.Drawing.Size(97, 37);
             this.lblCidade.TabIndex = 6;
             this.lblCidade.Text = "Cidade";
-            this.lblCidade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCidade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBairro
             // 
             this.lblBairro.AutoSize = true;
             this.lblBairro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.Location = new System.Drawing.Point(3, 190);
+            this.lblBairro.Location = new System.Drawing.Point(4, 191);
             this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(97, 38);
+            this.lblBairro.Size = new System.Drawing.Size(97, 37);
             this.lblBairro.TabIndex = 5;
             this.lblBairro.Text = "Bairro";
-            this.lblBairro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblBairro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(3, 152);
+            this.lblNumero.Location = new System.Drawing.Point(4, 153);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(97, 38);
+            this.lblNumero.Size = new System.Drawing.Size(97, 37);
             this.lblNumero.TabIndex = 4;
             this.lblNumero.Text = "Numero";
-            this.lblNumero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNumero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEndereco
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndereco.Location = new System.Drawing.Point(3, 114);
+            this.lblEndereco.Location = new System.Drawing.Point(4, 115);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(97, 38);
+            this.lblEndereco.Size = new System.Drawing.Size(97, 37);
             this.lblEndereco.TabIndex = 3;
             this.lblEndereco.Text = "Endereço";
-            this.lblEndereco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEndereco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTelfone
             // 
             this.lblTelfone.AutoSize = true;
             this.lblTelfone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTelfone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelfone.Location = new System.Drawing.Point(3, 76);
+            this.lblTelfone.Location = new System.Drawing.Point(4, 77);
             this.lblTelfone.Name = "lblTelfone";
-            this.lblTelfone.Size = new System.Drawing.Size(97, 38);
+            this.lblTelfone.Size = new System.Drawing.Size(97, 37);
             this.lblTelfone.TabIndex = 2;
             this.lblTelfone.Text = "Telefone";
-            this.lblTelfone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTelfone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(3, 38);
+            this.lblNome.Location = new System.Drawing.Point(4, 39);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(97, 38);
+            this.lblNome.Size = new System.Drawing.Size(97, 37);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
-            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCnpj
             // 
             this.lblCnpj.AutoSize = true;
             this.lblCnpj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCnpj.Location = new System.Drawing.Point(3, 0);
+            this.lblCnpj.Location = new System.Drawing.Point(4, 1);
             this.lblCnpj.Name = "lblCnpj";
-            this.lblCnpj.Size = new System.Drawing.Size(97, 38);
+            this.lblCnpj.Size = new System.Drawing.Size(97, 37);
             this.lblCnpj.TabIndex = 0;
             this.lblCnpj.Text = "Cnpj";
-            this.lblCnpj.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCnpj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -287,7 +287,6 @@
             // 
             // panel5
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.tableLayoutPanel2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(5, 5);
@@ -298,6 +297,7 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -312,7 +312,6 @@
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -323,56 +322,69 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(330, 308);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(332, 310);
             this.tableLayoutPanel2.TabIndex = 16;
+            // 
+            // txtCnpj
+            // 
+            this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCnpj.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtCnpj.Location = new System.Drawing.Point(4, 7);
+            this.txtCnpj.Mask = "99.999.999/9999-99";
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(324, 25);
+            this.txtCnpj.TabIndex = 0;
+            this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCnpj.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtCidade
             // 
-            this.txtCidade.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtCidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCidade.BackColor = System.Drawing.SystemColors.Control;
             this.txtCidade.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(8, 233);
+            this.txtCidade.Location = new System.Drawing.Point(4, 235);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(314, 25);
+            this.txtCidade.Size = new System.Drawing.Size(324, 25);
             this.txtCidade.TabIndex = 6;
             this.txtCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBairro
             // 
-            this.txtBairro.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBairro.BackColor = System.Drawing.SystemColors.Control;
             this.txtBairro.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(8, 196);
+            this.txtBairro.Location = new System.Drawing.Point(4, 197);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(314, 25);
+            this.txtBairro.Size = new System.Drawing.Size(324, 25);
             this.txtBairro.TabIndex = 5;
             this.txtBairro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNumero
             // 
-            this.txtNumero.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNumero.BackColor = System.Drawing.SystemColors.Control;
             this.txtNumero.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(8, 159);
+            this.txtNumero.Location = new System.Drawing.Point(4, 159);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(314, 25);
+            this.txtNumero.Size = new System.Drawing.Size(324, 25);
             this.txtNumero.TabIndex = 4;
             this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtRua
             // 
-            this.txtRua.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtRua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRua.BackColor = System.Drawing.SystemColors.Control;
             this.txtRua.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRua.Location = new System.Drawing.Point(8, 122);
+            this.txtRua.Location = new System.Drawing.Point(4, 121);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(314, 25);
+            this.txtRua.Size = new System.Drawing.Size(324, 25);
             this.txtRua.TabIndex = 3;
             this.txtRua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbEstado
             // 
-            this.cbEstado.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbEstado.BackColor = System.Drawing.SystemColors.Control;
             this.cbEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbEstado.DropDownHeight = 100;
@@ -409,21 +421,33 @@
             "SP",
             "SE",
             "TO"});
-            this.cbEstado.Location = new System.Drawing.Point(8, 270);
+            this.cbEstado.Location = new System.Drawing.Point(4, 274);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(314, 27);
+            this.cbEstado.Size = new System.Drawing.Size(324, 27);
             this.cbEstado.TabIndex = 7;
             // 
             // txtNome
             // 
-            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.BackColor = System.Drawing.SystemColors.Control;
             this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(8, 48);
+            this.txtNome.Location = new System.Drawing.Point(4, 45);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(314, 25);
+            this.txtNome.Size = new System.Drawing.Size(324, 25);
             this.txtNome.TabIndex = 1;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.maskedTextBox1.Location = new System.Drawing.Point(4, 83);
+            this.maskedTextBox1.Mask = "(99) 0000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(324, 25);
+            this.maskedTextBox1.TabIndex = 2;
+            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel2
             // 
@@ -503,31 +527,6 @@
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Cadastrar Cliente";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.maskedTextBox1.Location = new System.Drawing.Point(8, 85);
-            this.maskedTextBox1.Mask = "(99) 0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(314, 25);
-            this.maskedTextBox1.TabIndex = 2;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCnpj.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtCnpj.Location = new System.Drawing.Point(8, 11);
-            this.txtCnpj.Mask = "99.999.999/9999-99";
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(314, 25);
-            this.txtCnpj.TabIndex = 0;
-            this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCnpj.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // InsertClienteView
             // 
