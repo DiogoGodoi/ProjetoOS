@@ -29,13 +29,13 @@ namespace VIEWS
                 // Validação do tamanho máximo dos campos antes da inserção.
                 if (txtCnpj.Text.Length > 15)
                 {
-                    MessageBox.Show("Cnpj do cliente excede 15 caracteres, o cnpj é composto por apenas numeros e verifique os caracteres especiais como '.' '/' '-'  e os remova", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cnpj do cliente excede 15 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (txtNome.Text.Length > 45)
                 {
                     MessageBox.Show("Nome do cliente excede 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (txtTelefone.Text.Length > 18)
+                else if (maskedTextBox1.Text.Length > 18)
                 {
                     MessageBox.Show("Telefone do cliente excede 18 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -58,7 +58,7 @@ namespace VIEWS
                 else
                 {
                     // Cria um objeto Cliente com os dados inseridos no formulário.
-                    MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
+                    MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, maskedTextBox1.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
 
                     // Chama o método de inserção do controlador e obtém o resultado.
                     var retorno = controllerCliente.Insert(cliente);
@@ -69,7 +69,7 @@ namespace VIEWS
                         MessageBox.Show("Cadastrado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtCnpj.Text = string.Empty;
                         txtNome.Text = string.Empty;
-                        txtTelefone.Text = string.Empty;
+                        maskedTextBox1.Text = string.Empty;
                         txtRua.Text = string.Empty;
                         txtNumero.Text = string.Empty;
                         txtBairro.Text = string.Empty;
@@ -91,5 +91,4 @@ namespace VIEWS
             }
         }
     }
-
 }

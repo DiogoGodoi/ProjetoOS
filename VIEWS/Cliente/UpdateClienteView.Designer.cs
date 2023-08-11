@@ -36,9 +36,7 @@
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -63,6 +61,8 @@
             this.panelFooter = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAlterar = new System.Windows.Forms.Button();
+            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -111,10 +111,10 @@
             this.tableLayoutPanel2.Controls.Add(this.txtBairro, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.txtNumero, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.txtRua, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtTelefone, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.txtNome, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtCnpj, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cbEstado, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.txtCnpj, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtTelefone, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -127,6 +127,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(392, 254);
             this.tableLayoutPanel2.TabIndex = 13;
             // 
@@ -174,17 +175,6 @@
             this.txtRua.TabIndex = 3;
             this.txtRua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefone.BackColor = System.Drawing.SystemColors.Control;
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(3, 65);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(386, 25);
-            this.txtTelefone.TabIndex = 2;
-            this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtNome
             // 
             this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -195,17 +185,6 @@
             this.txtNome.Size = new System.Drawing.Size(386, 25);
             this.txtNome.TabIndex = 1;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCnpj.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCnpj.Location = new System.Drawing.Point(3, 3);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(386, 25);
-            this.txtCnpj.TabIndex = 0;
-            this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbEstado
             // 
@@ -538,6 +517,32 @@
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
             // 
+            // txtCnpj
+            // 
+            this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCnpj.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtCnpj.Location = new System.Drawing.Point(3, 3);
+            this.txtCnpj.Mask = "99.999.999/9999-99";
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(386, 25);
+            this.txtCnpj.TabIndex = 0;
+            this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCnpj.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefone.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtTelefone.Location = new System.Drawing.Point(3, 65);
+            this.txtTelefone.Mask = "(99) 0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(386, 25);
+            this.txtTelefone.TabIndex = 2;
+            this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // UpdateClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,9 +589,7 @@
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtRua;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtCnpj;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
@@ -611,5 +614,7 @@
         private System.Windows.Forms.Panel panelFooter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.MaskedTextBox txtCnpj;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }

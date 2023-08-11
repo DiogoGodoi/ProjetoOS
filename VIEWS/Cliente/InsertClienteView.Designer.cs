@@ -51,8 +51,6 @@
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,6 +59,8 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.tbTitulo = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.panelFooter.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -301,14 +301,14 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.txtCnpj, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtCidade, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.txtBairro, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.txtNumero, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.txtRua, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtTelefone, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtCnpj, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cbEstado, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.txtNome, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.maskedTextBox1, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -369,28 +369,6 @@
             this.txtRua.Size = new System.Drawing.Size(314, 25);
             this.txtRua.TabIndex = 3;
             this.txtRua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtTelefone.BackColor = System.Drawing.SystemColors.Control;
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(8, 85);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(314, 25);
-            this.txtTelefone.TabIndex = 2;
-            this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCnpj.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCnpj.Location = new System.Drawing.Point(8, 11);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(314, 25);
-            this.txtCnpj.TabIndex = 0;
-            this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbEstado
             // 
@@ -525,6 +503,31 @@
             this.lblTitulo.Text = "Cadastrar Cliente";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.maskedTextBox1.Location = new System.Drawing.Point(8, 85);
+            this.maskedTextBox1.Mask = "(99) 0000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(314, 25);
+            this.maskedTextBox1.TabIndex = 2;
+            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtCnpj
+            // 
+            this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCnpj.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtCnpj.Location = new System.Drawing.Point(8, 11);
+            this.txtCnpj.Mask = "99.999.999/9999-99";
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(314, 25);
+            this.txtCnpj.TabIndex = 0;
+            this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCnpj.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // InsertClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,8 +585,6 @@
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtRua;
-        private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.TextBox txtCnpj;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Panel panel2;
@@ -592,5 +593,7 @@
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.TableLayoutPanel tbTitulo;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtCnpj;
     }
 }
