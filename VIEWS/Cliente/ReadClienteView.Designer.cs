@@ -105,6 +105,7 @@
             this.btnDeletar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDeletar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDeletar.Location = new System.Drawing.Point(336, 3);
             this.btnDeletar.Name = "btnDeletar";
@@ -120,6 +121,7 @@
             this.btnAlterar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAlterar.Location = new System.Drawing.Point(114, 3);
             this.btnAlterar.Name = "btnAlterar";
@@ -135,6 +137,7 @@
             this.btnAtualizar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAtualizar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAtualizar.Location = new System.Drawing.Point(558, 3);
             this.btnAtualizar.Name = "btnAtualizar";

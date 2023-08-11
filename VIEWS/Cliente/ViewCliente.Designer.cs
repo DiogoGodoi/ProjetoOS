@@ -46,21 +46,23 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tbPanelTitulo = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.tbPanelTitulo = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tbPanelTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.tbPanelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -168,12 +170,13 @@
             // 
             // btnRelatorios
             // 
-            this.btnRelatorios.BackColor = System.Drawing.Color.Navy;
+            this.btnRelatorios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnRelatorios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRelatorios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRelatorios.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnRelatorios.FlatAppearance.BorderSize = 2;
             this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRelatorios.Location = new System.Drawing.Point(97, 68);
             this.btnRelatorios.Name = "btnRelatorios";
@@ -184,12 +187,13 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.Navy;
+            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnPesquisar.FlatAppearance.BorderSize = 2;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPesquisar.Location = new System.Drawing.Point(4, 68);
             this.btnPesquisar.Name = "btnPesquisar";
@@ -200,12 +204,13 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.Navy;
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCadastrar.FlatAppearance.BorderSize = 2;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCadastrar.Location = new System.Drawing.Point(97, 4);
             this.btnCadastrar.Name = "btnCadastrar";
@@ -216,12 +221,13 @@
             // 
             // btnExibir
             // 
-            this.btnExibir.BackColor = System.Drawing.Color.Navy;
+            this.btnExibir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnExibir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExibir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExibir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnExibir.FlatAppearance.BorderSize = 2;
             this.btnExibir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExibir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExibir.Location = new System.Drawing.Point(4, 4);
             this.btnExibir.Name = "btnExibir";
@@ -241,12 +247,13 @@
             // 
             // btnSair
             // 
-            this.btnSair.BackColor = System.Drawing.Color.Navy;
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSair.FlatAppearance.BorderSize = 2;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSair.Location = new System.Drawing.Point(0, 0);
             this.btnSair.Name = "btnSair";
@@ -259,56 +266,13 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.tbPanelTitulo);
+            this.panel1.Controls.Add(this.panel7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(927, 61);
             this.panel1.TabIndex = 14;
-            // 
-            // tbPanelTitulo
-            // 
-            this.tbPanelTitulo.BackColor = System.Drawing.Color.White;
-            this.tbPanelTitulo.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tbPanelTitulo.ColumnCount = 2;
-            this.tbPanelTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
-            this.tbPanelTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbPanelTitulo.Controls.Add(this.pictureBox1, 0, 0);
-            this.tbPanelTitulo.Controls.Add(this.lblTitulo, 1, 0);
-            this.tbPanelTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbPanelTitulo.Location = new System.Drawing.Point(5, 5);
-            this.tbPanelTitulo.Name = "tbPanelTitulo";
-            this.tbPanelTitulo.RowCount = 1;
-            this.tbPanelTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbPanelTitulo.Size = new System.Drawing.Size(915, 49);
-            this.tbPanelTitulo.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.White;
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblTitulo.Location = new System.Drawing.Point(197, 1);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(714, 47);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Modulo - Clientes";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -341,6 +305,59 @@
             this.panel6.Size = new System.Drawing.Size(915, 33);
             this.panel6.TabIndex = 0;
             // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.tbPanelTitulo);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(5, 5);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(915, 49);
+            this.panel7.TabIndex = 0;
+            // 
+            // tbPanelTitulo
+            // 
+            this.tbPanelTitulo.BackColor = System.Drawing.Color.White;
+            this.tbPanelTitulo.ColumnCount = 2;
+            this.tbPanelTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
+            this.tbPanelTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbPanelTitulo.Controls.Add(this.pictureBox1, 0, 0);
+            this.tbPanelTitulo.Controls.Add(this.lblTitulo, 1, 0);
+            this.tbPanelTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbPanelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.tbPanelTitulo.Name = "tbPanelTitulo";
+            this.tbPanelTitulo.RowCount = 1;
+            this.tbPanelTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbPanelTitulo.Size = new System.Drawing.Size(913, 47);
+            this.tbPanelTitulo.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(186, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.White;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblTitulo.Location = new System.Drawing.Point(195, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(715, 47);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Modulo - Clientes";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ViewCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,11 +376,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.tbPanelTitulo.ResumeLayout(false);
             this.tbPanelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,16 +401,17 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TableLayoutPanel tbPanelTitulo;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnRelatorios;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnExibir;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TableLayoutPanel tbPanelTitulo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
