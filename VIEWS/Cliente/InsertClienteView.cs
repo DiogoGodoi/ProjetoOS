@@ -29,7 +29,7 @@ namespace VIEWS
                 // Validação do tamanho máximo dos campos antes da inserção.
                 if (txtCnpj.Text.Length > 15)
                 {
-                    MessageBox.Show("Cnpj do cliente excede 15 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cnpj do cliente excede 15 caracteres, o cnpj é composto por apenas numeros e verifique os caracteres especiais como '.' '/' '-'  e os remova", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (txtNome.Text.Length > 45)
                 {
