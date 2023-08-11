@@ -5,8 +5,8 @@ namespace CONEXAO {
     {
         public SqlConnection Connection()
         {
-            string connectionString = "Data Source=localhost; Initial Catalog=OS; Integrated Security=True";
-            SqlConnection connection = new SqlConnection(connectionString) ;
+            var builder = new SqlConnectionStringBuilder { DataSource = "localhost", InitialCatalog = "OS", IntegratedSecurity = true };
+            SqlConnection connection = new SqlConnection(builder.ConnectionString) ;
             return connection;
         }
     }    
