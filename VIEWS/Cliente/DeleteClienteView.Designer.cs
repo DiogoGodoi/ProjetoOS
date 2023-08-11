@@ -110,6 +110,7 @@
             // btnDeletar
             // 
             this.btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDeletar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;

@@ -18,7 +18,7 @@ namespace VIEWS
             // Associações de eventos para carregar e filtrar os dados de clientes
             Load += (sender, e) => { Read(); dtGrid.Focus(); }; // Carrega todos os clientes
             btnAtualizar.Click += (sender, e) => Read(); // Atualiza a exibição dos clientes
-            btnPesquisar.Click += (sender, e) => Filter(); // Realiza a filtragem dos clientes
+            btnPesquisar.Click += (sender, e) => { Filter(); dtGrid.Focus(); }; // Realiza a filtragem dos clientes
         }
 
         // Função para realizar a filtragem dos clientes com base nos parâmetros informados

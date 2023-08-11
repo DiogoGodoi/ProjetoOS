@@ -532,6 +532,7 @@
             // btnAlterar
             // 
             this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
