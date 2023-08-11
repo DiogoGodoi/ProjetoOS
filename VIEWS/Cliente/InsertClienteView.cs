@@ -2,6 +2,7 @@
 using MODEL;
 using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace VIEWS
 {
@@ -84,7 +85,7 @@ namespace VIEWS
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Exibe uma mensagem de erro caso ocorra uma exceção.
                 MessageBox.Show("Por favor insira os dados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
