@@ -285,7 +285,7 @@ namespace VIEWS.Cliente.Relatorio {
             
             private global::System.Data.DataColumn columnTelefone;
             
-            private global::System.Data.DataColumn columnRua;
+            private global::System.Data.DataColumn columnEndereco;
             
             private global::System.Data.DataColumn columnNumero;
             
@@ -354,9 +354,9 @@ namespace VIEWS.Cliente.Relatorio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RuaColumn {
+            public global::System.Data.DataColumn EnderecoColumn {
                 get {
-                    return this.columnRua;
+                    return this.columnEndereco;
                 }
             }
             
@@ -429,13 +429,13 @@ namespace VIEWS.Cliente.Relatorio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientesRow AddClientesRow(long Cnpj, string Nome, string Telefone, string Rua, string Numero, string Bairro, string Cidade, string Estado) {
+            public ClientesRow AddClientesRow(long Cnpj, string Nome, string Telefone, string Endereco, string Numero, string Bairro, string Cidade, string Estado) {
                 ClientesRow rowClientesRow = ((ClientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cnpj,
                         Nome,
                         Telefone,
-                        Rua,
+                        Endereco,
                         Numero,
                         Bairro,
                         Cidade,
@@ -465,7 +465,7 @@ namespace VIEWS.Cliente.Relatorio {
                 this.columnCnpj = base.Columns["Cnpj"];
                 this.columnNome = base.Columns["Nome"];
                 this.columnTelefone = base.Columns["Telefone"];
-                this.columnRua = base.Columns["Rua"];
+                this.columnEndereco = base.Columns["Endereco"];
                 this.columnNumero = base.Columns["Numero"];
                 this.columnBairro = base.Columns["Bairro"];
                 this.columnCidade = base.Columns["Cidade"];
@@ -481,8 +481,8 @@ namespace VIEWS.Cliente.Relatorio {
                 base.Columns.Add(this.columnNome);
                 this.columnTelefone = new global::System.Data.DataColumn("Telefone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTelefone);
-                this.columnRua = new global::System.Data.DataColumn("Rua", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRua);
+                this.columnEndereco = new global::System.Data.DataColumn("Endereco", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEndereco);
                 this.columnNumero = new global::System.Data.DataColumn("Numero", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNumero);
                 this.columnBairro = new global::System.Data.DataColumn("Bairro", typeof(string), null, global::System.Data.MappingType.Element);
@@ -681,17 +681,17 @@ namespace VIEWS.Cliente.Relatorio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Rua {
+            public string Endereco {
                 get {
                     try {
-                        return ((string)(this[this.tableClientes.RuaColumn]));
+                        return ((string)(this[this.tableClientes.EnderecoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Rua\' na tabela \'Clientes\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Endereco\' na tabela \'Clientes\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableClientes.RuaColumn] = value;
+                    this[this.tableClientes.EnderecoColumn] = value;
                 }
             }
             
@@ -797,14 +797,14 @@ namespace VIEWS.Cliente.Relatorio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsRuaNull() {
-                return this.IsNull(this.tableClientes.RuaColumn);
+            public bool IsEnderecoNull() {
+                return this.IsNull(this.tableClientes.EnderecoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetRuaNull() {
-                this[this.tableClientes.RuaColumn] = global::System.Convert.DBNull;
+            public void SetEnderecoNull() {
+                this[this.tableClientes.EnderecoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
