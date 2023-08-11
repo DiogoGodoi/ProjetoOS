@@ -5,6 +5,7 @@ namespace CONEXAO {
     {
         public SqlConnection Connection()
         {
+            // Criação da conexão
             var builder = new SqlConnectionStringBuilder { DataSource = "localhost", InitialCatalog = "OS", IntegratedSecurity = true };
             SqlConnection connection = new SqlConnection(builder.ConnectionString) ;
             return connection;
