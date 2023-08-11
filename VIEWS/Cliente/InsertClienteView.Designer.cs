@@ -40,7 +40,7 @@
             this.lblCidade = new System.Windows.Forms.Label();
             this.lblBairro = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
-            this.lblRua = new System.Windows.Forms.Label();
+            this.lblEndereco = new System.Windows.Forms.Label();
             this.lblTelfone = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCnpj = new System.Windows.Forms.Label();
@@ -160,7 +160,7 @@
             this.tlPanelLabels.Controls.Add(this.lblCidade, 0, 6);
             this.tlPanelLabels.Controls.Add(this.lblBairro, 0, 5);
             this.tlPanelLabels.Controls.Add(this.lblNumero, 0, 4);
-            this.tlPanelLabels.Controls.Add(this.lblRua, 0, 3);
+            this.tlPanelLabels.Controls.Add(this.lblEndereco, 0, 3);
             this.tlPanelLabels.Controls.Add(this.lblTelfone, 0, 2);
             this.tlPanelLabels.Controls.Add(this.lblNome, 0, 1);
             this.tlPanelLabels.Controls.Add(this.lblCnpj, 0, 0);
@@ -227,17 +227,17 @@
             this.lblNumero.Text = "Numero";
             this.lblNumero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblRua
+            // lblEndereco
             // 
-            this.lblRua.AutoSize = true;
-            this.lblRua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRua.Location = new System.Drawing.Point(3, 114);
-            this.lblRua.Name = "lblRua";
-            this.lblRua.Size = new System.Drawing.Size(97, 38);
-            this.lblRua.TabIndex = 3;
-            this.lblRua.Text = "Rua";
-            this.lblRua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndereco.Location = new System.Drawing.Point(3, 114);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(97, 38);
+            this.lblEndereco.TabIndex = 3;
+            this.lblEndereco.Text = "Endereço";
+            this.lblEndereco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTelfone
             // 
@@ -571,7 +571,7 @@
         private System.Windows.Forms.Label lblCidade;
         private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.Label lblRua;
+        private System.Windows.Forms.Label lblEndereco;
         private System.Windows.Forms.Label lblTelfone;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCnpj;
