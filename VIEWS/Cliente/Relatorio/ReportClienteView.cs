@@ -19,7 +19,6 @@ namespace VIEWS
             // Evento de carregamento do formulário para gerar o relatório
             Load += (sender, e) => GenerateReport();
             rpv1.Print += (sender, e) => { this.Close(); };
-            this.FormClosed += (sender, e) => { MessageBox.Show("Arquivo salvo", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information); };
         }
 
         // Método assíncrono para gerar o relatório
