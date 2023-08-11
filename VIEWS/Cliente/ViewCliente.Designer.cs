@@ -46,23 +46,23 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tbPanelTitulo = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tbPanelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -91,19 +91,19 @@
             // tsCadastrar
             // 
             this.tsCadastrar.Name = "tsCadastrar";
-            this.tsCadastrar.Size = new System.Drawing.Size(180, 22);
+            this.tsCadastrar.Size = new System.Drawing.Size(124, 22);
             this.tsCadastrar.Text = "Cadastrar";
             // 
             // tsPesquisar
             // 
             this.tsPesquisar.Name = "tsPesquisar";
-            this.tsPesquisar.Size = new System.Drawing.Size(180, 22);
+            this.tsPesquisar.Size = new System.Drawing.Size(124, 22);
             this.tsPesquisar.Text = "Pesquisar";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // relatoriosToolStripMenuItem
@@ -118,7 +118,7 @@
             // tsReport
             // 
             this.tsReport.Name = "tsReport";
-            this.tsReport.Size = new System.Drawing.Size(180, 22);
+            this.tsReport.Size = new System.Drawing.Size(155, 22);
             this.tsReport.Text = "Emitir Relatório";
             // 
             // panel4
@@ -274,37 +274,6 @@
             this.panel1.Size = new System.Drawing.Size(927, 61);
             this.panel1.TabIndex = 14;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 532);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(927, 45);
-            this.panel2.TabIndex = 18;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel6);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(925, 43);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(5, 5);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(915, 33);
-            this.panel6.TabIndex = 0;
-            // 
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -358,6 +327,37 @@
             this.lblTitulo.Text = "Modulo - Clientes";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 532);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(927, 45);
+            this.panel2.TabIndex = 18;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(5);
+            this.panel3.Size = new System.Drawing.Size(925, 43);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(5, 5);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(915, 33);
+            this.panel6.TabIndex = 0;
+            // 
             // ViewCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,12 +376,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.tbPanelTitulo.ResumeLayout(false);
             this.tbPanelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
