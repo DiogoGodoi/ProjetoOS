@@ -234,6 +234,7 @@
             // 
             this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCnpj.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCnpj.Enabled = false;
             this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtCnpj.Location = new System.Drawing.Point(3, 3);
             this.txtCnpj.Mask = "99.999.999/9999-99";

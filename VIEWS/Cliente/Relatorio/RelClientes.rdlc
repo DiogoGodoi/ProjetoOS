@@ -9,7 +9,7 @@
               <Width>4.39177cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>13.28177cm</Width>
+              <Width>10.05385cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -131,7 +131,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -194,7 +193,7 @@
         <Top>4.1337cm</Top>
         <Left>0.86995cm</Left>
         <Height>1.2cm</Height>
-        <Width>17.67354cm</Width>
+        <Width>14.44562cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -225,7 +224,7 @@
         <Top>1.58433cm</Top>
         <Left>0.86995cm</Left>
         <Height>1.39375cm</Height>
-        <Width>17.67354cm</Width>
+        <Width>14.44562cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -243,7 +242,7 @@
     <Height>3.85417in</Height>
     <Style />
   </Body>
-  <Width>7.59734in</Width>
+  <Width>6.3912in</Width>
   <Page>
     <PageHeader>
       <Height>2.81974cm</Height>
@@ -254,10 +253,10 @@
           <Source>Embedded</Source>
           <Value>Semtítulo</Value>
           <Sizing>Fit</Sizing>
-          <Top>0.68474cm</Top>
-          <Left>7.16703cm</Left>
+          <Top>0.75878cm</Top>
+          <Left>6.1251cm</Left>
           <Height>1.28833cm</Height>
-          <Width>5.17771cm</Width>
+          <Width>3.92442cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
