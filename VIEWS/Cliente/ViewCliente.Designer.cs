@@ -89,19 +89,19 @@
             // tsCadastrar
             // 
             this.tsCadastrar.Name = "tsCadastrar";
-            this.tsCadastrar.Size = new System.Drawing.Size(124, 22);
+            this.tsCadastrar.Size = new System.Drawing.Size(180, 22);
             this.tsCadastrar.Text = "Cadastrar";
             // 
             // tsPesquisar
             // 
             this.tsPesquisar.Name = "tsPesquisar";
-            this.tsPesquisar.Size = new System.Drawing.Size(124, 22);
+            this.tsPesquisar.Size = new System.Drawing.Size(180, 22);
             this.tsPesquisar.Text = "Pesquisar";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // relatoriosToolStripMenuItem
@@ -116,7 +116,7 @@
             // tsReport
             // 
             this.tsReport.Name = "tsReport";
-            this.tsReport.Size = new System.Drawing.Size(155, 22);
+            this.tsReport.Size = new System.Drawing.Size(180, 22);
             this.tsReport.Text = "Emitir Relatório";
             // 
             // panel4
