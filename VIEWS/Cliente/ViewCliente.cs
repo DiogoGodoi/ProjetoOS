@@ -12,6 +12,7 @@ namespace VIEWS
         private InsertClienteView _viewCadastrarCliente { get; set; }
         private FilterClienteView _viewPesquisarCliente { get; set; }
         private ReportClientView _viewReportClient { get;set; }
+        private ReportClientView1 _viewReportClient1 { get;set; }
 
         // Construtor da classe ViewCliente
         public ViewCliente()
@@ -28,7 +29,7 @@ namespace VIEWS
             btnCadastrar.Click += (sender, e) => OpenClientInserView(); // Abre a visualização de cadastro de clientes
             btnExibir.Click += (sender, e) => OpenClientReadView(); // Abre a visualização de leitura de clientes
             btnPesquisar.Click += (sender, e) => OpenClientFilterView(); // Abre a visualização de filtro de clientes
-            btnRelatorios.Click += (sender, e) => OpenClientReportView(); // Abre a visualização de relatórios de clientes
+            btnRelatorios.Click += (sender, e) => OpenClientReport1View(); // Abre a visualização de relatórios de clientes
             tsCadastrar.Click += (sender, e) => OpenClientInserView(); // Abre a visualização de cadastro de clientes
             tsPesquisar.Click += (sender, e) => OpenClientFilterView(); // Abre a visualização de filtro de clientes
             tsReport.Click += (sender, e) => OpenClientReportView(); // Abre a visualização de relatórios de clientes
@@ -92,12 +93,18 @@ namespace VIEWS
         // Abre a visualização de relatórios de clientes
         private void OpenClientReportView()
         {
-                // Cria um dataSet de dados
-                 Dados dados = new Dados();
-                // Cria e exibe a visualização do relatório de clientes
-                _viewReportClient.SetDados(dados);
-                _viewReportClient.ShowDialog();   
+            // Cria um dataSet de dados
+            Dados dados = new Dados();
+            // Cria e exibe a visualização do relatório de clientes
+            _viewReportClient.SetDados(dados);
+            _viewReportClient.ShowDialog();
         }
+        private void OpenClientReport1View()
+        {
+            transicaoTela(_viewReportClient1);
+        }
+
+        
     }
 }
 

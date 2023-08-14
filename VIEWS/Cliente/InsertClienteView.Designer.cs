@@ -43,7 +43,7 @@
             this.lblEndereco = new System.Windows.Forms.Label();
             this.lblTelfone = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.lblCnpj = new System.Windows.Forms.Label();
+            this.btnCnpj = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -54,7 +54,7 @@
             this.txtRua = new System.Windows.Forms.TextBox();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pctLogo = new System.Windows.Forms.PictureBox();
@@ -155,7 +155,6 @@
             this.tlPanelLabels.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tlPanelLabels.ColumnCount = 1;
             this.tlPanelLabels.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlPanelLabels.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlPanelLabels.Controls.Add(this.lblEstado, 0, 7);
             this.tlPanelLabels.Controls.Add(this.lblCidade, 0, 6);
             this.tlPanelLabels.Controls.Add(this.lblBairro, 0, 5);
@@ -163,7 +162,7 @@
             this.tlPanelLabels.Controls.Add(this.lblEndereco, 0, 3);
             this.tlPanelLabels.Controls.Add(this.lblTelfone, 0, 2);
             this.tlPanelLabels.Controls.Add(this.lblNome, 0, 1);
-            this.tlPanelLabels.Controls.Add(this.lblCnpj, 0, 0);
+            this.tlPanelLabels.Controls.Add(this.btnCnpj, 0, 0);
             this.tlPanelLabels.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlPanelLabels.Location = new System.Drawing.Point(0, 0);
             this.tlPanelLabels.Name = "tlPanelLabels";
@@ -176,6 +175,7 @@
             this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlPanelLabels.Size = new System.Drawing.Size(105, 310);
             this.tlPanelLabels.TabIndex = 14;
             // 
@@ -263,17 +263,19 @@
             this.lblNome.Text = "Nome";
             this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblCnpj
+            // btnCnpj
             // 
-            this.lblCnpj.AutoSize = true;
-            this.lblCnpj.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCnpj.Location = new System.Drawing.Point(4, 1);
-            this.lblCnpj.Name = "lblCnpj";
-            this.lblCnpj.Size = new System.Drawing.Size(97, 37);
-            this.lblCnpj.TabIndex = 0;
-            this.lblCnpj.Text = "Cnpj";
-            this.lblCnpj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCnpj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnCnpj.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCnpj.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCnpj.ForeColor = System.Drawing.Color.White;
+            this.btnCnpj.Location = new System.Drawing.Point(4, 4);
+            this.btnCnpj.Name = "btnCnpj";
+            this.btnCnpj.Size = new System.Drawing.Size(97, 31);
+            this.btnCnpj.TabIndex = 10;
+            this.btnCnpj.Text = "Cnpj";
+            this.btnCnpj.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -300,7 +302,6 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.txtCnpj, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtCidade, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.txtBairro, 0, 5);
@@ -308,7 +309,7 @@
             this.tableLayoutPanel2.Controls.Add(this.txtRua, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.cbEstado, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.txtNome, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.maskedTextBox1, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtTelefone, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -437,17 +438,17 @@
             this.txtNome.TabIndex = 1;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // maskedTextBox1
+            // txtTelefone
             // 
-            this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.maskedTextBox1.Location = new System.Drawing.Point(4, 83);
-            this.maskedTextBox1.Mask = "(99) 0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(324, 25);
-            this.maskedTextBox1.TabIndex = 2;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefone.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtTelefone.Location = new System.Drawing.Point(4, 83);
+            this.txtTelefone.Mask = "(99) 0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(324, 25);
+            this.txtTelefone.TabIndex = 2;
+            this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel2
             // 
@@ -577,7 +578,6 @@
         private System.Windows.Forms.Label lblEndereco;
         private System.Windows.Forms.Label lblTelfone;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label lblCnpj;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -593,7 +593,8 @@
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.TableLayoutPanel tbTitulo;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.MaskedTextBox txtCnpj;
+        private System.Windows.Forms.Button btnCnpj;
     }
 }

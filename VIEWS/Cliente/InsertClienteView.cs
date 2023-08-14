@@ -17,6 +17,7 @@ namespace VIEWS
             // Associação do evento de clique do botão 'Inserir' à função Insert
             Load += (sender, e) => { txtCnpj.Focus(); };
             btnInserir.Click += (sender, e) => Insert();
+            btnCnpj.Click += (sender, e) => BuscaCnpj(txtCnpj.Text);
         }
 
         // Função para realizar a inserção de um novo cliente
@@ -36,7 +37,7 @@ namespace VIEWS
                 {
                     MessageBox.Show("Nome do cliente excede 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (maskedTextBox1.Text.Length > 18)
+                else if (txtTelefone.Text.Length > 18)
                 {
                     MessageBox.Show("Telefone do cliente excede 18 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -59,7 +60,7 @@ namespace VIEWS
                 else
                 {
                     // Cria um objeto Cliente com os dados inseridos no formulário.
-                    MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, maskedTextBox1.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
+                    MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
 
                     // Chama o método de inserção do controlador e obtém o resultado.
                     var retorno = controllerCliente.Insert(cliente);
@@ -70,7 +71,7 @@ namespace VIEWS
                         MessageBox.Show("Cadastrado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtCnpj.Text = string.Empty;
                         txtNome.Text = string.Empty;
-                        maskedTextBox1.Text = string.Empty;
+                        txtTelefone.Text = string.Empty;
                         txtRua.Text = string.Empty;
                         txtNumero.Text = string.Empty;
                         txtBairro.Text = string.Empty;
@@ -89,6 +90,26 @@ namespace VIEWS
             {
                 // Exibe uma mensagem de erro caso ocorra uma exceção.
                 MessageBox.Show("Por favor insira os dados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private async void BuscaCnpj(string cnpj)
+        {
+            ControllerCliente controllerCliente = new ControllerCliente();
+            var retorno = await controllerCliente.ApiReceita(cnpj);
+            if (retorno != null)
+            {
+                txtNome.Text = retorno.nome;
+                txtTelefone.Text = retorno.telefone;
+                txtRua.Text = retorno.logradouro;
+                txtNumero.Text = retorno.numero;
+                txtBairro.Text = retorno.bairro;
+                txtCidade.Text = retorno.municipio;
+                cbEstado.Text = retorno.uf;
+            }
+            else
+            {
+                MessageBox.Show("Empresa não localizada", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

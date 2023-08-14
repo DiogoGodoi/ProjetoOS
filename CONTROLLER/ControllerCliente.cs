@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 using MODEL;
 using DAO;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System;
+using Newtonsoft.Json;
 
 namespace CONTROLLER
 {
@@ -49,6 +53,27 @@ namespace CONTROLLER
         {
             DaoCliente dao = new DaoCliente();
             return dao.report();
+        }
+
+        //Método api receita federal
+        public async Task<ApiReceitaFederal> ApiReceita(string cnpj)
+        {
+            string url = $"https://www.receitaws.com.br/v1/cnpj/{cnpj}";
+            HttpClient cliente = new HttpClient();
+
+            try
+            {
+                HttpResponseMessage response = await cliente.GetAsync(url);
+                response.EnsureSuccessStatusCode();  // Lança uma exceção se a resposta não for bem-sucedida
+
+                string content = await response.Content.ReadAsStringAsync();
+                ApiReceitaFederal dados = JsonConvert.DeserializeObject<ApiReceitaFederal>(content);
+                return dados;
+            }
+            catch (HttpRequestException ex)
+            {
+                throw new Exception($"Erro ao consultar o CEP: {ex.Message}");
+            }
         }
     }
 }
