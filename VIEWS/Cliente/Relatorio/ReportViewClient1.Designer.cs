@@ -35,7 +35,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnGerar = new System.Windows.Forms.Button();
-            this.btnExibir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,9 +44,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.chkFiltros = new System.Windows.Forms.CheckedListBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTituloFiltro = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.dtGrid = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -61,8 +60,8 @@
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrid)).BeginInit();
             this.panel4.SuspendLayout();
@@ -90,14 +89,12 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.btnGerar, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnExibir, 1, 0);
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.btnGerar, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -114,27 +111,12 @@
             this.btnGerar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGerar.Location = new System.Drawing.Point(468, 3);
+            this.btnGerar.Location = new System.Drawing.Point(262, 3);
             this.btnGerar.Name = "btnGerar";
-            this.btnGerar.Size = new System.Drawing.Size(149, 32);
+            this.btnGerar.Size = new System.Drawing.Size(253, 32);
             this.btnGerar.TabIndex = 0;
             this.btnGerar.Text = "Gerar ";
             this.btnGerar.UseVisualStyleBackColor = false;
-            // 
-            // btnExibir
-            // 
-            this.btnExibir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnExibir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExibir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExibir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExibir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExibir.Location = new System.Drawing.Point(158, 3);
-            this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(149, 32);
-            this.btnExibir.TabIndex = 1;
-            this.btnExibir.Text = "Exibir dados";
-            this.btnExibir.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -246,6 +228,16 @@
             this.chkFiltros.Size = new System.Drawing.Size(93, 244);
             this.chkFiltros.TabIndex = 0;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.tableLayoutPanel3);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(5);
+            this.panel6.Size = new System.Drawing.Size(115, 54);
+            this.panel6.TabIndex = 17;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
@@ -275,16 +267,6 @@
             this.lblTituloFiltro.TabIndex = 8;
             this.lblTituloFiltro.Text = "Filtros";
             this.lblTituloFiltro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.tableLayoutPanel3);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(5);
-            this.panel6.Size = new System.Drawing.Size(115, 54);
-            this.panel6.TabIndex = 17;
             // 
             // panel11
             // 
@@ -362,9 +344,9 @@
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.panel6.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtGrid)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -378,7 +360,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnGerar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnExibir;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblTitulo;

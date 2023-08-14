@@ -99,6 +99,10 @@ namespace VIEWS
                     dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
                 }
                 dtGrid.DataSource = dados.Clientes;
+                dtGrid.Columns["Cnpj"].Visible = false;
+                dtGrid.Columns["Telefone"].Visible = false;
+                dtGrid.Columns["Bairro"].Visible = false;
+                dtGrid.Columns["Estado"].Visible = false;
             }
             else
             {
