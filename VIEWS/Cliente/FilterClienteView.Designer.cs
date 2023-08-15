@@ -235,9 +235,10 @@
             // 
             this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCnpj.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCnpj.Location = new System.Drawing.Point(424, 6);
+            this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtCnpj.Location = new System.Drawing.Point(424, 4);
             this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(163, 20);
+            this.txtCnpj.Size = new System.Drawing.Size(163, 25);
             this.txtCnpj.TabIndex = 3;
             this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -284,9 +285,10 @@
             // 
             this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.BackColor = System.Drawing.SystemColors.Control;
-            this.txtNome.Location = new System.Drawing.Point(169, 6);
+            this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtNome.Location = new System.Drawing.Point(169, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(183, 20);
+            this.txtNome.Size = new System.Drawing.Size(183, 25);
             this.txtNome.TabIndex = 6;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
