@@ -64,11 +64,17 @@ namespace CONTROLLER
             try
             {
                 HttpResponseMessage response = await cliente.GetAsync(url);
-                response.EnsureSuccessStatusCode();  // Lança uma exceção se a resposta não for bem-sucedida
-
+                if(response.IsSuccessStatusCode)
+                {
                 string content = await response.Content.ReadAsStringAsync();
-                ApiReceitaFederal dados = JsonConvert.DeserializeObject<ApiReceitaFederal>(content);
+                ApiReceitaFederal dados = JsonConvert.DeserializeObject<ApiReceitaFederal>(content);   
                 return dados;
+                }
+                else
+                {
+                return null;    
+                }
+
             }
             catch (HttpRequestException ex)
             {
