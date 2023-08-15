@@ -590,7 +590,7 @@
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtRua;
-        private System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;

@@ -22,6 +22,8 @@ namespace VIEWS
             txtCidade.Text = cliente.GetCidade();
             cbEstado.Text = cliente.GetSiglaEs();
 
+            txtNome.Focus();
+
             // Associação de evento para realizar a atualização dos dados
             btnAlterar.Click += (sender, e) => Update();
             this.MaximizeBox = false;

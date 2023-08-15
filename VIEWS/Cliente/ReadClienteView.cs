@@ -46,7 +46,9 @@ namespace VIEWS
                 MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
                 UpdateClienteView _frmAlterarCliente = new UpdateClienteView(cliente);
                 _frmAlterarCliente.Show();
-                _frmAlterarCliente.FormClosed += (sender, e) => Read();
+                _frmAlterarCliente.txtNome.Focus();
+                _frmAlterarCliente.FormClosed += (sender, e) => { Read(); dtGrid.Focus(); };
+                
             }
             else
             {
@@ -74,7 +76,7 @@ namespace VIEWS
                 MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
                 DeleteClienteView _frmAlterarCliente = new DeleteClienteView(cliente);
                 _frmAlterarCliente.Show();
-                _frmAlterarCliente.FormClosed += (sender, e) => Read();
+                _frmAlterarCliente.FormClosed += (sender, e) => { Read(); dtGrid.Focus(); };
             }
             else
             {
