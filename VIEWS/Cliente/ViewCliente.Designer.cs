@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewCliente));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +54,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.tolTipCadastrar = new System.Windows.Forms.ToolTip(this.components);
+            this.tolTipExibir = new System.Windows.Forms.ToolTip(this.components);
+            this.tolTipPesquisar = new System.Windows.Forms.ToolTip(this.components);
+            this.tolTipRelatorios = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -358,6 +363,26 @@
             this.panel6.Size = new System.Drawing.Size(915, 33);
             this.panel6.TabIndex = 0;
             // 
+            // tolTipCadastrar
+            // 
+            this.tolTipCadastrar.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tolTipCadastrar.ToolTipTitle = "Cadastrar";
+            // 
+            // tolTipExibir
+            // 
+            this.tolTipExibir.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tolTipExibir.ToolTipTitle = "Exibir";
+            // 
+            // tolTipPesquisar
+            // 
+            this.tolTipPesquisar.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tolTipPesquisar.ToolTipTitle = "Pesquisar";
+            // 
+            // tolTipRelatorios
+            // 
+            this.tolTipRelatorios.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tolTipRelatorios.ToolTipTitle = "Relatórios";
+            // 
             // ViewCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,5 +438,9 @@
         private System.Windows.Forms.TableLayoutPanel tbPanelTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.ToolTip tolTipCadastrar;
+        private System.Windows.Forms.ToolTip tolTipExibir;
+        private System.Windows.Forms.ToolTip tolTipPesquisar;
+        private System.Windows.Forms.ToolTip tolTipRelatorios;
     }
 }

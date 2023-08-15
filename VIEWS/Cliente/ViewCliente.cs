@@ -28,11 +28,16 @@ namespace VIEWS
             btnCadastrar.Click += (sender, e) => OpenClientInserView(); // Abre a visualização de cadastro de clientes
             btnExibir.Click += (sender, e) => OpenClientReadView(); // Abre a visualização de leitura de clientes
             btnPesquisar.Click += (sender, e) => OpenClientFilterView(); // Abre a visualização de filtro de clientes
-            btnRelatorios.Click += (sender, e) => OpenClientReport1View(); // Abre a visualização de relatórios de clientes
+            btnRelatorios.Click += (sender, e) => OpenClientReportView(); // Abre a visualização de relatórios de clientes
             tsCadastrar.Click += (sender, e) => OpenClientInserView(); // Abre a visualização de cadastro de clientes
             tsPesquisar.Click += (sender, e) => OpenClientFilterView(); // Abre a visualização de filtro de clientes
             tsReport.Click += (sender, e) => OpenClientReportView(); // Abre a visualização de relatórios de clientes
             btnSair.Click += (sender, e) => this.Close();
+
+            tolTipExibir.SetToolTip(btnExibir, "Exiba a lista de clientes");
+            tolTipCadastrar.SetToolTip(btnCadastrar, "Cadastre um novo cliente");
+            tolTipPesquisar.SetToolTip(btnPesquisar, "Procure um cliente");
+            tolTipRelatorios.SetToolTip(btnRelatorios, "Imprima a lista de clientes");
 
             this.WindowState = FormWindowState.Normal;
         }
@@ -99,11 +104,7 @@ namespace VIEWS
             _viewReportClient.SetDados(dados);
             _viewReportClient.ShowDialog();
         }
-        private void OpenClientReport1View()
-        {
-            ReportClientView report = new ReportClientView();
-            report.ShowDialog();
-        } 
+
     }
 }
 
