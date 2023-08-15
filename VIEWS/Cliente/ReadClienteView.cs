@@ -22,7 +22,8 @@ namespace VIEWS
             btnAtualizar.Click += (sender, e) => { Read(); dtGrid.Focus(); }; // Atualiza a exibição dos clientes
             btnAlterar.Click += (sender, e) => OpenUpdateClientView(); // Abre a tela de alteração do cliente
             btnDeletar.Click += (sender, e) => OpenDeleteClientView(); // Abre a tela de exclusão do cliente
-            chkFiltros.SelectedIndexChanged += (sender, e) => { Filtros(); dtGrid.Focus(); };
+            chkFiltros.DoubleClick += (sender, e) => { Filtros(); dtGrid.Focus(); };
+            chkFiltros.Click += (sender, e) => { Filtros(); dtGrid.Focus(); };
         }
 
         // Função para abrir a tela de alteração do cliente

@@ -20,6 +20,8 @@ namespace VIEWS
             btnAtualizar.Click += (sender, e) => { Read(); dtGrid.Focus(); }; // Atualiza a exibição dos clientes
             btnPesquisar.Click += (sender, e) => { Filter(); dtGrid.Focus(); }; // Realiza a filtragem dos clientes
             chkFiltros.SelectedIndexChanged += (sender, e) => { Filtros(); dtGrid.Focus(); };
+            chkFiltros.DoubleClick += (sender, e) => { Filtros(); dtGrid.Focus(); };
+            chkFiltros.Click += (sender, e) => { Filtros(); dtGrid.Focus(); };
         }
 
         // Função para realizar a filtragem dos clientes com base nos parâmetros informados
