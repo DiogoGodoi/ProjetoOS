@@ -32,6 +32,7 @@ namespace VIEWS
             tsCadastrar.Click += (sender, e) => OpenClientInserView(); // Abre a visualização de cadastro de clientes
             tsPesquisar.Click += (sender, e) => OpenClientFilterView(); // Abre a visualização de filtro de clientes
             tsReport.Click += (sender, e) => OpenClientReportView(); // Abre a visualização de relatórios de clientes
+            btnSair.Click += (sender, e) => this.Close();
 
             this.WindowState = FormWindowState.Normal;
         }

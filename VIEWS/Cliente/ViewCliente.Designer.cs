@@ -41,8 +41,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRelatorios = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnExibir = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -202,23 +202,6 @@
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCadastrar.FlatAppearance.BorderSize = 2;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCadastrar.Location = new System.Drawing.Point(97, 4);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(87, 57);
-            this.btnCadastrar.TabIndex = 1;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            // 
             // btnExibir
             // 
             this.btnExibir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -235,6 +218,23 @@
             this.btnExibir.TabIndex = 6;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = false;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCadastrar.FlatAppearance.BorderSize = 2;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCadastrar.Location = new System.Drawing.Point(97, 4);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(87, 57);
+            this.btnCadastrar.TabIndex = 1;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
