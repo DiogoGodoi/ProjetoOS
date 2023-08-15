@@ -31,12 +31,12 @@ namespace DAO
                 var query = $"EXEC cadCliente " +
                      $" {Cliente.GetCnpj()}, " +
                      $"'{Cliente.GetNome()}'," +
-                     $"'{Cliente.GetTelefone()}', " +
-                     $"'{Cliente.GetRua()}', " +
-                     $"'{Cliente.GetNumero()}', " +
-                     $"'{Cliente.GetBairro()}', " +
-                     $"'{Cliente.GetCidade()}', " +
-                     $"'{Cliente.GetSiglaEs()}'";
+                     $"'{Cliente.GetEndereco().telefone}', " +
+                     $"'{Cliente.GetEndereco().logradouro}', " +
+                     $"'{Cliente.GetEndereco().numero}', " +
+                     $"'{Cliente.GetEndereco().bairro}', " +
+                     $"'{Cliente.GetEndereco().municipio}', " +
+                     $"'{Cliente.GetEndereco().uf}'";
                 // Executa a consulta e trata o valor de retorno.
                 var retorno = conn.Execute(query, Cliente);
                 if (retorno > 0)
@@ -71,7 +71,7 @@ namespace DAO
             {
                 conn.Open();
                 // Constrói a consulta SQL para atualizar um registro existente de Cliente.
-                var query = $"EXEC upCliente {Cliente.GetCnpj()}, '{Cliente.GetNome()}', '{Cliente.GetTelefone()}', '{Cliente.GetRua()}', '{Cliente.GetNumero()}', '{Cliente.GetBairro()}', '{Cliente.GetCidade()}', '{Cliente.GetSiglaEs()}'";
+                var query = $"EXEC upCliente {Cliente.GetCnpj()}, '{Cliente.GetNome()}', '{Cliente.GetEndereco().telefone}', '{Cliente.GetEndereco().logradouro}', '{Cliente.GetEndereco().numero}', '{Cliente.GetEndereco().bairro}', '{Cliente.GetEndereco().municipio}', '{Cliente.GetEndereco().uf}'";
                 // Executa a consulta e trata o valor de retorno.
                 var resultado = conn.Execute(query, Cliente);
                 if (resultado > 0)

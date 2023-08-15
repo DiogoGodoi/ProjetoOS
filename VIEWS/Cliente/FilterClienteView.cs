@@ -48,7 +48,7 @@ namespace VIEWS
                 // Preenche o DataGridView com os dados filtrados dos clientes.
                 foreach (var idx in retorno)
                 {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
+                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetEndereco().telefone, idx.GetEndereco().logradouro, idx.GetEndereco().numero, idx.GetEndereco().bairro, idx.GetEndereco().municipio, idx.GetEndereco().uf);
                 }
 
                 dtGrid.DataSource = dados.Clientes;
@@ -75,7 +75,7 @@ namespace VIEWS
                 // Preenche o DataGridView com os dados dos clientes.
                 foreach (var idx in clientes)
                 {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
+                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetEndereco().telefone, idx.GetEndereco().logradouro, idx.GetEndereco().numero, idx.GetEndereco().bairro, idx.GetEndereco().municipio, idx.GetEndereco().uf);
                 }
                 dtGrid.DataSource = dados.Clientes;
             }

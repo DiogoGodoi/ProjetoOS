@@ -34,7 +34,7 @@ namespace VIEWS
                 // Preenche os dados do relatório com informações dos clientes
                 foreach (var idx in clientes)
                 {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetTelefone(), idx.GetRua(), idx.GetNumero(), idx.GetBairro(), idx.GetCidade(), idx.GetSiglaEs());
+                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetEndereco().telefone, idx.GetEndereco().logradouro, idx.GetEndereco().numero, idx.GetEndereco().bairro, idx.GetEndereco().municipio, idx.GetEndereco().uf);
                 }
 
 

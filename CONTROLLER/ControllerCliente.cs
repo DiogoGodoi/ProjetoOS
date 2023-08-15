@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System;
 using Newtonsoft.Json;
+using API_EXTERNAS;
 
 namespace CONTROLLER
 {
@@ -56,7 +57,7 @@ namespace CONTROLLER
         }
 
         //Método api receita federal
-        public async Task<ApiReceitaFederal> ApiReceita(string cnpj)
+        public async Task<ModelReceitaFederal> ApiReceita(string cnpj)
         {
             string url = $"https://www.receitaws.com.br/v1/cnpj/{cnpj}";
             HttpClient cliente = new HttpClient();
@@ -67,7 +68,7 @@ namespace CONTROLLER
                 if(response.IsSuccessStatusCode)
                 {
                 string content = await response.Content.ReadAsStringAsync();
-                ApiReceitaFederal dados = JsonConvert.DeserializeObject<ApiReceitaFederal>(content);   
+                ModelReceitaFederal dados = JsonConvert.DeserializeObject<ModelReceitaFederal>(content);   
                 return dados;
                 }
                 else

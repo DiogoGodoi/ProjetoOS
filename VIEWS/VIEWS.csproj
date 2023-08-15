@@ -182,6 +182,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\API_EXTERNAS\API_EXTERNAS.csproj">
+      <Project>{78864782-7412-4d46-bec3-d91c82979610}</Project>
+      <Name>API_EXTERNAS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CONTROLLER\CONTROLLER.csproj">
       <Project>{e0be4daa-2d50-4da2-a3db-a2e00f5f24af}</Project>
       <Name>CONTROLLER</Name>

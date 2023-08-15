@@ -49,6 +49,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\API_EXTERNAS\API_EXTERNAS.csproj">
+      <Project>{78864782-7412-4d46-bec3-d91c82979610}</Project>
+      <Name>API_EXTERNAS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAO\DAO.csproj">
       <Project>{a7e43ebc-9b73-4177-8e85-d97ba985e29c}</Project>
       <Name>DAO</Name>

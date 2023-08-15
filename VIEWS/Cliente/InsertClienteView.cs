@@ -15,7 +15,7 @@ namespace VIEWS
             // Associação do evento de clique do botão 'Inserir' à função Insert
             Load += (sender, e) => { txtCnpj.Focus(); };
             btnInserir.Click += (sender, e) => Insert();
-            btnCnpj.Click += (sender, e) => BuscaCnpj(txtCnpj.Text);
+            btnCnpj.Click += (sender, e) => BuscaCnpjApi(txtCnpj.Text);
         }
 
         // Função para realizar a inserção de um novo cliente
@@ -91,7 +91,7 @@ namespace VIEWS
             }
         }
 
-        private async void BuscaCnpj(string cnpj)
+        private async void BuscaCnpjApi(string cnpj)
         {
             ControllerCliente controllerCliente = new ControllerCliente();
             var retorno = await controllerCliente.ApiReceita(cnpj);
