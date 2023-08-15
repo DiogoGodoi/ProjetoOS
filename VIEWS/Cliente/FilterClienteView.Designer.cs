@@ -49,8 +49,15 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.dtGrid = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.chkFiltros = new System.Windows.Forms.CheckedListBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTituloFiltro = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -62,8 +69,13 @@
             this.panel7.SuspendLayout();
             this.tbPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrid)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -280,23 +292,23 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel11);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(5, 120);
+            this.panel1.Location = new System.Drawing.Point(120, 120);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(790, 275);
-            this.panel1.TabIndex = 11;
+            this.panel1.Size = new System.Drawing.Size(675, 275);
+            this.panel1.TabIndex = 23;
             // 
-            // panel4
+            // panel11
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.dtGrid);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(5, 5);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(780, 265);
-            this.panel4.TabIndex = 0;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.dtGrid);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(5, 5);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(665, 265);
+            this.panel11.TabIndex = 0;
             // 
             // dtGrid
             // 
@@ -326,8 +338,100 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dtGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtGrid.Size = new System.Drawing.Size(778, 263);
-            this.dtGrid.TabIndex = 6;
+            this.dtGrid.Size = new System.Drawing.Size(663, 263);
+            this.dtGrid.TabIndex = 5;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel10);
+            this.panel4.Controls.Add(this.panel13);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(5, 120);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(115, 275);
+            this.panel4.TabIndex = 22;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.panel12);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(0, 54);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(5);
+            this.panel10.Size = new System.Drawing.Size(115, 221);
+            this.panel10.TabIndex = 18;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.chkFiltros);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(5, 5);
+            this.panel12.Name = "panel12";
+            this.panel12.Padding = new System.Windows.Forms.Padding(5);
+            this.panel12.Size = new System.Drawing.Size(105, 211);
+            this.panel12.TabIndex = 0;
+            // 
+            // chkFiltros
+            // 
+            this.chkFiltros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.chkFiltros.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkFiltros.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFiltros.FormattingEnabled = true;
+            this.chkFiltros.Items.AddRange(new object[] {
+            "Cnpj",
+            "Nome",
+            "Telefone",
+            "Endereco",
+            "Numero",
+            "Bairro",
+            "Cidade",
+            "Estado"});
+            this.chkFiltros.Location = new System.Drawing.Point(5, 5);
+            this.chkFiltros.Name = "chkFiltros";
+            this.chkFiltros.Size = new System.Drawing.Size(93, 199);
+            this.chkFiltros.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.tableLayoutPanel3);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(5);
+            this.panel13.Size = new System.Drawing.Size(115, 54);
+            this.panel13.TabIndex = 17;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.lblTituloFiltro, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 5);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(105, 44);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // lblTituloFiltro
+            // 
+            this.lblTituloFiltro.AutoSize = true;
+            this.lblTituloFiltro.BackColor = System.Drawing.Color.White;
+            this.lblTituloFiltro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTituloFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloFiltro.Location = new System.Drawing.Point(4, 1);
+            this.lblTituloFiltro.Name = "lblTituloFiltro";
+            this.lblTituloFiltro.Size = new System.Drawing.Size(97, 42);
+            this.lblTituloFiltro.TabIndex = 8;
+            this.lblTituloFiltro.Text = "Filtros";
+            this.lblTituloFiltro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FilterClienteView
             // 
@@ -335,6 +439,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel3);
@@ -356,8 +461,14 @@
             this.tbPanel.ResumeLayout(false);
             this.tbPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtGrid)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -381,7 +492,14 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.DataGridView dtGrid;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.CheckedListBox chkFiltros;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label lblTituloFiltro;
     }
 }

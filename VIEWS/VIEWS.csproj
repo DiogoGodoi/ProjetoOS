@@ -77,12 +77,6 @@
     <Compile Include="Cliente\InsertClienteView.Designer.cs">
       <DependentUpon>InsertClienteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente\Relatorio\ReportViewClient1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cliente\Relatorio\ReportViewClient1.Designer.cs">
-      <DependentUpon>ReportViewClient1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cliente\UpdateClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,9 +125,6 @@
     </Compile>
     <EmbeddedResource Include="Cliente\InsertClienteView.resx">
       <DependentUpon>InsertClienteView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cliente\Relatorio\ReportViewClient1.resx">
-      <DependentUpon>ReportViewClient1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\UpdateClienteView.resx">
       <DependentUpon>UpdateClienteView.cs</DependentUpon>

@@ -22,7 +22,7 @@ namespace VIEWS
             btnAtualizar.Click += (sender, e) => { Read(); dtGrid.Focus(); }; // Atualiza a exibição dos clientes
             btnAlterar.Click += (sender, e) => OpenUpdateClientView(); // Abre a tela de alteração do cliente
             btnDeletar.Click += (sender, e) => OpenDeleteClientView(); // Abre a tela de exclusão do cliente
-
+            chkFiltros.SelectedIndexChanged += (sender, e) => { Filtros(); dtGrid.Focus(); };
         }
 
         // Função para abrir a tela de alteração do cliente
@@ -112,6 +112,24 @@ namespace VIEWS
                 dtGrid.DataSource = tb;
                 dtGrid.Enabled = false;
             }
-        }   
+        }
+
+        private void Filtros()
+        {
+            // Percorre os itens do CheckBoxList
+            for (int i = 0; i < chkFiltros.Items.Count; i++)
+            {
+                if (chkFiltros.GetItemChecked(i))
+                {
+                    string itemValue = chkFiltros.Items[i].ToString();
+                    dtGrid.Columns[$"{itemValue}"].Visible = true;
+                }
+                else if (!chkFiltros.GetItemChecked(i))
+                {
+                    string itemValue = chkFiltros.Items[i].ToString();
+                    dtGrid.Columns[$"{itemValue}"].Visible = false;
+                }
+            }
+        }
     }
 }

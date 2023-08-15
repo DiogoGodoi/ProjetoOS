@@ -149,6 +149,7 @@
                             <TextRun>
                               <Value>=Fields!Cnpj.Value</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>DarkBlue</Color>
                               </Style>
@@ -185,6 +186,7 @@
                             <TextRun>
                               <Value>=Fields!Nome.Value</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>DarkBlue</Color>
                               </Style>
@@ -221,6 +223,7 @@
                             <TextRun>
                               <Value>=Fields!Telefone.Value</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>DarkBlue</Color>
                               </Style>

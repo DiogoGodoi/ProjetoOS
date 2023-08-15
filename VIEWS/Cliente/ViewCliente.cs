@@ -12,7 +12,6 @@ namespace VIEWS
         private InsertClienteView _viewCadastrarCliente { get; set; }
         private FilterClienteView _viewPesquisarCliente { get; set; }
         private ReportClientView _viewReportClient { get;set; }
-        private ReportClientView1 _viewReportClient1 { get;set; }
 
         // Construtor da classe ViewCliente
         public ViewCliente()
@@ -101,10 +100,9 @@ namespace VIEWS
         }
         private void OpenClientReport1View()
         {
-            transicaoTela(_viewReportClient1);
-        }
-
-        
+            ReportClientView report = new ReportClientView();
+            report.ShowDialog();
+        } 
     }
 }
 

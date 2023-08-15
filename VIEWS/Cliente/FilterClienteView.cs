@@ -17,8 +17,9 @@ namespace VIEWS
 
             // Associações de eventos para carregar e filtrar os dados de clientes
             Load += (sender, e) => { Read(); dtGrid.Focus(); }; // Carrega todos os clientes
-            btnAtualizar.Click += (sender, e) => Read(); // Atualiza a exibição dos clientes
+            btnAtualizar.Click += (sender, e) => { Read(); dtGrid.Focus(); }; // Atualiza a exibição dos clientes
             btnPesquisar.Click += (sender, e) => { Filter(); dtGrid.Focus(); }; // Realiza a filtragem dos clientes
+            chkFiltros.SelectedIndexChanged += (sender, e) => { Filtros(); dtGrid.Focus(); };
         }
 
         // Função para realizar a filtragem dos clientes com base nos parâmetros informados
@@ -80,6 +81,24 @@ namespace VIEWS
             {
                 // Desabilita o DataGridView se não houver clientes.
                 dtGrid.Enabled = false;
+            }
+        }
+
+        private void Filtros()
+        {
+            // Percorre os itens do CheckBoxList
+            for (int i = 0; i < chkFiltros.Items.Count; i++)
+            {
+                if (chkFiltros.GetItemChecked(i))
+                {
+                    string itemValue = chkFiltros.Items[i].ToString();
+                    dtGrid.Columns[$"{itemValue}"].Visible = true;
+                }
+                else if (!chkFiltros.GetItemChecked(i))
+                {
+                    string itemValue = chkFiltros.Items[i].ToString();
+                    dtGrid.Columns[$"{itemValue}"].Visible = false;
+                }
             }
         }
     }
