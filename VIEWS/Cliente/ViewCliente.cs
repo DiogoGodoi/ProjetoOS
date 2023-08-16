@@ -36,14 +36,16 @@ namespace VIEWS
                 _viewReportClient.SetDados(dados);
                 _viewReportClient.ShowDialog();
             };
+
             tsPesquisar.Click += (sender, e) => TransicaoTela(_viewPesquisarCliente); // Abre a visualização de filtro de clientes
             tsReport.Click += (sender, e) => {
                 Dados dados = new Dados();
                 _viewReportClient.SetDados(dados);
                 _viewReportClient.ShowDialog();
             };
-            btnSair.Click += (sender, e) => this.Close();
 
+            btnSair.Click += (sender, e) => this.Close();
+            
             // Configura as dicas de ferramentas para os botões
             tolTipExibir.SetToolTip(btnExibir, "Exiba a lista de clientes");
             tolTipCadastrar.SetToolTip(btnCadastrar, "Cadastre um novo cliente");
