@@ -20,7 +20,7 @@ namespace VIEWS
             dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // Associa eventos aos controles.
-            Load += (sender, e) => { Read(); dtGrid.Focus(); }; // Carrega todos os clientes
+            Load += (sender, e) => { Read(); dtGrid.Focus(); chkFiltros.SetItemChecked(1, true); chkFiltros.SetItemChecked(0, true); }; // Carrega todos os clientes
             btnAtualizar.Click += (sender, e) => { Read(); dtGrid.Focus(); }; // Atualiza a exibição dos clientes
             btnPesquisar.Click += (sender, e) => { Filter(); dtGrid.Focus(); }; // Realiza a filtragem dos clientes
             chkFiltros.SelectedIndexChanged += (sender, e) => { Filtros(); dtGrid.Focus(); };
@@ -92,6 +92,12 @@ namespace VIEWS
                         dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetEndereco().telefone, idx.GetEndereco().logradouro, idx.GetEndereco().numero, idx.GetEndereco().bairro, idx.GetEndereco().municipio, idx.GetEndereco().uf);
                     }
                     dtGrid.DataSource = dados.Clientes;
+                    dtGrid.Columns["Endereco"].Visible = false;
+                    dtGrid.Columns["Numero"].Visible = false;
+                    dtGrid.Columns["Cidade"].Visible = false;
+                    dtGrid.Columns["Telefone"].Visible = false;
+                    dtGrid.Columns["Bairro"].Visible = false;
+                    dtGrid.Columns["Estado"].Visible = false;
                 }
                 else
                 {
@@ -125,5 +131,4 @@ namespace VIEWS
             }
         }
     }
-
 }
