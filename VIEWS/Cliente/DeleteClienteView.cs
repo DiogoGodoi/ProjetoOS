@@ -1,17 +1,21 @@
 ﻿using CONTROLLER;
+using System;
 using System.Windows.Forms;
 
 namespace VIEWS
 {
-    // Classe que representa a interface de usuário para exclusão de um cliente
+    // Classe DeleteClienteView: Formulário para exclusão de um registro de cliente.
     public partial class DeleteClienteView : Form
     {
         // Construtor da classe, recebe um objeto 'cliente' para preencher os campos do formulário
         public DeleteClienteView(MODEL.Cliente cliente)
         {
+            // Inicializa o formulário e associa eventos aos controles.
+
+            // Inicializa os componentes do formulário.
             InitializeComponent();
 
-            // Inicializa os campos do formulário com os valores passados como parâmetros.
+            // Preenche os campos do formulário com os valores do objeto cliente.
             txtCnpj.Text = cliente.GetCnpj().ToString(); // Define o CNPJ
             txtNome.Text = cliente.GetNome(); // Define o nome
             txtTelefone.Text = cliente.GetEndereco().telefone; // Define o telefone
@@ -24,42 +28,52 @@ namespace VIEWS
             // Associa o evento de clique do botão 'Deletar' à função Delete
             btnDeletar.Click += (sender, e) => Delete();
 
+            // Desabilita o botão de maximizar no canto superior direito do formulário.
             this.MaximizeBox = false;
         }
 
         // Função para realizar a exclusão do cliente
         private void Delete()
         {
-            // Cria uma instância do controlador de Cliente.
-            ControllerCliente controllerCliente = new ControllerCliente();
-
-            // Exibe um diálogo de confirmação para excluir o registro.
-            DialogResult resultado = MessageBox.Show("Deseja mesmo excluir o registro ?", "Mensagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (resultado == DialogResult.Yes)
+            try
             {
-                // Chama o método de exclusão do controlador e obtém o resultado.
-                var retorno = controllerCliente.Delete(decimal.Parse(txtCnpj.Text));
+                // Cria uma instância do controlador de Cliente.
+                ControllerCliente controllerCliente = new ControllerCliente();
 
-                if (retorno == true)
+                // Exibe um diálogo de confirmação para excluir o registro.
+                DialogResult resultado = MessageBox.Show("Deseja mesmo excluir o registro?", "Confirmação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
                 {
-                    // Exibe uma mensagem de sucesso e fecha o formulário.
-                    MessageBox.Show("Deletado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    // Chama o método de exclusão do controlador e obtém o resultado.
+                    var retorno = controllerCliente.Delete(decimal.Parse(txtCnpj.Text));
+
+                    if (retorno == true)
+                    {
+                        // Exibe uma mensagem de sucesso e fecha o formulário.
+                        MessageBox.Show("Registro deletado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        // Exibe uma mensagem de erro e fecha o formulário.
+                        MessageBox.Show("Erro na exclusão do registro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        this.Close();
+                    }
                 }
                 else
                 {
-                    // Exibe uma mensagem de erro e fecha o formulário.
-                    MessageBox.Show("Erro na exclusão", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Exibe uma mensagem de cancelamento e fecha o formulário.
+                    MessageBox.Show("Operação de exclusão cancelada", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
             }
-            else
+            catch (Exception)
             {
-                // Exibe uma mensagem de cancelamento e fecha o formulário.
-                MessageBox.Show("Operação cancelada", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                // Exibe mensagem em caso de exceção.
+                MessageBox.Show("Ocorreu um erro ao tentar excluir o registro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
+
 }

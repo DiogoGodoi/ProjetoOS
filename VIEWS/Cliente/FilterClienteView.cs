@@ -1,21 +1,25 @@
 ﻿using CONTROLLER;
 using VIEWS.Cliente.Relatorio;
 using System.Windows.Forms;
+using System;
 
 namespace VIEWS
 {
-    // Classe que representa a interface de usuário para filtrar e exibir clientes
+    // Classe FilterClienteView: Formulário para filtragem de registros de clientes.
     public partial class FilterClienteView : Form
     {
         // Construtor da classe
         public FilterClienteView()
         {
+            // Inicializa o formulário e associa eventos aos controles.
+
+            // Inicializa os componentes do formulário.
             InitializeComponent();
 
-            // Configuração do DataGridView para preencher as colunas automaticamente.
+            // Configura o DataGridView para preencher as colunas automaticamente.
             dtGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Associações de eventos para carregar e filtrar os dados de clientes
+            // Associa eventos aos controles.
             Load += (sender, e) => { Read(); dtGrid.Focus(); }; // Carrega todos os clientes
             btnAtualizar.Click += (sender, e) => { Read(); dtGrid.Focus(); }; // Atualiza a exibição dos clientes
             btnPesquisar.Click += (sender, e) => { Filter(); dtGrid.Focus(); }; // Realiza a filtragem dos clientes
@@ -27,65 +31,82 @@ namespace VIEWS
         // Função para realizar a filtragem dos clientes com base nos parâmetros informados
         private void Filter()
         {
-            // Cria uma instância do controlador de Cliente.
-            ControllerCliente controllerCliente = new ControllerCliente();
-            Dados dados = new Dados();
-
-            decimal? cnpj = null;
-
-            // Verifica se um CNPJ foi informado para filtragem
-            if (txtCnpj.Text != string.Empty)
+            try
             {
-                // Converte o CNPJ informado para decimal.
-                cnpj = decimal.Parse(txtCnpj.Text);
-            }
+                // Cria uma instância do controlador de Cliente.
+                ControllerCliente controllerCliente = new ControllerCliente();
+                Dados dados = new Dados();
 
-            // Chama o método de filtro do controlador e obtém o resultado.
-            var retorno = controllerCliente.Filter(cnpj, txtNome.Text);
+                decimal? cnpj = null;
 
-            if (retorno.Count > 0)
-            {
-                // Preenche o DataGridView com os dados filtrados dos clientes.
-                foreach (var idx in retorno)
+                // Verifica se um CNPJ foi informado para filtragem
+                if (txtCnpj.Text != string.Empty)
                 {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetEndereco().telefone, idx.GetEndereco().logradouro, idx.GetEndereco().numero, idx.GetEndereco().bairro, idx.GetEndereco().municipio, idx.GetEndereco().uf);
+                    // Converte o CNPJ informado para decimal.
+                    cnpj = decimal.Parse(txtCnpj.Text);
                 }
 
-                dtGrid.DataSource = dados.Clientes;
+                // Chama o método de filtro do controlador e obtém o resultado.
+                var retorno = controllerCliente.Filter(cnpj, txtNome.Text);
+
+                if (retorno.Count > 0)
+                {
+                    // Preenche o DataGridView com os dados filtrados dos clientes.
+                    foreach (var idx in retorno)
+                    {
+                        dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetEndereco().telefone, idx.GetEndereco().logradouro, idx.GetEndereco().numero, idx.GetEndereco().bairro, idx.GetEndereco().municipio, idx.GetEndereco().uf);
+                    }
+
+                    dtGrid.DataSource = dados.Clientes;
+                }
+                else
+                {
+                    // Exibe mensagem quando a pesquisa não encontra clientes registrados com os parâmetros informados.
+                    MessageBox.Show("Não existem clientes registrados com os parâmetros informados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            else
+            catch (Exception)
             {
-                // Mensagem exibida quando a pesquisa não encontra clientes registrados com os parâmetros informados
-                MessageBox.Show("Não existem clientes registrados com os parâmetros informados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Exibe mensagem em caso de exceção.
+                MessageBox.Show("Ocorreu um erro ao filtrar os clientes", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         // Função para exibir todos os clientes
         private void Read()
         {
-            // Cria uma instância do controlador de Cliente.
-            ControllerCliente controllerCliente = new ControllerCliente();
-
-            // Recupera todos os clientes do banco de dados.
-            var clientes = controllerCliente.Read();
-            Dados dados = new Dados();
-
-            if (clientes.Count > 0)
+            try
             {
-                // Preenche o DataGridView com os dados dos clientes.
-                foreach (var idx in clientes)
+                // Cria uma instância do controlador de Cliente.
+                ControllerCliente controllerCliente = new ControllerCliente();
+                Dados dados = new Dados();
+
+                // Recupera todos os clientes do banco de dados.
+                var clientes = controllerCliente.Read();
+
+                if (clientes.Count > 0)
                 {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetEndereco().telefone, idx.GetEndereco().logradouro, idx.GetEndereco().numero, idx.GetEndereco().bairro, idx.GetEndereco().municipio, idx.GetEndereco().uf);
+                    // Preenche o DataGridView com os dados dos clientes.
+                    foreach (var idx in clientes)
+                    {
+                        dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetEndereco().telefone, idx.GetEndereco().logradouro, idx.GetEndereco().numero, idx.GetEndereco().bairro, idx.GetEndereco().municipio, idx.GetEndereco().uf);
+                    }
+                    dtGrid.DataSource = dados.Clientes;
                 }
-                dtGrid.DataSource = dados.Clientes;
+                else
+                {
+                    // Desabilita o DataGridView se não houver clientes.
+                    dtGrid.Enabled = false;
+                }
             }
-            else
+            catch (Exception)
             {
-                // Desabilita o DataGridView se não houver clientes.
-                dtGrid.Enabled = false;
+                // Exibe mensagem em caso de exceção.
+                MessageBox.Show("Ocorreu um erro ao carregar os clientes", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        // Função para exibir/ocultar colunas do DataGridView com base na seleção dos filtros
         private void Filtros()
         {
             // Percorre os itens do CheckBoxList
@@ -104,4 +125,5 @@ namespace VIEWS
             }
         }
     }
+
 }
