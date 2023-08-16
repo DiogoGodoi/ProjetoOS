@@ -49,7 +49,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tbPanelTitulo = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -65,7 +65,7 @@
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tbPanelTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -295,7 +295,7 @@
             this.tbPanelTitulo.ColumnCount = 2;
             this.tbPanelTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
             this.tbPanelTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tbPanelTitulo.Controls.Add(this.pictureBox1, 0, 0);
+            this.tbPanelTitulo.Controls.Add(this.pctLogo, 0, 0);
             this.tbPanelTitulo.Controls.Add(this.lblTitulo, 1, 0);
             this.tbPanelTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbPanelTitulo.Location = new System.Drawing.Point(0, 0);
@@ -305,18 +305,18 @@
             this.tbPanelTitulo.Size = new System.Drawing.Size(913, 47);
             this.tbPanelTitulo.TabIndex = 1;
             // 
-            // pictureBox1
+            // pctLogo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pctLogo.BackColor = System.Drawing.Color.White;
+            this.pctLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pctLogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
+            this.pctLogo.Location = new System.Drawing.Point(3, 3);
+            this.pctLogo.Name = "pctLogo";
+            this.pctLogo.Size = new System.Drawing.Size(186, 41);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctLogo.TabIndex = 0;
+            this.pctLogo.TabStop = false;
             // 
             // lblTitulo
             // 
@@ -404,7 +404,7 @@
             this.panel7.ResumeLayout(false);
             this.tbPanelTitulo.ResumeLayout(false);
             this.tbPanelTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -436,7 +436,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TableLayoutPanel tbPanelTitulo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ToolTip tolTipCadastrar;
         private System.Windows.Forms.ToolTip tolTipExibir;

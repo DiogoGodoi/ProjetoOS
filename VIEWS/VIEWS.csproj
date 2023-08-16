@@ -78,6 +78,12 @@
     <Compile Include="Cliente\InsertClienteView.Designer.cs">
       <DependentUpon>InsertClienteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cliente\ProtTela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\ProtTela.Designer.cs">
+      <DependentUpon>ProtTela.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente\UpdateClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </Compile>
     <EmbeddedResource Include="Cliente\InsertClienteView.resx">
       <DependentUpon>InsertClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\ProtTela.resx">
+      <DependentUpon>ProtTela.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\UpdateClienteView.resx">
       <DependentUpon>UpdateClienteView.cs</DependentUpon>

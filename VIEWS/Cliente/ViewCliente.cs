@@ -1,6 +1,6 @@
-﻿using CONTROLLER;
-using VIEWS.Cliente.Relatorio;
+﻿using VIEWS.Cliente.Relatorio;
 using System.Windows.Forms;
+using VIEWS.Cliente;
 
 namespace VIEWS
 {
@@ -12,6 +12,7 @@ namespace VIEWS
         private InsertClienteView _viewCadastrarCliente { get; set; }
         private FilterClienteView _viewPesquisarCliente { get; set; }
         private ReportClientView _viewReportClient { get;set; }
+        private ProtectClientView _viewProtTela { get; set; }
 
         // Construtor da classe ViewCliente
         public ViewCliente()
@@ -24,7 +25,8 @@ namespace VIEWS
             _viewReportClient = new ReportClientView();
 
             // Associações de eventos para diferentes ações do usuário
-            Load += (sender, e) => OpenClientReadView(); // Carrega a visualização de leitura de clientes
+            pctLogo.Click += (sender, e) => OpenProtecaoView();
+            Load += (sender, e) => OpenProtecaoView(); ; // Carrega a visualização de leitura de clientes
             btnCadastrar.Click += (sender, e) => OpenClientInserView(); // Abre a visualização de cadastro de clientes
             btnExibir.Click += (sender, e) => OpenClientReadView(); // Abre a visualização de leitura de clientes
             btnPesquisar.Click += (sender, e) => OpenClientFilterView(); // Abre a visualização de filtro de clientes
@@ -103,6 +105,11 @@ namespace VIEWS
             // Cria e exibe a visualização do relatório de clientes
             _viewReportClient.SetDados(dados);
             _viewReportClient.ShowDialog();
+        }
+
+        private void OpenProtecaoView()
+        {
+            transicaoTela(_viewProtTela);
         }
 
     }
