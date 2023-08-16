@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Windows.Forms;
 using CONTROLLER;
 using VIEWS.Cliente.Relatorio;
@@ -117,6 +116,7 @@ namespace VIEWS
             }
         }
 
+        // Função para aplicar filtros de exibição nos dados do DataGridView
         private void Filtros()
         {
             // Percorre os itens do CheckBoxList

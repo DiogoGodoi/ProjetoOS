@@ -4,17 +4,22 @@ using System.Windows.Forms;
 
 namespace VIEWS
 {
-    // Classe que representa a interface de usuário para inserção de um novo cliente
+    // Classe InsertClienteView: Formulário para inserção de novos registros de clientes.
     public partial class InsertClienteView : Form
     {
         // Construtor da classe
         public InsertClienteView()
         {
+            // Inicializa o formulário e associa eventos aos controles.
+
+            // Inicializa os componentes do formulário.
             InitializeComponent();
 
-            // Associação do evento de clique do botão 'Inserir' à função Insert
+            // Associa o evento de carregamento do formulário à função que define o foco no campo CNPJ.
             Load += (sender, e) => { txtCnpj.Focus(); };
+            // Associa o evento de clique do botão 'Inserir' à função Insert.
             btnInserir.Click += (sender, e) => Insert();
+            // Associa o evento de clique do botão 'Cnpj' à função BuscaCnpjApi.
             btnCnpj.Click += (sender, e) => BuscaCnpjApi(txtCnpj.Text);
         }
 
@@ -26,7 +31,7 @@ namespace VIEWS
                 // Cria uma instância do controlador de Cliente.
                 ControllerCliente controllerCliente = new ControllerCliente();
 
-                // Validação do tamanho máximo dos campos antes da inserção.
+                // Realiza validações nos campos de entrada antes da inserção.
                 if (txtCnpj.Text.Length > 15)
                 {
                     MessageBox.Show("Cnpj do cliente excede 15 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -79,24 +84,29 @@ namespace VIEWS
                     }
                     else
                     {
-                        // Exibe uma mensagem de erro.
+                        // Exibe uma mensagem de erro em caso de falha na inserção.
                         MessageBox.Show("Erro no cadastro", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception)
             {
-                // Exibe uma mensagem de erro caso ocorra uma exceção.
+                // Exibe uma mensagem em caso de exceção.
                 MessageBox.Show("Por favor insira os dados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
+        // Função para buscar dados de cliente via API a partir do CNPJ
         private async void BuscaCnpjApi(string cnpj)
         {
-            ControllerCliente controllerCliente = new ControllerCliente();
-            var retorno = await controllerCliente.ApiReceita(cnpj);
+            // Cria uma instância do controlador de Cliente.
+            ControllerApiReceita controllerApiReceita = new ControllerApiReceita();
+            // Realiza a chamada assíncrona à API para buscar dados de cliente.
+            var retorno = await controllerApiReceita.ApiReceita(cnpj);
+
             if (retorno != null)
             {
+                // Preenche os campos do formulário com os dados retornados da API.
                 txtNome.Text = retorno.nome;
                 txtTelefone.Text = retorno.telefone;
                 txtRua.Text = retorno.logradouro;
@@ -107,8 +117,10 @@ namespace VIEWS
             }
             else
             {
+                // Exibe mensagem caso a empresa não seja localizada.
                 MessageBox.Show("Empresa não localizada", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
+
 }
