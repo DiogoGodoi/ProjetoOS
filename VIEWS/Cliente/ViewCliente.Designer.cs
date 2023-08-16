@@ -37,7 +37,7 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsReport = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelConteudo = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRelatorios = new System.Windows.Forms.Button();
@@ -126,15 +126,15 @@
             this.tsReport.Size = new System.Drawing.Size(155, 22);
             this.tsReport.Text = "Emitir Relatório";
             // 
-            // panel4
+            // panelConteudo
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(200, 85);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(727, 447);
-            this.panel4.TabIndex = 20;
+            this.panelConteudo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelConteudo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelConteudo.Location = new System.Drawing.Point(200, 85);
+            this.panelConteudo.Name = "panelConteudo";
+            this.panelConteudo.Size = new System.Drawing.Size(727, 447);
+            this.panelConteudo.TabIndex = 20;
             // 
             // panelMenu
             // 
@@ -388,7 +388,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 577);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panelConteudo);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -420,7 +420,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsPesquisar;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsReport;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelConteudo;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnSair;
