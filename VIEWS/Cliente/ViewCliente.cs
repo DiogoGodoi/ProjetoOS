@@ -25,15 +25,14 @@ namespace VIEWS
             _viewReportClient = new ReportClientView();
 
             // Associações de eventos para diferentes ações do usuário
-            pctLogo.Click += (sender, e) => OpenProtecaoView();
-            Load += (sender, e) => OpenProtecaoView(); ; // Carrega a visualização de leitura de clientes
-            btnCadastrar.Click += (sender, e) => OpenClientInserView(); // Abre a visualização de cadastro de clientes
-            btnExibir.Click += (sender, e) => OpenClientReadView(); // Abre a visualização de leitura de clientes
-            btnPesquisar.Click += (sender, e) => OpenClientFilterView(); // Abre a visualização de filtro de clientes
-            btnRelatorios.Click += (sender, e) => OpenClientReportView(); // Abre a visualização de relatórios de clientes
-            tsCadastrar.Click += (sender, e) => OpenClientInserView(); // Abre a visualização de cadastro de clientes
-            tsPesquisar.Click += (sender, e) => OpenClientFilterView(); // Abre a visualização de filtro de clientes
-            tsReport.Click += (sender, e) => OpenClientReportView(); // Abre a visualização de relatórios de clientes
+            pctLogo.Click += (sender, e) => transicaoTela(_viewProtTela);
+            Load += (sender, e) => transicaoTela(_viewProtTela); ; // Carrega a visualização de leitura de clientes
+            btnCadastrar.Click += (sender, e) => transicaoTela(_viewCadastrarCliente); // Abre a visualização de cadastro de clientes
+            btnExibir.Click += (sender, e) => transicaoTela(_viewExibirCliente); // Abre a visualização de leitura de clientes
+            btnPesquisar.Click += (sender, e) => transicaoTela(_viewPesquisarCliente); // Abre a visualização de filtro de clientes
+            btnRelatorios.Click += (sender, e) => { Dados dados = new Dados(); _viewReportClient.SetDados(dados); _viewReportClient.ShowDialog();};
+            tsPesquisar.Click += (sender, e) => transicaoTela(_viewPesquisarCliente); // Abre a visualização de filtro de clientes
+            tsReport.Click += (sender, e) => { Dados dados = new Dados(); _viewReportClient.SetDados(dados); _viewReportClient.ShowDialog();}; 
             btnSair.Click += (sender, e) => this.Close();
 
             tolTipExibir.SetToolTip(btnExibir, "Exiba a lista de clientes");
@@ -77,39 +76,6 @@ namespace VIEWS
                 panel4.Controls.Add(tela);
                 tela.Show();
             };
-        }
-
-        // Abre a visualização de cadastro de clientes
-        private void OpenClientInserView()
-        {
-            transicaoTela(_viewCadastrarCliente);
-        }
-
-        // Abre a visualização de leitura de clientes
-        private void OpenClientReadView()
-        {
-            transicaoTela(_viewExibirCliente);
-        }
-
-        // Abre a visualização de filtro de clientes
-        private void OpenClientFilterView()
-        {
-            transicaoTela(_viewPesquisarCliente);
-        }
-
-        // Abre a visualização de relatórios de clientes
-        private void OpenClientReportView()
-        {
-            // Cria um dataSet de dados
-            Dados dados = new Dados();
-            // Cria e exibe a visualização do relatório de clientes
-            _viewReportClient.SetDados(dados);
-            _viewReportClient.ShowDialog();
-        }
-
-        private void OpenProtecaoView()
-        {
-            transicaoTela(_viewProtTela);
         }
 
     }
