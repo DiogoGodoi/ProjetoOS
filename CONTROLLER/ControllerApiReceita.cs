@@ -10,7 +10,7 @@ namespace CONTROLLER
     public class ControllerApiReceita
     {
         // Método para consultar os dados de uma empresa na Receita Federal.
-        public async Task<ModelReceitaFederal> ApiReceita(string cnpj)
+        public async Task<EnderecoApi> ApiReceita(string cnpj)
         {
             // URL da API da Receita Federal para consulta de CNPJ.
             string url = $"https://www.receitaws.com.br/v1/cnpj/{cnpj}";
@@ -30,7 +30,7 @@ namespace CONTROLLER
                     string content = await response.Content.ReadAsStringAsync();
 
                     // Converte o conteúdo JSON em um objeto ModelReceitaFederal.
-                    ModelReceitaFederal dados = JsonConvert.DeserializeObject<ModelReceitaFederal>(content);
+                    EnderecoApi dados = JsonConvert.DeserializeObject<EnderecoApi>(content);
 
                     // Retorna os dados da Receita Federal.
                     return dados;

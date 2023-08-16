@@ -1,6 +1,7 @@
 ﻿using CONTROLLER;
 using System;
 using System.Windows.Forms;
+using MODEL;
 
 namespace VIEWS
 {
@@ -63,8 +64,8 @@ namespace VIEWS
                 else
                 {
                     // Cria um objeto Cliente com os dados inseridos no formulário.
-                    MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
-
+                    ClientePJ cliente = new ClientePJ(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
+         
                     // Chama o método de inserção do controlador e obtém o resultado.
                     var retorno = controllerCliente.Insert(cliente);
 

@@ -8,7 +8,7 @@ namespace VIEWS
     public partial class DeleteClienteView : Form
     {
         // Construtor da classe, recebe um objeto 'cliente' para preencher os campos do formulário
-        public DeleteClienteView(MODEL.Cliente cliente)
+        public DeleteClienteView(MODEL.ClientePJ cliente)
         {
             // Inicializa o formulário e associa eventos aos controles.
 

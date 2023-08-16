@@ -41,7 +41,7 @@ namespace VIEWS
                 var siglaEs = linhaSelecionada.Cells[7].Value.ToString();
 
                 // Cria e exibe o formulário de atualização com os dados do cliente.
-                MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
+                MODEL.ClientePJ cliente = new MODEL.ClientePJ(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
                 UpdateClienteView _frmAlterarCliente = new UpdateClienteView(cliente);
                 _frmAlterarCliente.Show();
                 _frmAlterarCliente.txtNome.Focus();
@@ -71,7 +71,7 @@ namespace VIEWS
                 var siglaEs = linhaSelecionada.Cells[7].Value.ToString();
 
                 // Cria e exibe o formulário de exclusão com os dados do cliente.
-                MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
+                MODEL.ClientePJ cliente = new MODEL.ClientePJ(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
                 DeleteClienteView _frmAlterarCliente = new DeleteClienteView(cliente);
                 _frmAlterarCliente.Show();
                 _frmAlterarCliente.FormClosed += (sender, e) => { Read(); dtGrid.Focus(); };

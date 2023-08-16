@@ -15,14 +15,14 @@ namespace CONTROLLER
         public ControllerCliente() { }
 
         // Insere um novo registro de Cliente usando a classe DAO correspondente.
-        public bool Insert(Cliente Cliente)
+        public bool Insert(ClientePJ Cliente)
         {
             DaoCliente dao = new DaoCliente();
             return dao.Insert(Cliente);
         }
 
         // Atualiza um registro existente de Cliente usando a classe DAO correspondente.
-        public bool Update(Cliente Cliente, decimal cnpj)
+        public bool Update(ClientePJ Cliente, decimal cnpj)
         {
             DaoCliente dao = new DaoCliente();
             return dao.Update(Cliente, cnpj);
@@ -36,21 +36,21 @@ namespace CONTROLLER
         }
 
         // Recupera uma lista de todos os registros de Cliente usando a classe DAO correspondente.
-        public List<Cliente> Read()
+        public List<ClientePJ> Read()
         {
             DaoCliente dao = new DaoCliente();
             return dao.Read();
         }
 
         // Recupera uma lista de registros de Cliente com base em critérios de filtro usando a classe DAO correspondente.
-        public List<Cliente> Filter(decimal? cnpj, string nome)
+        public List<ClientePJ> Filter(decimal? cnpj, string nome)
         {
             DaoCliente dao = new DaoCliente();
             return dao.Filter(cnpj, nome);
         }
 
         // Recupera uma lista de todos os registros de Cliente para fins de relatório usando a classe DAO correspondente.
-        public List<Cliente> Report()
+        public List<ClientePJ> Report()
         {
             DaoCliente dao = new DaoCliente();
             return dao.report();

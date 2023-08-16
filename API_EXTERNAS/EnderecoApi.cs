@@ -1,6 +1,6 @@
 ﻿namespace API_EXTERNAS
 {
-    public class ModelReceitaFederal
+    public class EnderecoApi
     {
         public string nome { get; set; }
         public string logradouro { get; set; }

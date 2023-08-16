@@ -12,7 +12,7 @@ namespace Api.Controllers
     public IActionResult GetCliente()
         {
             ControllerCliente controllerCliente = new ControllerCliente();
-            List<MODEL.Cliente> cliente = new List<MODEL.Cliente>();
+            List<MODEL.ClientePJ> cliente = new List<MODEL.ClientePJ>();
             cliente = controllerCliente.Read();
             var dados = cliente.Select(i => new
             {

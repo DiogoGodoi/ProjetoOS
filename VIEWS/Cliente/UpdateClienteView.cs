@@ -8,7 +8,7 @@ namespace VIEWS
     public partial class UpdateClienteView : Form
     {
         // Construtor da classe que recebe um objeto Cliente para preencher os campos
-        public UpdateClienteView(MODEL.Cliente cliente)
+        public UpdateClienteView(MODEL.ClientePJ cliente)
         {
             InitializeComponent();
 
@@ -69,7 +69,7 @@ namespace VIEWS
                 else
                 {
                     // Cria um objeto Cliente com os dados atualizados.
-                    MODEL.Cliente cliente = new MODEL.Cliente(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
+                    MODEL.ClientePJ cliente = new MODEL.ClientePJ(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
 
                     // Chama o método de atualização do controlador e obtém o resultado.
                     var retorno = controllerCliente.Update(cliente, cliente.GetCnpj());

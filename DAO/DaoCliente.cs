@@ -20,7 +20,7 @@ namespace DAO
         }
 
         // Insere um novo registro de Cliente no banco de dados.
-        public bool Insert(Cliente Cliente)
+        public bool Insert(ClientePJ Cliente)
         {
 
             var conn = conexao.Connection();
@@ -63,7 +63,7 @@ namespace DAO
         }
 
         // Atualiza um registro existente de Cliente no banco de dados.
-        public bool Update(Cliente Cliente, decimal cnpj)
+        public bool Update(ClientePJ Cliente, decimal cnpj)
         {
 
             var conn = conexao.Connection();
@@ -129,7 +129,7 @@ namespace DAO
         }
 
         // Recupera uma lista de todos os registros de Cliente do banco de dados.
-        public List<Cliente> Read()
+        public List<ClientePJ> Read()
         {
 
             var conn = conexao.Connection();
@@ -139,7 +139,7 @@ namespace DAO
                 // Constrói a consulta SQL para recuperar todos os registros de Cliente.
                 var query = "SELECT * FROM Cliente";
                 // Executa a consulta e retorna a lista de objetos Cliente.
-                var clientes = conn.Query<Cliente>(query).ToList();
+                var clientes = conn.Query<ClientePJ>(query).ToList();
                 return clientes;
             }
             catch (Exception ex)
@@ -154,7 +154,7 @@ namespace DAO
         }
 
         // Recupera uma lista de registros de Cliente com base em critérios de filtro.
-        public List<Cliente> Filter(decimal? cnpj, string nome)
+        public List<ClientePJ> Filter(decimal? cnpj, string nome)
         {
 
             var conn = conexao.Connection();
@@ -164,7 +164,7 @@ namespace DAO
                 // Constrói a consulta SQL para filtrar registros de Cliente.
                 var query = $"SELECT * FROM Cliente WHERE nome LIKE '{nome}%' AND Cnpj LIKE '{cnpj}%'";
                 // Executa a consulta e retorna a lista filtrada de objetos Cliente.
-                var cliente = conn.Query<Cliente>(query).ToList();
+                var cliente = conn.Query<ClientePJ>(query).ToList();
                 return cliente;
 
             }
@@ -180,7 +180,7 @@ namespace DAO
         }
 
         // Recupera uma lista de todos os registros de Cliente para fins de relatório.
-        public List<Cliente> report()
+        public List<ClientePJ> report()
         {
 
             var conn = conexao.Connection();
@@ -190,7 +190,7 @@ namespace DAO
                 // Constrói a consulta SQL para recuperar todos os registros de Cliente.
                 var query = "SELECT * FROM Cliente";
                 // Executa a consulta e retorna a lista de objetos Cliente para relatório.
-                var clientes = conn.Query<Cliente>(query).ToList();
+                var clientes = conn.Query<ClientePJ>(query).ToList();
                 return clientes;
             }
             catch (Exception ex)
