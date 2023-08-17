@@ -18,7 +18,7 @@ namespace Api.Controllers
         [HttpGet]
         public IActionResult GetClientes()
         {
-            var clientes = serviceCliente.GetClientes()
+            var clientes = serviceCliente.ListarClientes()
                 .Select(cliente => new { Cnpj = cliente.GetCnpj(),
                                          Nome = cliente.GetNome()}).ToList();
 
@@ -36,7 +36,7 @@ namespace Api.Controllers
         [HttpGet("{cnpj}")]
         public IActionResult GetClienteByCnpj(string cnpj)
         {
-            var clientes = serviceCliente.GetClientesByCnpj(cnpj)
+            var clientes = serviceCliente.ListarPorCnpj(cnpj)
                     .Where(cliente => cliente.GetCnpj() == decimal.Parse(cnpj))
                     .Select(cliente => new {
                         Cnpj = cliente.GetCnpj(),

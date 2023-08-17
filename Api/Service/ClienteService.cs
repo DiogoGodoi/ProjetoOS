@@ -12,7 +12,7 @@ namespace API.Service
             this._controlerCliente = new ControllerCliente();
         }
 
-        public List<ClientePJ> GetClientes()
+        public List<ClientePJ> ListarClientes()
         {
             List<ClientePJ> clientes = _controlerCliente.Read();
 
@@ -26,7 +26,7 @@ namespace API.Service
             return clientes;
         }
 
-        public List<ClientePJ> GetClientesByCnpj(string cnpj)
+        public List<ClientePJ> ListarPorCnpj(string cnpj)
         {
             // Lê todos os clientes do ControllerCliente
             List<ClientePJ> clientes = _controlerCliente.Read();
