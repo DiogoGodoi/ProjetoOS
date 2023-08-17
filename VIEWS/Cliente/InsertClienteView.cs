@@ -140,6 +140,7 @@ namespace VIEWS
                 btnCnpj.Text = "Cnpj";
                 btnCnpj.Enabled = true;
                 btnCnpj.BackColor = Color.FromArgb(0, 0, 64);
+                mskIdentificador.Mask = "999.999.999/9999-99";
             }
         }
     }
