@@ -1,10 +1,9 @@
-﻿using API_EXTERNAS;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace CONTROLLER
+namespace API_EXTERNAS
 {
     // Classe ControllerApiReceita: Controlador para acessar a API da Receita Federal.
     public class ControllerApiReceita

@@ -1,11 +1,6 @@
 using System.Collections.Generic;
 using MODEL;
 using DAO;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System;
-using Newtonsoft.Json;
-using API_EXTERNAS;
 
 namespace CONTROLLER
 {

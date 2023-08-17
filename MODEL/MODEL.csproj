@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="ClientePF.cs" />
     <Compile Include="ClientePJ.cs" />
     <Compile Include="Defeito.cs" />
     <Compile Include="Especialidade.cs" />

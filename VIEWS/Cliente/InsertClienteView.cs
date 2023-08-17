@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Forms;
 using MODEL;
+using API_EXTERNAS;
 
 namespace VIEWS
 {
