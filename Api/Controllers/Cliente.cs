@@ -1,42 +1,56 @@
-using CONTROLLER;
 using Microsoft.AspNetCore.Mvc;
+using API.Service;
 
 namespace Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class Cliente : ControllerBase {
+    public class ClienteController : ControllerBase
+    {
 
-    [HttpGet]
-    [Route("/Cliente")]
-    public IActionResult GetCliente()
+        private readonly ClienteService serviceCliente;
+
+        public ClienteController()
         {
-            ControllerCliente controllerCliente = new ControllerCliente();
-            List<MODEL.ClientePJ> cliente = new List<MODEL.ClientePJ>();
-            cliente = controllerCliente.Read();
-            var dados = cliente.Select(i => new
-            {
-                Cnpj = i.GetCnpj(),
-                Nome = i.GetNome()
-            }).ToList();
-
-            return Ok(dados);
+            serviceCliente = new ClienteService();
         }
 
         [HttpGet]
-        [Route("/Cliente/{cnpj}")]
-        public IActionResult SelectCliente(string cnpj)
+        public IActionResult GetClientes()
         {
-            ControllerCliente controllerCliente = new ControllerCliente();
-            var cliente = controllerCliente.Read();
-            var dados = cliente.Where(i => i.GetCnpj() == decimal.Parse(cnpj));
-            var result = dados.Select(i => new
-            {
-             Cnpj = i.GetCnpj(),
-             Nome = i.GetNome(),
-            }).ToList();
+            var clientes = serviceCliente.GetClientes()
+                .Select(cliente => new { Cnpj = cliente.GetCnpj(),
+                                         Nome = cliente.GetNome()}).ToList();
 
-            return Ok(result);
+            if (clientes.Count > 0)
+            {
+                return Ok(clientes);
+            }
+            else
+            {
+                return NotFound("Status 404: not found");
+            }
+
+        }
+
+        [HttpGet("{cnpj}")]
+        public IActionResult GetClienteByCnpj(string cnpj)
+        {
+            var clientes = serviceCliente.GetClientesByCnpj(cnpj)
+                    .Where(cliente => cliente.GetCnpj() == decimal.Parse(cnpj))
+                    .Select(cliente => new {
+                        Cnpj = cliente.GetCnpj(),
+                        Nome = cliente.GetNome(),
+                    }).ToList();
+
+            if (clientes.Count > 0)
+            {
+                return Ok(clientes);
+            }
+            else
+            {
+                return NotFound("Status 404: not found");
+            }
         }
     }
 }
