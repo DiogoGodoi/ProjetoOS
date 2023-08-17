@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using MODEL;
 using API_EXTERNAS;
+using System.Drawing;
 
 namespace VIEWS
 {
@@ -18,11 +19,12 @@ namespace VIEWS
             InitializeComponent();
 
             // Associa o evento de carregamento do formulário à função que define o foco no campo CNPJ.
-            Load += (sender, e) => { txtCnpj.Focus(); };
+            Load += (sender, e) => { cbTipo.Focus(); };
             // Associa o evento de clique do botão 'Inserir' à função Insert.
             btnInserir.Click += (sender, e) => Insert();
             // Associa o evento de clique do botão 'Cnpj' à função BuscaCnpjApi.
-            btnCnpj.Click += (sender, e) => BuscaCnpjApi(txtCnpj.Text);
+            btnCnpj.Click += (sender, e) => BuscaCnpjApi(mskIdentificador.Text);
+            cbTipo.SelectedIndexChanged += (sender, e) => SelectTipo();
         }
 
         // Função para realizar a inserção de um novo cliente
@@ -34,7 +36,7 @@ namespace VIEWS
                 ControllerCliente controllerCliente = new ControllerCliente();
 
                 // Realiza validações nos campos de entrada antes da inserção.
-                if (txtCnpj.Text.Length > 15)
+                if (mskIdentificador.Text.Length > 15)
                 {
                     MessageBox.Show("Cnpj do cliente excede 15 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -65,7 +67,7 @@ namespace VIEWS
                 else
                 {
                     // Cria um objeto Cliente com os dados inseridos no formulário.
-                    ClientePJ cliente = new ClientePJ(decimal.Parse(txtCnpj.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
+                    ClientePJ cliente = new ClientePJ(decimal.Parse(mskIdentificador.Text), txtNome.Text, txtTelefone.Text, txtRua.Text, txtNumero.Text, txtBairro.Text, txtCidade.Text, cbEstado.Text);
          
                     // Chama o método de inserção do controlador e obtém o resultado.
                     var retorno = controllerCliente.Insert(cliente);
@@ -74,7 +76,7 @@ namespace VIEWS
                     {
                         // Exibe uma mensagem de sucesso, limpa os campos do formulário e define o foco no campo CNPJ.
                         MessageBox.Show("Cadastrado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtCnpj.Text = string.Empty;
+                        mskIdentificador.Text = string.Empty;
                         txtNome.Text = string.Empty;
                         txtTelefone.Text = string.Empty;
                         txtRua.Text = string.Empty;
@@ -82,7 +84,7 @@ namespace VIEWS
                         txtBairro.Text = string.Empty;
                         txtCidade.Text = string.Empty;
                         cbEstado.Text = string.Empty;
-                        txtCnpj.Focus();
+                        mskIdentificador.Focus();
                     }
                     else
                     {
@@ -121,6 +123,23 @@ namespace VIEWS
             {
                 // Exibe mensagem caso a empresa não seja localizada.
                 MessageBox.Show("Empresa não localizada", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void SelectTipo()
+        {
+            if (cbTipo.SelectedIndex == 1)
+            {
+                btnCnpj.Text = "Cpf";
+                btnCnpj.Enabled = false;
+                btnCnpj.BackColor = Color.White;
+                mskIdentificador.Mask = "999.999.999-99";
+            }
+            else if(cbTipo.SelectedIndex == 0)
+            {
+                btnCnpj.Text = "Cnpj";
+                btnCnpj.Enabled = true;
+                btnCnpj.BackColor = Color.FromArgb(0, 0, 64);
             }
         }
     }

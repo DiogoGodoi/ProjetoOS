@@ -44,17 +44,19 @@
             this.lblTelfone = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.btnCnpj = new System.Windows.Forms.Button();
+            this.lblTipo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.mskIdentificador = new System.Windows.Forms.MaskedTextBox();
+            this.cbTipo = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pctLogo = new System.Windows.Forms.PictureBox();
@@ -81,7 +83,7 @@
             // 
             this.panelFooter.Controls.Add(this.panel7);
             this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFooter.Location = new System.Drawing.Point(0, 390);
+            this.panelFooter.Location = new System.Drawing.Point(0, 459);
             this.panelFooter.Name = "panelFooter";
             this.panelFooter.Padding = new System.Windows.Forms.Padding(5);
             this.panelFooter.Size = new System.Drawing.Size(790, 50);
@@ -137,7 +139,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(115, 320);
+            this.panel1.Size = new System.Drawing.Size(115, 389);
             this.panel1.TabIndex = 4;
             // 
             // panel6
@@ -146,7 +148,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(5, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(105, 310);
+            this.panel6.Size = new System.Drawing.Size(105, 379);
             this.panel6.TabIndex = 0;
             // 
             // tlPanelLabels
@@ -155,28 +157,30 @@
             this.tlPanelLabels.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tlPanelLabels.ColumnCount = 1;
             this.tlPanelLabels.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlPanelLabels.Controls.Add(this.lblEstado, 0, 7);
-            this.tlPanelLabels.Controls.Add(this.lblCidade, 0, 6);
-            this.tlPanelLabels.Controls.Add(this.lblBairro, 0, 5);
-            this.tlPanelLabels.Controls.Add(this.lblNumero, 0, 4);
-            this.tlPanelLabels.Controls.Add(this.lblEndereco, 0, 3);
-            this.tlPanelLabels.Controls.Add(this.lblTelfone, 0, 2);
-            this.tlPanelLabels.Controls.Add(this.lblNome, 0, 1);
-            this.tlPanelLabels.Controls.Add(this.btnCnpj, 0, 0);
+            this.tlPanelLabels.Controls.Add(this.lblEstado, 0, 8);
+            this.tlPanelLabels.Controls.Add(this.lblCidade, 0, 7);
+            this.tlPanelLabels.Controls.Add(this.lblBairro, 0, 6);
+            this.tlPanelLabels.Controls.Add(this.lblNumero, 0, 5);
+            this.tlPanelLabels.Controls.Add(this.lblEndereco, 0, 4);
+            this.tlPanelLabels.Controls.Add(this.lblTelfone, 0, 3);
+            this.tlPanelLabels.Controls.Add(this.lblNome, 0, 2);
+            this.tlPanelLabels.Controls.Add(this.btnCnpj, 0, 1);
+            this.tlPanelLabels.Controls.Add(this.lblTipo, 0, 0);
             this.tlPanelLabels.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlPanelLabels.Location = new System.Drawing.Point(0, 0);
             this.tlPanelLabels.Name = "tlPanelLabels";
-            this.tlPanelLabels.RowCount = 8;
-            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlPanelLabels.RowCount = 9;
+            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tlPanelLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlPanelLabels.Size = new System.Drawing.Size(105, 310);
+            this.tlPanelLabels.Size = new System.Drawing.Size(105, 379);
             this.tlPanelLabels.TabIndex = 14;
             // 
             // lblEstado
@@ -184,9 +188,9 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(4, 267);
+            this.lblEstado.Location = new System.Drawing.Point(4, 337);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(97, 42);
+            this.lblEstado.Size = new System.Drawing.Size(97, 41);
             this.lblEstado.TabIndex = 7;
             this.lblEstado.Text = "Estado";
             this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,9 +200,9 @@
             this.lblCidade.AutoSize = true;
             this.lblCidade.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCidade.Location = new System.Drawing.Point(4, 229);
+            this.lblCidade.Location = new System.Drawing.Point(4, 295);
             this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(97, 37);
+            this.lblCidade.Size = new System.Drawing.Size(97, 41);
             this.lblCidade.TabIndex = 6;
             this.lblCidade.Text = "Cidade";
             this.lblCidade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,9 +212,9 @@
             this.lblBairro.AutoSize = true;
             this.lblBairro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.Location = new System.Drawing.Point(4, 191);
+            this.lblBairro.Location = new System.Drawing.Point(4, 253);
             this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(97, 37);
+            this.lblBairro.Size = new System.Drawing.Size(97, 41);
             this.lblBairro.TabIndex = 5;
             this.lblBairro.Text = "Bairro";
             this.lblBairro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,9 +224,9 @@
             this.lblNumero.AutoSize = true;
             this.lblNumero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(4, 153);
+            this.lblNumero.Location = new System.Drawing.Point(4, 211);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(97, 37);
+            this.lblNumero.Size = new System.Drawing.Size(97, 41);
             this.lblNumero.TabIndex = 4;
             this.lblNumero.Text = "Numero";
             this.lblNumero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,9 +236,9 @@
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndereco.Location = new System.Drawing.Point(4, 115);
+            this.lblEndereco.Location = new System.Drawing.Point(4, 169);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(97, 37);
+            this.lblEndereco.Size = new System.Drawing.Size(97, 41);
             this.lblEndereco.TabIndex = 3;
             this.lblEndereco.Text = "Endereço";
             this.lblEndereco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,9 +248,9 @@
             this.lblTelfone.AutoSize = true;
             this.lblTelfone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTelfone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelfone.Location = new System.Drawing.Point(4, 77);
+            this.lblTelfone.Location = new System.Drawing.Point(4, 127);
             this.lblTelfone.Name = "lblTelfone";
-            this.lblTelfone.Size = new System.Drawing.Size(97, 37);
+            this.lblTelfone.Size = new System.Drawing.Size(97, 41);
             this.lblTelfone.TabIndex = 2;
             this.lblTelfone.Text = "Telefone";
             this.lblTelfone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -256,9 +260,9 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(4, 39);
+            this.lblNome.Location = new System.Drawing.Point(4, 85);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(97, 37);
+            this.lblNome.Size = new System.Drawing.Size(97, 41);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
             this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,15 +271,28 @@
             // 
             this.btnCnpj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnCnpj.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCnpj.FlatAppearance.BorderSize = 0;
             this.btnCnpj.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCnpj.ForeColor = System.Drawing.Color.White;
-            this.btnCnpj.Location = new System.Drawing.Point(4, 4);
+            this.btnCnpj.Location = new System.Drawing.Point(4, 46);
             this.btnCnpj.Name = "btnCnpj";
-            this.btnCnpj.Size = new System.Drawing.Size(97, 31);
+            this.btnCnpj.Size = new System.Drawing.Size(97, 35);
             this.btnCnpj.TabIndex = 10;
             this.btnCnpj.Text = "Cnpj";
             this.btnCnpj.UseVisualStyleBackColor = false;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblTipo.Location = new System.Drawing.Point(4, 1);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(97, 41);
+            this.lblTipo.TabIndex = 11;
+            this.lblTipo.Text = "Tipo";
+            this.lblTipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -284,7 +301,7 @@
             this.panel3.Location = new System.Drawing.Point(115, 70);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(342, 320);
+            this.panel3.Size = new System.Drawing.Size(342, 389);
             this.panel3.TabIndex = 6;
             // 
             // panel5
@@ -293,7 +310,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(5, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(332, 310);
+            this.panel5.Size = new System.Drawing.Size(332, 379);
             this.panel5.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -302,86 +319,31 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.txtCnpj, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtCidade, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.txtBairro, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.txtNumero, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.txtRua, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.cbEstado, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.txtNome, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtTelefone, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.cbEstado, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.txtCidade, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.txtBairro, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.txtNumero, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.txtRua, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txtTelefone, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txtNome, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.mskIdentificador, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cbTipo, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel2.RowCount = 9;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(332, 310);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(332, 379);
             this.tableLayoutPanel2.TabIndex = 16;
-            // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCnpj.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCnpj.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtCnpj.Location = new System.Drawing.Point(4, 7);
-            this.txtCnpj.Mask = "99.999.999/9999-99";
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(324, 25);
-            this.txtCnpj.TabIndex = 0;
-            this.txtCnpj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCnpj.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCidade.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCidade.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(4, 235);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(324, 25);
-            this.txtCidade.TabIndex = 6;
-            this.txtCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtBairro
-            // 
-            this.txtBairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBairro.BackColor = System.Drawing.SystemColors.Control;
-            this.txtBairro.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(4, 197);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(324, 25);
-            this.txtBairro.TabIndex = 5;
-            this.txtBairro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNumero.BackColor = System.Drawing.SystemColors.Control;
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(4, 159);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(324, 25);
-            this.txtNumero.TabIndex = 4;
-            this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtRua
-            // 
-            this.txtRua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRua.BackColor = System.Drawing.SystemColors.Control;
-            this.txtRua.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRua.Location = new System.Drawing.Point(4, 121);
-            this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(324, 25);
-            this.txtRua.TabIndex = 3;
-            this.txtRua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbEstado
             // 
@@ -390,7 +352,6 @@
             this.cbEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbEstado.DropDownHeight = 100;
             this.cbEstado.DropDownWidth = 30;
-            this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbEstado.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.IntegralHeight = false;
@@ -422,33 +383,104 @@
             "SP",
             "SE",
             "TO"});
-            this.cbEstado.Location = new System.Drawing.Point(4, 274);
+            this.cbEstado.Location = new System.Drawing.Point(4, 344);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(324, 27);
             this.cbEstado.TabIndex = 7;
             // 
-            // txtNome
+            // txtCidade
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.BackColor = System.Drawing.SystemColors.Control;
-            this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(4, 45);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(324, 25);
-            this.txtNome.TabIndex = 1;
-            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCidade.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCidade.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Location = new System.Drawing.Point(4, 303);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(324, 25);
+            this.txtCidade.TabIndex = 6;
+            this.txtCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBairro.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBairro.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairro.Location = new System.Drawing.Point(4, 261);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(324, 25);
+            this.txtBairro.TabIndex = 5;
+            this.txtBairro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNumero.BackColor = System.Drawing.SystemColors.Control;
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.Location = new System.Drawing.Point(4, 219);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(324, 25);
+            this.txtNumero.TabIndex = 4;
+            this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtRua
+            // 
+            this.txtRua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRua.BackColor = System.Drawing.SystemColors.Control;
+            this.txtRua.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRua.Location = new System.Drawing.Point(4, 177);
+            this.txtRua.Name = "txtRua";
+            this.txtRua.Size = new System.Drawing.Size(324, 25);
+            this.txtRua.TabIndex = 3;
+            this.txtRua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTelefone
             // 
             this.txtTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefone.BackColor = System.Drawing.SystemColors.Control;
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtTelefone.Location = new System.Drawing.Point(4, 83);
+            this.txtTelefone.Location = new System.Drawing.Point(4, 135);
             this.txtTelefone.Mask = "(99) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(324, 25);
             this.txtTelefone.TabIndex = 2;
             this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.BackColor = System.Drawing.SystemColors.Control;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(4, 93);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(324, 25);
+            this.txtNome.TabIndex = 1;
+            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // mskIdentificador
+            // 
+            this.mskIdentificador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mskIdentificador.BackColor = System.Drawing.SystemColors.Control;
+            this.mskIdentificador.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.mskIdentificador.Location = new System.Drawing.Point(4, 51);
+            this.mskIdentificador.Mask = "99.999.999/9999-99";
+            this.mskIdentificador.Name = "mskIdentificador";
+            this.mskIdentificador.Size = new System.Drawing.Size(324, 25);
+            this.mskIdentificador.TabIndex = 0;
+            this.mskIdentificador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mskIdentificador.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // cbTipo
+            // 
+            this.cbTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbTipo.BackColor = System.Drawing.SystemColors.Control;
+            this.cbTipo.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cbTipo.FormattingEnabled = true;
+            this.cbTipo.Items.AddRange(new object[] {
+            "Pessoa Juridica",
+            "Pessoa Fisica"});
+            this.cbTipo.Location = new System.Drawing.Point(4, 8);
+            this.cbTipo.Name = "cbTipo";
+            this.cbTipo.Size = new System.Drawing.Size(324, 27);
+            this.cbTipo.TabIndex = 0;
             // 
             // panel2
             // 
@@ -457,7 +489,7 @@
             this.panel2.Location = new System.Drawing.Point(457, 70);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.panel2.Size = new System.Drawing.Size(333, 320);
+            this.panel2.Size = new System.Drawing.Size(333, 389);
             this.panel2.TabIndex = 7;
             // 
             // panel4
@@ -469,7 +501,7 @@
             this.panel4.Location = new System.Drawing.Point(5, 5);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(20);
-            this.panel4.Size = new System.Drawing.Size(323, 310);
+            this.panel4.Size = new System.Drawing.Size(323, 379);
             this.panel4.TabIndex = 15;
             // 
             // pctLogo
@@ -479,7 +511,7 @@
             this.pctLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctLogo.Image")));
             this.pctLogo.Location = new System.Drawing.Point(20, 20);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(281, 268);
+            this.pctLogo.Size = new System.Drawing.Size(281, 337);
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctLogo.TabIndex = 9;
             this.pctLogo.TabStop = false;
@@ -494,7 +526,7 @@
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHeader.Location = new System.Drawing.Point(5, 5);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(790, 440);
+            this.panelHeader.Size = new System.Drawing.Size(790, 509);
             this.panelHeader.TabIndex = 0;
             // 
             // tbTitulo
@@ -533,7 +565,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 519);
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InsertClienteView";
@@ -594,7 +626,9 @@
         private System.Windows.Forms.TableLayoutPanel tbTitulo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
-        private System.Windows.Forms.MaskedTextBox txtCnpj;
+        private System.Windows.Forms.MaskedTextBox mskIdentificador;
         private System.Windows.Forms.Button btnCnpj;
+        private System.Windows.Forms.ComboBox cbTipo;
+        private System.Windows.Forms.Label lblTipo;
     }
 }

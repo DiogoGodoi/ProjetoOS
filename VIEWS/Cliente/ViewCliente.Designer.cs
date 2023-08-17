@@ -133,7 +133,7 @@
             this.panelConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelConteudo.Location = new System.Drawing.Point(200, 85);
             this.panelConteudo.Name = "panelConteudo";
-            this.panelConteudo.Size = new System.Drawing.Size(727, 447);
+            this.panelConteudo.Size = new System.Drawing.Size(727, 506);
             this.panelConteudo.TabIndex = 20;
             // 
             // panelMenu
@@ -145,7 +145,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 85);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Padding = new System.Windows.Forms.Padding(5);
-            this.panelMenu.Size = new System.Drawing.Size(200, 447);
+            this.panelMenu.Size = new System.Drawing.Size(200, 506);
             this.panelMenu.TabIndex = 19;
             // 
             // tableLayoutPanel1
@@ -170,7 +170,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(188, 388);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(188, 447);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
             // btnRelatorios
@@ -183,9 +183,9 @@
             this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRelatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRelatorios.Location = new System.Drawing.Point(97, 68);
+            this.btnRelatorios.Location = new System.Drawing.Point(97, 78);
             this.btnRelatorios.Name = "btnRelatorios";
-            this.btnRelatorios.Size = new System.Drawing.Size(87, 57);
+            this.btnRelatorios.Size = new System.Drawing.Size(87, 67);
             this.btnRelatorios.TabIndex = 5;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.UseVisualStyleBackColor = false;
@@ -200,9 +200,9 @@
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPesquisar.Location = new System.Drawing.Point(4, 68);
+            this.btnPesquisar.Location = new System.Drawing.Point(4, 78);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(86, 57);
+            this.btnPesquisar.Size = new System.Drawing.Size(86, 67);
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
@@ -219,7 +219,7 @@
             this.btnExibir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExibir.Location = new System.Drawing.Point(4, 4);
             this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(86, 57);
+            this.btnExibir.Size = new System.Drawing.Size(86, 67);
             this.btnExibir.TabIndex = 6;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = false;
@@ -236,7 +236,7 @@
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCadastrar.Location = new System.Drawing.Point(97, 4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(87, 57);
+            this.btnCadastrar.Size = new System.Drawing.Size(87, 67);
             this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -245,7 +245,7 @@
             // 
             this.panel5.Controls.Add(this.btnSair);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(5, 393);
+            this.panel5.Location = new System.Drawing.Point(5, 452);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(188, 47);
             this.panel5.TabIndex = 0;
@@ -338,7 +338,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 532);
+            this.panel2.Location = new System.Drawing.Point(0, 591);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(927, 45);
             this.panel2.TabIndex = 18;
@@ -387,7 +387,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 577);
+            this.ClientSize = new System.Drawing.Size(927, 636);
             this.Controls.Add(this.panelConteudo);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel2);
