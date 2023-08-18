@@ -38,5 +38,31 @@ namespace API.Service
                 return false;
             }
         }
+
+        public bool InsertCliente(ClientePJ cliente)
+        {
+            var retorno = _controlerCliente.Insert(cliente);
+            if (retorno != false)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteCliente(decimal cnpj)
+        {
+            var retorno = _controlerCliente.Delete(cnpj);
+            if (retorno != false)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

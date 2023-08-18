@@ -137,7 +137,7 @@ namespace DAO
             {
                 conn.Open();
                 // Constrói a consulta SQL para recuperar todos os registros de Cliente.
-                var query = "SELECT * FROM Cliente";
+                var query = "EXEC readCliente";
                 // Executa a consulta e retorna a lista de objetos Cliente.
                 var clientes = conn.Query<ClientePJ>(query).ToList();
                 

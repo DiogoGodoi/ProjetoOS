@@ -72,14 +72,52 @@ namespace Api.Controllers
         }
 
         [HttpPut("update/{cnpj}")]
-        public IActionResult UpdateCliente([FromBody] ClientePJ request, string cnpj)
+        public IActionResult UpdateCliente(string cnpj, string nome, string telefone,
+            string logradouro, string numero, string bairro, string municipio, string uf)
         {
-            
-            var retorno = serviceCliente._controlerCliente.Update(request, decimal.Parse(cnpj));
+            ClientePJ clientePJ = new ClientePJ(decimal.Parse(cnpj), 
+                nome, telefone, logradouro, numero, bairro, municipio, uf);
+
+            var retorno = serviceCliente.UpdateCliente(clientePJ, decimal.Parse(cnpj));
 
             if(retorno != false)
             {
                 return Ok("Registro alterado");
+            }
+            else
+            {
+                return BadRequest("Erro");
+            }
+        }
+
+        [HttpPost("insert")]
+        public IActionResult InsertCliente(string cnpj, string nome, string telefone,
+            string logradouro, string numero, string bairro, string municipio, string uf)
+        {
+            ClientePJ clientePJ = new ClientePJ(decimal.Parse(cnpj),
+                nome, telefone, logradouro, numero, bairro, municipio, uf);
+
+            var retorno = serviceCliente.InsertCliente(clientePJ);
+
+            if (retorno != false)
+            {
+                return Ok("Registro inserido");
+            }
+            else
+            {
+                return BadRequest("Erro");
+            }
+        }
+
+        [HttpDelete("delete/{cnpj}")]
+        public IActionResult DeleteCliente(string cnpj)
+        {
+
+            var retorno = serviceCliente.DeleteCliente(decimal.Parse(cnpj));
+
+            if (retorno != false)
+            {
+                return Ok("Registro deletado");
             }
             else
             {
