@@ -97,7 +97,7 @@ namespace VIEWS
                 // Preenche o DataGridView com os dados dos clientes.
                 foreach (var idx in clientes)
                 {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetEndereco().telefone, idx.GetEndereco().logradouro, idx.GetEndereco().numero, idx.GetEndereco().bairro, idx.GetEndereco().municipio, idx.GetEndereco().uf);
+                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetDadosAPI().telefone, idx.GetDadosAPI().logradouro, idx.GetDadosAPI().numero, idx.GetDadosAPI().bairro, idx.GetDadosAPI().municipio, idx.GetDadosAPI().uf);
                 }
                 dtGrid.DataSource = dados.Clientes;
                 dtGrid.Columns["Endereco"].Visible = false;

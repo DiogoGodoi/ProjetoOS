@@ -18,12 +18,12 @@ namespace VIEWS
             // Preenche os campos do formulário com os valores do objeto cliente.
             txtCnpj.Text = cliente.GetCnpj().ToString(); // Define o CNPJ
             txtNome.Text = cliente.GetNome(); // Define o nome
-            txtTelefone.Text = cliente.GetEndereco().telefone; // Define o telefone
-            txtRua.Text = cliente.GetEndereco().logradouro; // Define a rua
-            txtNumero.Text = cliente.GetEndereco().numero; // Define o número
-            txtBairro.Text = cliente.GetEndereco().bairro; // Define o bairro
-            txtCidade.Text = cliente.GetEndereco().municipio; // Define a cidade
-            cbEstado.Text = cliente.GetEndereco().uf; // Define a sigla do estado
+            txtTelefone.Text = cliente.GetDadosAPI().telefone; // Define o telefone
+            txtRua.Text = cliente.GetDadosAPI().logradouro; // Define a rua
+            txtNumero.Text = cliente.GetDadosAPI().numero; // Define o número
+            txtBairro.Text = cliente.GetDadosAPI().bairro; // Define o bairro
+            txtCidade.Text = cliente.GetDadosAPI().municipio; // Define a cidade
+            cbEstado.Text = cliente.GetDadosAPI().uf; // Define a sigla do estado
 
             // Associa o evento de clique do botão 'Deletar' à função Delete
             btnDeletar.Click += (sender, e) => Delete();

@@ -15,12 +15,12 @@ namespace VIEWS
             // Preenche os campos do formulário com os valores recebidos.
             txtCnpj.Text = cliente.GetCnpj().ToString();
             txtNome.Text = cliente.GetNome();
-            txtTelefone.Text = cliente.GetEndereco().telefone;
-            txtRua.Text = cliente.GetEndereco().logradouro;
-            txtNumero.Text = cliente.GetEndereco().numero;
-            txtBairro.Text = cliente.GetEndereco().bairro;
-            txtCidade.Text = cliente.GetEndereco().municipio;
-            cbEstado.Text = cliente.GetEndereco().uf;
+            txtTelefone.Text = cliente.GetDadosAPI().telefone;
+            txtRua.Text = cliente.GetDadosAPI().logradouro;
+            txtNumero.Text = cliente.GetDadosAPI().numero;
+            txtBairro.Text = cliente.GetDadosAPI().bairro;
+            txtCidade.Text = cliente.GetDadosAPI().municipio;
+            cbEstado.Text = cliente.GetDadosAPI().uf;
 
             txtNome.Focus();
 

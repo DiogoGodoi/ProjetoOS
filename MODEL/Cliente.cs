@@ -5,24 +5,24 @@ namespace MODEL {
     {
         //Atributos
         protected string nome { get; set; }
-        protected EnderecoApi endereco { get; set; } 
+        protected EnderecoApi dadosAPI { get; set; } 
 
         // Construtor para a classe Cliente que inicializa as propriedades.
-        public Cliente(string nome, string telefone, string rua, string numero, string bairro, string cidade, string siglaEs)
+        public Cliente(string nome, string telefone, string logradouro, string numero, string bairro, string municipio, string uf)
         {
             this.nome = nome;
-            endereco = new EnderecoApi();
-            endereco.telefone = telefone;
-            endereco.logradouro = rua;
-            endereco.numero = numero;
-            endereco.bairro = bairro;
-            endereco.municipio = cidade;
-            endereco.uf = siglaEs;
+            dadosAPI = new EnderecoApi();
+            dadosAPI.telefone = telefone;
+            dadosAPI.logradouro = logradouro;
+            dadosAPI.numero = numero;
+            dadosAPI.bairro = bairro;
+            dadosAPI.municipio = municipio;
+            dadosAPI.uf = uf;
         }
 
         // Métodos para acessar as propriedades privadas.
         public string GetNome() { return this.nome; }
-        public EnderecoApi GetEndereco() { return this.endereco; }
+        public EnderecoApi GetDadosAPI() { return this.dadosAPI; }
     }
 
 }

@@ -93,10 +93,10 @@ namespace VIEWS
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 // Exibe uma mensagem em caso de exceção.
-                MessageBox.Show("Por favor insira os dados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor insira os dados= " + ex.Message, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

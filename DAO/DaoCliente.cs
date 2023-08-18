@@ -31,12 +31,12 @@ namespace DAO
                 var query = $"EXEC cadCliente " +
                      $" {Cliente.GetCnpj()}, " +
                      $"'{Cliente.GetNome()}'," +
-                     $"'{Cliente.GetEndereco().telefone}', " +
-                     $"'{Cliente.GetEndereco().logradouro}', " +
-                     $"'{Cliente.GetEndereco().numero}', " +
-                     $"'{Cliente.GetEndereco().bairro}', " +
-                     $"'{Cliente.GetEndereco().municipio}', " +
-                     $"'{Cliente.GetEndereco().uf}'";
+                     $"'{Cliente.GetDadosAPI().telefone}', " +
+                     $"'{Cliente.GetDadosAPI().logradouro}', " +
+                     $"'{Cliente.GetDadosAPI().numero}', " +
+                     $"'{Cliente.GetDadosAPI().bairro}', " +
+                     $"'{Cliente.GetDadosAPI().municipio}', " +
+                     $"'{Cliente.GetDadosAPI().uf}'";
                 // Executa a consulta e trata o valor de retorno.
                 var retorno = conn.Execute(query, Cliente);
                 if (retorno > 0)
@@ -71,7 +71,7 @@ namespace DAO
             {
                 conn.Open();
                 // Constrói a consulta SQL para atualizar um registro existente de Cliente.
-                var query = $"EXEC upCliente {Cliente.GetCnpj()}, '{Cliente.GetNome()}', '{Cliente.GetEndereco().telefone}', '{Cliente.GetEndereco().logradouro}', '{Cliente.GetEndereco().numero}', '{Cliente.GetEndereco().bairro}', '{Cliente.GetEndereco().municipio}', '{Cliente.GetEndereco().uf}'";
+                var query = $"EXEC upCliente {Cliente.GetCnpj()}, '{Cliente.GetNome()}', '{Cliente.GetDadosAPI().telefone}', '{Cliente.GetDadosAPI().logradouro}', '{Cliente.GetDadosAPI().numero}', '{Cliente.GetDadosAPI().bairro}', '{Cliente.GetDadosAPI().municipio}', '{Cliente.GetDadosAPI().uf}'";
                 // Executa a consulta e trata o valor de retorno.
                 var resultado = conn.Execute(query, Cliente);
                 if (resultado > 0)
@@ -140,12 +140,13 @@ namespace DAO
                 var query = "SELECT * FROM Cliente";
                 // Executa a consulta e retorna a lista de objetos Cliente.
                 var clientes = conn.Query<ClientePJ>(query).ToList();
+                
                 return clientes;
             }
             catch (Exception ex)
             {
                 conn.Close();
-                return null;
+                throw new Exception("Mensagem: "+ ex.Message);
             }
             finally
             {
