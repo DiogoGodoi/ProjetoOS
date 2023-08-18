@@ -1,10 +1,3 @@
-using API.Service;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
-using Microsoft.IdentityModel.Tokens;
-using MODEL;
-using System.Text;
-
 namespace Api
 {
     public class Program
