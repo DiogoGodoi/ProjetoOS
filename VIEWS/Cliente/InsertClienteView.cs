@@ -25,6 +25,9 @@ namespace VIEWS
             // Associa o evento de clique do botão 'Cnpj' à função BuscaCnpjApi.
             btnCnpj.Click += (sender, e) => BuscaCnpjApi(mskIdentificador.Text);
             cbTipo.SelectedIndexChanged += (sender, e) => SelectTipo();
+            toolTipCnpj.ToolTipTitle = "Busca por CNPJ";
+            toolTipCnpj.ToolTipIcon = ToolTipIcon.Info;
+            toolTipCnpj.SetToolTip(btnCnpj, "Pesquise a empresa pelo cnpj");
         }
 
         // Função para realizar a inserção de um novo cliente

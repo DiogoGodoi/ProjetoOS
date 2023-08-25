@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 namespace CONEXAO {
     public class Conexao
     {
+
         public SqlConnection Connection()
         {
             // Criação da conexão

@@ -9,7 +9,7 @@ namespace API_EXTERNAS
     public class ControllerApiReceita
     {
         // Método para consultar os dados de uma empresa na Receita Federal.
-        public async Task<ApiReceita> ApiReceita(string cnpj)
+        public async Task<ModelApiReceita> ApiReceita(string cnpj)
         {
             // URL da API da Receita Federal para consulta de CNPJ.
             string url = $"https://www.receitaws.com.br/v1/cnpj/{cnpj}";
@@ -29,7 +29,7 @@ namespace API_EXTERNAS
                     string content = await response.Content.ReadAsStringAsync();
 
                     // Converte o conteúdo JSON em um objeto ModelReceitaFederal.
-                    ApiReceita dados = JsonConvert.DeserializeObject<ApiReceita>(content);
+                    ModelApiReceita dados = JsonConvert.DeserializeObject<ModelApiReceita>(content);
 
                     // Retorna os dados da Receita Federal.
                     return dados;

@@ -5,13 +5,13 @@ namespace MODEL {
     {
         //Atributos
         protected string nome { get; set; }
-        protected ApiReceita dadosAPI { get; set; } 
+        protected ModelApiReceita dadosAPI { get; set; } 
 
         // Construtor para a classe Cliente que inicializa as propriedades.
         public Cliente(string nome, string telefone, string logradouro, string numero, string bairro, string municipio, string uf)
         {
             this.nome = nome;
-            dadosAPI = new ApiReceita();
+            dadosAPI = new ModelApiReceita();
             dadosAPI.telefone = telefone;
             dadosAPI.logradouro = logradouro;
             dadosAPI.numero = numero;
@@ -22,7 +22,7 @@ namespace MODEL {
 
         // Métodos para acessar as propriedades privadas.
         public string GetNome() { return this.nome; }
-        public ApiReceita GetDadosAPI() { return this.dadosAPI; }
+        public ModelApiReceita GetDadosAPI() { return this.dadosAPI; }
     }
 
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertClienteView));
             this.panelFooter = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -63,6 +64,7 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.tbTitulo = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.toolTipCnpj = new System.Windows.Forms.ToolTip(this.components);
             this.panelFooter.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -630,5 +632,6 @@
         private System.Windows.Forms.Button btnCnpj;
         private System.Windows.Forms.ComboBox cbTipo;
         private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.ToolTip toolTipCnpj;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using VIEWS.Cliente.Relatorio;
 using System.Windows.Forms;
 using VIEWS.Cliente;
+using CONEXAO;
 
 namespace VIEWS
 {
@@ -36,7 +37,6 @@ namespace VIEWS
                 _viewReportClient.SetDados(dados);
                 _viewReportClient.ShowDialog();
             };
-
             tsPesquisar.Click += (sender, e) => TransicaoTela(_viewPesquisarCliente); // Abre a visualização de filtro de clientes
             tsReport.Click += (sender, e) => {
                 Dados dados = new Dados();

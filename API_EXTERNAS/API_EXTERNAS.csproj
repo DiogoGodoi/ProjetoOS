@@ -44,8 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControllerApiReceita.cs" />
-    <Compile Include="ApiReceita.cs" />
+    <Compile Include="Controler\ControllerApiReceita.cs" />
+    <Compile Include="Model\ModelApiReceita.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
