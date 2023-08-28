@@ -11,7 +11,6 @@
         {
             this.cpf = cpf;
         }
-
         public decimal GetCpf() { return cpf; }
     }
 }
