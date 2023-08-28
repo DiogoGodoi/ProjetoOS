@@ -25,11 +25,10 @@ namespace VIEWS
 
             // Inicializa a visualização de relatórios
             _viewReportClient = new ReportClientView();
-
             // Associações de eventos para diferentes ações do usuário
             pctLogo.Click += (sender, e) => TransicaoTela(_viewProtTela);
-            Load += (sender, e) => TransicaoTela(_viewProtTela); ; // Carrega a visualização de proteção da tela
-            btnCadastrar.Click += (sender, e) => TransicaoTela(_viewCadastrarCliente); // Abre a visualização de cadastro de clientes
+            Load += (sender, e) => { TransicaoTela(_viewProtTela); };// Carrega a visualização de proteção da tela
+            btnCadastrar.Click += (sender, e) => { TransicaoTela(_viewCadastrarCliente); }; // Abre a visualização de cadastro de clientes
             btnExibir.Click += (sender, e) => TransicaoTela(_viewExibirCliente); // Abre a visualização de leitura de clientes
             btnPesquisar.Click += (sender, e) => TransicaoTela(_viewPesquisarCliente); // Abre a visualização de filtro de clientes
             btnRelatorios.Click += (sender, e) => {
@@ -43,7 +42,6 @@ namespace VIEWS
                 _viewReportClient.SetDados(dados);
                 _viewReportClient.ShowDialog();
             };
-
             btnSair.Click += (sender, e) => this.Close();
             
             // Configura as dicas de ferramentas para os botões
@@ -75,6 +73,15 @@ namespace VIEWS
                 tela.MdiParent = this;
                 panelConteudo.Controls.Add(tela);
                 tela.Show();
+
+                if(tela is VIEWS.InsertClienteView)
+                {
+                    this.MaximizeBox = false;
+                }
+                else
+                {
+                    this.MaximizeBox = true;
+                }
             }
             else
             {
