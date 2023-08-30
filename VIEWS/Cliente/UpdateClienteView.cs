@@ -51,15 +51,15 @@ namespace VIEWS
                 // Realiza validações nos campos de entrada antes da inserção.
                 if (validarNome == false)
                 {
-                    MessageBox.Show("Nome do cliente excede 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nome do cliente deve ter no minimo 6 e no maximo 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (validarTelefone == false)
                 {
-                    MessageBox.Show("Telefone do cliente excede 18 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nome do cliente deve ter no minimo 10 e no maximo 18 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (validarLogradouro == false)
                 {
-                    MessageBox.Show("Rua do cliente excede 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nome do cliente deve ter no minimo 5 e no maximo 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (validarNumero == false)
                 {
@@ -67,11 +67,11 @@ namespace VIEWS
                 }
                 else if (validarBairro == false)
                 {
-                    MessageBox.Show("Bairro do cliente excede 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nome do cliente deve ter no minimo 5 e no maximo 45 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (validarMunicipio == false)
                 {
-                    MessageBox.Show("Cidade do cliente excede 35 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nome do cliente deve ter no minimo 5 e no maximo 35 caracteres", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (validarUF == false)
                 {

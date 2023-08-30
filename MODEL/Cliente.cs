@@ -14,7 +14,7 @@ namespace MODEL {
         }
         public bool SetNome(string nome)
         {
-            if(nome.Length <= 45)
+            if(nome.Length <= 45 && nome.Length > 6)
             {
                 this.nome = nome;
                 return true;
@@ -26,7 +26,7 @@ namespace MODEL {
         }
         public bool SetLogradouro(string logradouro)
         {
-            if (logradouro.Length <= 45)
+            if (logradouro.Length <= 45 && logradouro.Length > 5)
             {
                 this.dadosAPI.logradouro = logradouro;
                 return true;
@@ -38,7 +38,7 @@ namespace MODEL {
         }
         public bool SetTelefone(string telefone)
         {
-            if (telefone.Length <= 18)
+            if (telefone.Length <= 18 && telefone.Length > 10)
             {
                 this.dadosAPI.telefone = telefone;
                 return true;
@@ -62,7 +62,7 @@ namespace MODEL {
         }
         public bool SetBairro(string bairro)
         {
-            if (bairro.Length <= 45)
+            if (bairro.Length <= 45 && bairro.Length > 5)
             {
                 this.dadosAPI.bairro = bairro;
                 return true;
@@ -74,7 +74,7 @@ namespace MODEL {
         }
         public bool SetMunicipio(string municipio)
         {
-            if (municipio.Length <= 35)
+            if (municipio.Length <= 35 && municipio.Length > 5)
             {
                 this.dadosAPI.municipio = municipio;
                 return true;
@@ -86,7 +86,7 @@ namespace MODEL {
         }
         public bool SetUf(string uf)
         {
-            if(uf.Length <= 2)
+            if(uf.Length == 2)
             {
                 dadosAPI.uf = uf;
                 return true;

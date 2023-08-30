@@ -22,7 +22,7 @@
         public string GetEndereco() { return logradouro; }
         public bool SetCnpj (string cnpj) { 
         
-            if(cnpj.Length <= 15)
+            if(cnpj.Length == 14)
             {
                 this.cnpj = decimal.Parse(cnpj);
                 return true;
