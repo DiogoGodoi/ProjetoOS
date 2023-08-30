@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using API_EXTERNAS;
 using CONEXAO;
 using Dapper;
 using MODEL;
@@ -71,10 +72,10 @@ namespace DAO
             {
                 conn.Open();
                 // Constrói a consulta SQL para atualizar um registro existente de Cliente.
-                var query = $"EXEC upCliente {Cliente.GetCnpj()}, '{Cliente.GetNome()}', '{Cliente.GetDadosAPI().telefone}', '{Cliente.GetDadosAPI().logradouro}', '{Cliente.GetDadosAPI().numero}', '{Cliente.GetDadosAPI().bairro}', '{Cliente.GetDadosAPI().municipio}', '{Cliente.GetDadosAPI().uf}'";
+                var query = $"EXEC upCliente {cnpj}, '{Cliente.GetNome()}', '{Cliente.GetDadosAPI().telefone}', '{Cliente.GetDadosAPI().logradouro}', '{Cliente.GetDadosAPI().numero}', '{Cliente.GetDadosAPI().bairro}', '{Cliente.GetDadosAPI().municipio}', '{Cliente.GetDadosAPI().uf}'";
                 // Executa a consulta e trata o valor de retorno.
-                var resultado = conn.Execute(query, Cliente);
-                if (resultado > 0)
+                var linhasAfetadas = conn.Execute(query, Cliente);
+                if (linhasAfetadas > 0)
                 {
                     return true;
                 }
@@ -139,9 +140,20 @@ namespace DAO
                 // Constrói a consulta SQL para recuperar todos os registros de Cliente.
                 var query = "EXEC readCliente";
                 // Executa a consulta e retorna a lista de objetos Cliente.
-                var clientes = conn.Query<ClientePJ>(query).ToList();
+                var clientes = conn.Query<ClientePJ, ModelApiReceita, ClientePJ>(query, (cliente, dadosAPI) =>
+                {
+                    cliente.SetDadosAPI(dadosAPI);
+                    return cliente;
+                }, splitOn: "telefone").ToList();
                 
+                if(clientes.Count > 0)
+                {
                 return clientes;
+                }
+                else
+                {
+                return null;
+                }
             }
             catch (Exception ex)
             {

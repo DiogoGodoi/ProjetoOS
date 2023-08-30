@@ -3,13 +3,20 @@
     public class ClientePF: Cliente
     {
         private decimal cpf { get; set; }
-
-        public ClientePF(decimal cpf, string nome, string telefone,
-            string logradouro, string numero,
-            string bairro, string municipio,
-            string uf) : base(nome, telefone, logradouro, numero, bairro, municipio, uf)
+        public ClientePF() { }
+        public bool SetCnpjf(string cpf)
         {
-            this.cpf = cpf;
+
+            if (cpf.Length <= 11)
+            {
+                this.cpf = decimal.Parse(cpf);
+                return true;
+            }
+            else
+            {
+                return false; ;
+            }
+
         }
         public decimal GetCpf() { return cpf; }
     }

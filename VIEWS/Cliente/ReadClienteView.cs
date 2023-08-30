@@ -41,7 +41,17 @@ namespace VIEWS
                 var siglaEs = linhaSelecionada.Cells[7].Value.ToString();
 
                 // Cria e exibe o formulário de atualização com os dados do cliente.
-                MODEL.ClientePJ cliente = new MODEL.ClientePJ(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
+                MODEL.ClientePJ cliente = new MODEL.ClientePJ();
+
+                cliente.SetCnpj(cnpj);
+                cliente.SetNome(nome);
+                cliente.SetLogradouro(rua);
+                cliente.SetTelefone(telefone);
+                cliente.SetNumero(numero);
+                cliente.SetBairro(bairro);
+                cliente.SetMunicipio(cidade);
+                cliente.SetUf(siglaEs);
+
                 UpdateClienteView _frmAlterarCliente = new UpdateClienteView(cliente);
                 _frmAlterarCliente.Show();
                 _frmAlterarCliente.txtNome.Focus();
@@ -71,7 +81,17 @@ namespace VIEWS
                 var siglaEs = linhaSelecionada.Cells[7].Value.ToString();
 
                 // Cria e exibe o formulário de exclusão com os dados do cliente.
-                MODEL.ClientePJ cliente = new MODEL.ClientePJ(decimal.Parse(cnpj), nome, telefone, rua, numero, bairro, cidade, siglaEs);
+                MODEL.ClientePJ cliente = new MODEL.ClientePJ();
+
+                cliente.SetCnpj(cnpj);
+                cliente.SetNome(nome);
+                cliente.SetLogradouro(rua);
+                cliente.SetTelefone(telefone);
+                cliente.SetNumero(numero);
+                cliente.SetBairro(bairro);
+                cliente.SetMunicipio(cidade);
+                cliente.SetUf(siglaEs);
+
                 DeleteClienteView _frmAlterarCliente = new DeleteClienteView(cliente);
                 _frmAlterarCliente.Show();
                 _frmAlterarCliente.FormClosed += (sender, e) => { Read(); dtGrid.Focus(); };
@@ -95,9 +115,9 @@ namespace VIEWS
             if (clientes.Count > 0)
             {
                 // Preenche o DataGridView com os dados dos clientes.
-                foreach (var idx in clientes)
+                foreach (var idx in clientes)  
                 {
-                    dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetDadosAPI().telefone, idx.GetDadosAPI().logradouro, idx.GetDadosAPI().numero, idx.GetDadosAPI().bairro, idx.GetDadosAPI().municipio, idx.GetDadosAPI().uf);
+                dados.Clientes.Rows.Add(idx.GetCnpj(), idx.GetNome(), idx.GetDadosAPI().telefone, idx.GetDadosAPI().logradouro, idx.GetDadosAPI().numero, idx.GetDadosAPI().bairro, idx.GetDadosAPI().municipio, idx.GetDadosAPI().uf);
                 }
                 dtGrid.DataSource = dados.Clientes;
                 dtGrid.Columns["Endereco"].Visible = false;
