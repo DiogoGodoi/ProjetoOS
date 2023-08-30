@@ -14,6 +14,7 @@ namespace MODEL {
             dadosAPI = new ModelApiReceita();
         }
 
+
         //Setters
         public bool SetNome(string nome)
         {
