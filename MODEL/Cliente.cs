@@ -7,11 +7,14 @@ namespace MODEL {
         protected string nome { get; set; }
         protected ModelApiReceita dadosAPI { get; set; } 
 
+
         // Construtor para a classe Cliente que inicializa as propriedades.
         public Cliente()
         {
             dadosAPI = new ModelApiReceita();
         }
+
+        //Setters
         public bool SetNome(string nome)
         {
             if(nome.Length <= 45 && nome.Length > 6)
@@ -26,7 +29,7 @@ namespace MODEL {
         }
         public bool SetLogradouro(string logradouro)
         {
-            if (logradouro.Length <= 45 && logradouro.Length > 5)
+            if (logradouro.Length > 5&& logradouro.Length <= 45)
             {
                 this.dadosAPI.logradouro = logradouro;
                 return true;
@@ -50,7 +53,7 @@ namespace MODEL {
         }
         public bool SetNumero(string numero)
         {
-            if (numero.Length <= 7)
+            if (numero.Length <= 7 && numero.Length != 0)
             {
                 this.dadosAPI.numero = numero;
                 return true;
@@ -62,7 +65,7 @@ namespace MODEL {
         }
         public bool SetBairro(string bairro)
         {
-            if (bairro.Length <= 45 && bairro.Length > 5)
+            if (bairro.Length > 5 && bairro.Length <= 45)
             {
                 this.dadosAPI.bairro = bairro;
                 return true;
@@ -97,10 +100,10 @@ namespace MODEL {
             }
         }
 
+
         // Métodos para acessar as propriedades privadas.
         public string GetNome() { return this.nome; }
         public void SetDadosAPI(ModelApiReceita dadosApi) { this.dadosAPI = dadosApi; }
         public ModelApiReceita GetDadosAPI() { return this.dadosAPI; }
     }
-
 }

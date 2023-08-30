@@ -349,7 +349,7 @@
             // 
             // cbEstado
             // 
-            this.cbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbEstado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbEstado.BackColor = System.Drawing.SystemColors.Control;
             this.cbEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbEstado.DropDownHeight = 100;
